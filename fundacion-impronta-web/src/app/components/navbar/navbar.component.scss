@@ -15,6 +15,13 @@
       border: 0;
       background: transparent;
     }
+    .logo-mobile{
+      width: 7em;
+    }
+    .menu-mobile-btn{
+      width: 2em;
+      cursor: pointer;
+    }
   }
   .side-menu{
     position: fixed;
@@ -25,8 +32,58 @@
     justify-content: flex-start;
     transform: translateX(-100%);
     transition: all ease-out .5s;
+    font-family: 'IsidoraBlack';
+    font-size: 1.7em;
+    color: #00ABD3;
     &.active{
       transform: translateX(0);
+    }
+    .back-mobile-btn{
+      width: 2em;
+      cursor: pointer;
+    }
+    ul{
+      display: flex;
+      padding-left: 0;
+      list-style: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 20vh;
+      li a{
+        text-decoration: none;
+        color: inherit;
+
+      }
+      li{
+        margin-bottom: 5vh;
+      }
+      li:hover{
+        color: #F21B83;
+      }
+    }
+    .donation-btn{
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      border: 3px solid #AFB800;
+      background-color: #00ABD3;
+      font-family: 'IsidoraBlack';
+      color: white;
+      font-size: 1.7em;
+      gap: 3px;
+      cursor: pointer;
+      img{
+        width: 1em;
+      }
+    }
+    .donation-btn:hover{
+      border: 3px solid #F21B83;
+      background-color: #F21B83;
+      font-family: 'IsidoraBlack';
+      color: white;
     }
   }
 }
@@ -34,6 +91,7 @@
 .hide-mobile {
   display: none;
   box-shadow: 0px 2px 5px rgb(black, .2);
+  font-family: 'IsidoraBlack';
   div {
     padding: 1em;
     display: flex;
@@ -43,9 +101,10 @@
   .logo {
     margin-right: 1 em;
     margin-left: 1 em;
+    padding: 0;
   }
   nav {
-    display: flex;
+    display: grid;
     align-items: center;
     font-size: 1.7em;
     color: #00ABD3;
@@ -54,10 +113,13 @@
       display: flex;
       list-style: none;
       a {
-        font-family: 'IsidoraBlack';
+
         margin: 0.2em;
         color: inherit;
         text-decoration: none;
+      }
+      li{
+        margin-right: 0.5em;
       }
     }
     li:hover{
@@ -71,14 +133,39 @@
       margin-right: .5em;
     }
   }
+  .donation-btn{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    border: 3px solid #AFB800;
+    background-color: #00ABD3;
+    font-family: 'IsidoraBlack';
+    color: white;
+    font-size: 1.7em;
+    gap: 3px;
+    cursor: pointer;
+    img{
+      width: 1em;
+    }
+  }
+  .donation-btn:hover{
+    border: 3px solid #F21B83;
+    background-color: #F21B83;
+    font-family: 'IsidoraBlack';
+    color: white;
+  }
 }
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
   .show-mobile {
-    display: none;
+    .logo{
+      width: 1%;
+    }
   }
   .hide-mobile {
-    display: block;
+    display: none;
   }
 }
 

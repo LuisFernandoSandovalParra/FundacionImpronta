@@ -1,29 +1,38 @@
 <div class="show-mobile">
   <div>
     <button (click)="toogleMenu()">
-      <img src="../../../assets/svg/menu-mobile-icon.svg" alt="menu"/>
+      <img src="../../../assets/svg/menu-mobile-icon.svg" class="menu-mobile-btn" alt="menu"/>
     </button>
     <a href="#">
-      <img src="../../../assets/svg/fundacion-logo.svg" alt="fundaciónImpronta"/>
+      <img src="../../../assets/svg/fundacion-logo.jpg" class="logo-mobile" alt="fundaciónImpronta"/>
     </a>
   </div>
   <div class="side-menu" [class.active]="activeMenu">
-    <button (click)="toogleMenu()">Cerrar</button>
+    <button (click)="toogleMenu()">
+      <img src="../../../assets/svg/back-row-icon.svg" class="back-mobile-btn" alt="volver">
+    </button>
     <ul>
       <li><a href="">Inicio</a></li>
       <li><a href="">Nosotros</a></li>
       <li><a href="">Proyectos</a></li>
       <li><a href="">Contactanos</a></li>
-      <li><a href="">Donaciones</a></li>
     </ul>
+    <div>
+      <button class="donation-btn">
+        <img src="../../../assets/svg/donation-icon.svg" alt="Donaciones">
+        Donaciones
+      </button>
+    </div>
   </div>
 </div>
 <div class="hide-mobile">
   <div>
-    <nav>
+    <div class="logo">
       <a class="logo" href="">
         <img src="../../../assets/svg/fundacion-logo.jpg" alt="logo" width="150px">
       </a>
+    </div>
+    <nav>
       <ul>
         <li><a href="">Inicio</a></li>
         <li><a href="">Nosotros</a></li>
@@ -32,5 +41,11 @@
         <li><a href="">Donaciones</a></li>
       </ul>
     </nav>
+    <div>
+      <button class="donation-btn">
+        <img src="../../../assets/svg/donation-icon.svg" alt="Donaciones">
+        Donaciones
+      </button>
+    </div>
   </div>
 </div>
