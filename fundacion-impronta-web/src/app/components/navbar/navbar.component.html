@@ -1,0 +1,36 @@
+<div class="show-mobile">
+  <div>
+    <button (click)="toogleMenu()">
+      <img src="../../../assets/svg/menu-mobile-icon.svg" alt="menu"/>
+    </button>
+    <a href="#">
+      <img src="../../../assets/svg/fundacion-logo.svg" alt="fundaciónImpronta"/>
+    </a>
+  </div>
+  <div class="side-menu" [class.active]="activeMenu">
+    <button (click)="toogleMenu()">Cerrar</button>
+    <ul>
+      <li><a href="">Inicio</a></li>
+      <li><a href="">Nosotros</a></li>
+      <li><a href="">Proyectos</a></li>
+      <li><a href="">Contactanos</a></li>
+      <li><a href="">Donaciones</a></li>
+    </ul>
+  </div>
+</div>
+<div class="hide-mobile">
+  <div>
+    <nav>
+      <a class="logo" href="">
+        <img src="../../../assets/svg/fundacion-logo.jpg" alt="logo" width="150px">
+      </a>
+      <ul>
+        <li><a href="">Inicio</a></li>
+        <li><a href="">Nosotros</a></li>
+        <li><a href="">Proyectos</a></li>
+        <li><a href="">Contactanos</a></li>
+        <li><a href="">Donaciones</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
