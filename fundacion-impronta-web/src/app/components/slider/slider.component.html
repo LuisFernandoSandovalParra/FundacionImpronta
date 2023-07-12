@@ -1,0 +1,9 @@
+<div class="slider">
+  <div class="container">
+    <div class="slide" *ngFor="let image of images; let i = index" [class.active]="i === currentImageIndex">
+      <!--<h2 class="caption">{{ image.caption }}</h2>-->
+      <img [src]="image.url" alt="{{ image.caption }}" />
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  background-image: url('../../../assets/images/Diseño1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  .logo-phrase {
+    margin: 3%;
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      width: 5em;
+    }
+    hr {
+      color: #f21b83;
+      border: 3px solid;
+    }
+    h2 {
+      font-family: "IsidoraBlack";
+      color: #303030;
+      font-size: 1.2em;
+      text-align: center;
+      margin: 0.5em;
+    }
+  }
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-family: "IsidoraBlack";
+      font-size: 80%;
+      margin: 0.5em;
+      padding: 0.2em 2em;
+      border: 2px solid white;
+      border-radius: 10em;
+      background-color: #f21b83;
+      color: white;
+    }
+  }
+  .info-container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    font-family: "IsidoraSemiBold";
+    font-size: 1.4em;
+    justify-content: center;
+    align-content: center;
+    text-align: justify;
+    div {
+      justify-content: center;
+      align-content: center;
+      flex-basis: 17em;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+    .image {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 60%;
+      }
+    }
+    .description-part-one {
+      font-size: 80%;
+      margin: 10%;
+      margin-bottom: 0;
+      .container-btn {
+        display: flex;
+        justify-content: center;
+        button {
+          border: none;
+          background-color: transparent;
+          width: 15%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .description-part-two {
+      display: none;
+      font-size: 80%;
+      margin: 10%;
+      margin-top: 0;
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .container {
+    background-image: url('../../../assets/images/Diseño1.png');
+    background-size: cover;
+    .info-container {
+      column-gap: 10px;
+      text-align: justify;
+      div {
+        flex-basis: 80%;
+        padding: 0px;
+        .image {
+          width: 100em;
+          img {
+            width: 10%;
+          }
+        }
+      }
+      .description-part-one {
+        .container-btn {
+          button {
+            border: none;
+            padding: 0;
+            background-color: transparent;
+            width: 9%;
+            cursor: pointer;
+            img {
+              width: 100%;
+            }
+          }
+          button:hover {
+            width: 11%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+  .container {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo-phrase {
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.8em;
+      }
+      img {
+        width: 6em;
+      }
+      hr {
+        color: #f21b83;
+        border: 3px solid;
+      }
+      h2 {
+        font-family: "IsidoraBlack";
+        font-size: 2em;
+      }
+    }
+    .title-container {
+      .title {
+        font-size: 1.4em;
+        margin: 0.5em;
+        padding: 0.2em 2em;
+      }
+    }
+    .info-container {
+      padding: 2em;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 25px;
+      font-family: "IsidoraSemiBold";
+      font-size: 1.4em;
+      justify-content: center;
+      align-content: center;
+      text-align: justify;
+      div {
+        flex-basis: 17em;
+        box-sizing: border-box;
+        padding: 10px;
+      }
+      .image {
+        display: flex;
+        justify-content: center;
+        img {
+          width: 100%;
+        }
+      }
+      .description-part-one {
+        margin: 0;
+        font-size: 1em;
+        .container-btn {
+          display: flex;
+          justify-content: center;
+          button {
+            border: none;
+            padding: 0;
+            background-color: transparent;
+            width: 15%;
+            cursor: pointer;
+            img {
+              width: 100%;
+            }
+          }
+          button:hover {
+            width: 18%;
+          }
+        }
+      }
+      .description-part-two {
+        display: none;
+        margin: 0;
+        font-size: 1em;
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+}

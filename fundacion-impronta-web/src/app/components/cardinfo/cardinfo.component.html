@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="logo-phrase">
+    <div class="logo">
+      <img src="../../../assets/images/Triciclo.png" alt="Triciclo" />
+    </div>
+    <hr />
+    <h2>Reconociendo, empoderando y resignificando.</h2>
+  </div>
+
+  <div class="title-container">
+    <div class="title">
+      <h1>Fundación Impronta</h1>
+    </div>
+  </div>
+
+  <div class="info-container">
+    <div class="image">
+      <img src="../../../assets/images/boy.png" alt="Fundación Impronta" />
+    </div>
+    <div class="description-part-one">
+      <p>
+        La Fundación Impronta es una institución de utilidad común y sin ánimo
+        de lucro, tiene un carácter permanente, independiente y autónomo, la
+        principal motivación de la fundación es contribuir al mejoramiento de la
+        calidad de vida de la población en tres ciclos de vida: primera
+        infancia, adolescencia y vejez, desarrollando acciones orientadas al
+        bienestar psicológico, físico y mental de dichos grupos específicos.
+      </p>
+      <div class="container-btn">
+        <button (click)="toogleDescriptionBtn()"><img src="{{urlShowMoreDescriptionBtn}}" alt="Ver mas"></button>
+      </div>
+    </div>
+    <div [class.active]="showMoreDescription" class="description-part-two">
+      <p>
+        Para lograr sus fines, implementa proyectos educativos, sociales,
+        deportivos, recreativos, culturales y terapéuticos. La Fundación
+        Impronta puede realizar actividades como la organización de eventos,
+        sociarse con otras entidades sin ánimo de lucro, apoyar proyectos afines
+        a sus propósitos, diseñar mecanismos de financiación, desarrollar
+        programas y proyectos para el desarrollo personal y social de la
+        población objetivo, y realizar otras actividades económicas relacionadas
+        con su objeto social.
+      </p>
+    </div>
+  </div>
+</div>
