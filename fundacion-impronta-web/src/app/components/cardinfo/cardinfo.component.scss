@@ -2,11 +2,16 @@
   margin: 0;
   padding: 0;
 }
+
+strong{
+  font-family: 'IsidoraBlack';
+}
+
 .container {
+  width: 100%;
   background-image: url('../../../assets/images/Diseño1.png');
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: right;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -98,17 +103,72 @@
     }
   }
 }
+.mision-container{
+  background-color: #AFB800;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  font-family: "IsidoraSemiBold";
+  text-align: justify;
+  font-size: 1.4em;
+  .mision-logo{
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    img{
+      width: 50%;
+    }
+  }
+  .mision-info{
+    font-size: 82%;
+    margin: 0 14%;
+    margin-bottom: 2em;
+  }
+}
+.vision-container{
+  background-color: #F21B83;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-content: center;
+  font-family: "IsidoraSemiBold";
+  color: white;
+  text-align: justify;
+  font-size: 1.4em;
+  .vision-logo{
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    img{
+      width: 50%;
+    }
+  }
+  .vision-info{
+    font-size: 82%;
+    margin: 0 14%;
+    margin-bottom: 2em;
+  }
+}
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
   .container {
     background-image: url('../../../assets/images/Diseño1.png');
     background-size: cover;
+    .title-container {
+      .title {
+        font-size: 1.4em;
+        margin: 0.5em;
+        margin-bottom: 10%;
+        padding: 0.2em 2em;
+      }
+    }
     .info-container {
       column-gap: 10px;
       text-align: justify;
       div {
         flex-basis: 80%;
-        padding: 0px;
+        padding: 0;
         .image {
           width: 100em;
           img {
@@ -117,7 +177,10 @@
         }
       }
       .description-part-one {
+        font-size: 100%;
         .container-btn {
+          margin-top: 2em;
+          margin-bottom: 2em;
           button {
             border: none;
             padding: 0;
@@ -129,10 +192,31 @@
             }
           }
           button:hover {
-            width: 11%;
+            width: 9%;
           }
         }
       }
+      .description-part-two{
+        font-size: 100%;
+      }
+    }
+  }
+  .mision-container{
+    font-family: "IsidoraSemiBold";
+    font-size: 1.4em;
+    .mision-info{
+      margin-left: 10%;
+      margin-right: 10%;
+      font-size: 100%;
+    }
+  }
+  .vision-container{
+    font-family: "IsidoraSemiBold";
+    font-size: 1.4em;
+    .vision-info{
+      margin-left: 10%;
+      margin-right: 10%;
+      font-size: 100%;
     }
   }
 }
@@ -142,7 +226,7 @@
   .container {
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
+    background-position: right;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,11 +253,12 @@
       .title {
         font-size: 1.4em;
         margin: 0.5em;
+        margin-bottom: 10%;
         padding: 0.2em 2em;
       }
     }
     .info-container {
-      padding: 2em;
+      padding: 0;
       display: flex;
       flex-wrap: wrap;
       column-gap: 25px;
@@ -223,6 +308,64 @@
           display: block;
         }
       }
+    }
+  }
+  .mision-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    font-family: "IsidoraSemiBold";
+    font-size: 1.4em;
+    column-gap: 1%;
+    div{
+      display: flex;
+      justify-content: center;
+      flex-basis: 23em;
+      box-sizing: border-box;
+    }
+    .mision-logo{
+      margin: 1em;
+      width: 100%;
+      img{
+        width: 100%;
+      }
+    }
+    .mision-info{
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 1em;
+      font-size: 1.3em;
+    }
+  }
+  .vision-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    font-family: "IsidoraSemiBold";
+    font-size: 1.4em;
+    column-gap: 1%;
+    div{
+      display: flex;
+      justify-content: center;
+      flex-basis: 23em;
+      box-sizing: border-box;
+    }
+    .vision-logo{
+      margin: 1em;
+      width: 100%;
+      img{
+        width: 100%;
+      }
+    }
+    .vision-info{
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 1em;
+      font-size: 1.3em;
     }
   }
 }

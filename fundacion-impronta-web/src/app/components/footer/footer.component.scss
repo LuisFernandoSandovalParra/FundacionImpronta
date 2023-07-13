@@ -1,0 +1,128 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'IsidoraBlack';
+}
+
+.footer-container{
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: #00ABD3;
+  clip-path: ellipse(100% 10em at 70% 70%);
+  z-index: 0;
+  .contact{
+    display: flex;
+    button{
+      background-color: #FEB100;
+      color: white;
+      border: 1px solid #FEB100;
+      border-radius: 5em;
+      font-size: 1.6em;
+      padding: 0 0.4em;
+      cursor: pointer;
+    }
+  }
+  .info-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+    padding: 8%;
+    img{
+      width: 2%;
+    }
+    .email{
+      display: flex;
+      justify-content: center;
+      gap:0.6em;
+      padding: 0.3em;
+    }
+    .phone{
+      display: flex;
+      justify-content: center;
+      gap:0.6em;
+      padding: 0.4em;
+    }
+  }
+  .rights{
+    color: white;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em){
+  .footer-container{
+    clip-path: ellipse(100% 14.3em at 70% 75%);
+    .contact{
+      button{
+        font-size: 1.8em;
+      }
+      button:hover{
+        background-color: #AFB800;
+      }
+      button:active{
+        background-color: #F21B83;
+      }
+    }
+    .info-bar{
+      font-size: 1.5em;
+      padding: 5%;
+    }
+    .rights{
+      font-size: 1.4em;
+    }
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .footer-container{
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: #00ABD3;
+    clip-path: ellipse(100% 17em at 70% 87%);
+    .contact{
+      display: flex;
+      button{
+        background-color: #FEB100;
+        color: white;
+        border: 1px solid #FEB100;
+        border-radius: 5em;
+        font-size: 2.1em;
+        padding: 0 0.4em;
+        cursor: pointer;
+      }
+      button:hover{
+        background-color: #AFB800;
+      }
+      button:active{
+        background-color: #F21B83;
+      }
+    }
+    .info-bar{
+      font-size: 1.8em;
+      padding: 1%;
+      display: flex;
+      flex-direction: column;
+      .email{
+        margin: 0;
+        padding: 0;
+      }
+      .phone{
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .rights{
+      font-size: 1.8em;
+    }
+  }
+}

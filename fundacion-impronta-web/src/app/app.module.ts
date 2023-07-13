@@ -8,6 +8,7 @@ import { SocialbarComponent } from './components/socialbar/socialbar.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { ContainerComponent } from './components/container/container.component';
 import { CardinfoComponent } from './components/cardinfo/cardinfo.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CardinfoComponent } from './components/cardinfo/cardinfo.component';
     SocialbarComponent,
     SliderComponent,
     ContainerComponent,
-    CardinfoComponent
+    CardinfoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

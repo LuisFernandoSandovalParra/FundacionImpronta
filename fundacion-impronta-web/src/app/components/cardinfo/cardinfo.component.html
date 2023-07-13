@@ -1,3 +1,4 @@
+<app-slider></app-slider>
 <div class="container">
   <div class="logo-phrase">
     <div class="logo">
@@ -12,7 +13,6 @@
       <h1>Fundación Impronta</h1>
     </div>
   </div>
-
   <div class="info-container">
     <div class="image">
       <img src="../../../assets/images/boy.png" alt="Fundación Impronta" />
@@ -27,7 +27,9 @@
         bienestar psicológico, físico y mental de dichos grupos específicos.
       </p>
       <div class="container-btn">
-        <button (click)="toogleDescriptionBtn()"><img src="{{urlShowMoreDescriptionBtn}}" alt="Ver mas"></button>
+        <button (click)="toogleDescriptionBtn()">
+          <img src="{{ urlShowMoreDescriptionBtn }}" alt="Ver mas" />
+        </button>
       </div>
     </div>
     <div [class.active]="showMoreDescription" class="description-part-two">
@@ -42,5 +44,34 @@
         con su objeto social.
       </p>
     </div>
+  </div>
+</div>
+
+<div class="mision-container">
+  <div class="mision-logo">
+    <img src="../../../assets/images/mision.png" alt="Mision" />
+  </div>
+  <div class="mision-info">
+    <p>
+      Diseñar, aplicar y evaluar en pro de la mejora continua,
+      <strong>programas y proyectos</strong> que busquen movilizar la vida
+      <strong>de las poblaciones vulnerables</strong>
+      tanto por el ciclo vital como por sus circunstancias de vida.
+    </p>
+  </div>
+</div>
+<div class="vision-container">
+  <div class="vision-info">
+    <p>
+      Para el 2030 ser considerados un <strong>referente</strong> en torno al
+      <strong>diseño de programas y proyectos de índole social</strong>
+      dirigidos a movilizar la <strong>salud física y mental</strong> en
+      relación con las <strong>habilidades para la vida,</strong> de las
+      poblaciones vulnerables tanto por el ciclo vital como por sus
+      circunstancias de vida.
+    </p>
+  </div>
+  <div class="vision-logo">
+    <img src="../../../assets/images/Vision.png" alt="Mision" />
   </div>
 </div>
