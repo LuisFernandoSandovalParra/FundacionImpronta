@@ -6,8 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./cardinfo.component.scss']
 })
 export class CardinfoComponent {
-  showMoreDescription: boolean = false
+  showMoreDescription: boolean = false;
   urlShowMoreDescriptionBtn: string = "../../../assets/svg/more-icon.svg";
+  showTextMisionActive: boolean = false;
+  showTextVisionActive: boolean = false;
 
   toogleDescriptionBtn(){
     this.showMoreDescription = !this.showMoreDescription;
@@ -17,4 +19,13 @@ export class CardinfoComponent {
       this.urlShowMoreDescriptionBtn = "../../../assets/svg/more-icon.svg"
     }
   }
+
+  showTextMision(){
+    this.showTextMisionActive = !this.showTextMisionActive;
+  }
+
+  showTextVision(){
+    this.showTextVisionActive = !this.showTextVisionActive;
+  }
+
 }

@@ -116,14 +116,25 @@ strong{
     padding: 1em;
     display: flex;
     justify-content: center;
-    img{
-      width: 50%;
+    width: fit-content;
+    height: fit-content;
+    button{
+      padding: 0;
+      border: none;
+      background: none;
+      img{
+        width: 50%;
+      }
     }
   }
   .mision-info{
+    display: none;
     font-size: 82%;
     margin: 0 14%;
     margin-bottom: 2em;
+    &.activeMision{
+      display: block;
+    }
   }
 }
 .vision-container{
@@ -140,14 +151,79 @@ strong{
     padding: 1em;
     display: flex;
     justify-content: center;
-    img{
-      width: 50%;
+    width: fit-content;
+    height: fit-content;
+    button{
+      padding: 0;
+      border: none;
+      background: none;
+      img{
+        width: 50%;
+      }
     }
+
   }
   .vision-info{
+    display: none;
     font-size: 82%;
     margin: 0 14%;
     margin-bottom: 2em;
+    &.activeVision{
+      display: block;
+    }
+  }
+}
+
+@mixin white-gradient{
+  background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+$animationSpeed: 40s;
+.sponsors-container{
+  background: white;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 100px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 100%;
+
+	&::before,
+	&::after {
+		@include white-gradient;
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 200px;
+		z-index: 2;
+	}
+
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(250px * 14);
+	}
+
+	.slide {
+		height: 100px;
+		width: 250px;
+	}
+
+  // Animation
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 7))}
   }
 }
 
@@ -204,6 +280,23 @@ strong{
   .mision-container{
     font-family: "IsidoraSemiBold";
     font-size: 1.4em;
+    .mision-logo{
+      padding-right: 0;
+      padding-left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        img{
+          width: 50%;
+        }
+      }
+    }
     .mision-info{
       margin-left: 10%;
       margin-right: 10%;
@@ -217,6 +310,23 @@ strong{
       margin-left: 10%;
       margin-right: 10%;
       font-size: 100%;
+    }
+    .vision-logo{
+      padding-right: 0;
+      padding-left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        img{
+          width: 50%;
+        }
+      }
     }
   }
 }
@@ -327,8 +437,13 @@ strong{
     .mision-logo{
       margin: 1em;
       width: 100%;
-      img{
+      button{
         width: 100%;
+        height: auto;
+        pointer-events: none;
+        img{
+          width: 100%;
+        }
       }
     }
     .mision-info{
@@ -356,8 +471,13 @@ strong{
     .vision-logo{
       margin: 1em;
       width: 100%;
-      img{
+      button{
         width: 100%;
+        height: auto;
+        pointer-events: none;
+        img{
+          width: 100%;
+        }
       }
     }
     .vision-info{
@@ -366,6 +486,7 @@ strong{
       margin: 0;
       padding: 1em;
       font-size: 1.3em;
+      width: 100%;
     }
   }
 }

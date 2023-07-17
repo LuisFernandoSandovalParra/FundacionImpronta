@@ -49,9 +49,11 @@
 
 <div class="mision-container">
   <div class="mision-logo">
-    <img src="../../../assets/images/mision.png" alt="Mision" />
+    <button (click)="showTextMision()">
+      <img src="../../../assets/images/mision.png" alt="Mision" />
+    </button>
   </div>
-  <div class="mision-info">
+  <div [class.activeMision]="showTextMisionActive" class="mision-info">
     <p>
       Diseñar, aplicar y evaluar en pro de la mejora continua,
       <strong>programas y proyectos</strong> que busquen movilizar la vida
@@ -61,7 +63,7 @@
   </div>
 </div>
 <div class="vision-container">
-  <div class="vision-info">
+  <div [class.activeVision]="showTextVisionActive" class="vision-info">
     <p>
       Para el 2030 ser considerados un <strong>referente</strong> en torno al
       <strong>diseño de programas y proyectos de índole social</strong>
@@ -72,10 +74,125 @@
     </p>
   </div>
   <div class="vision-logo">
-    <img src="../../../assets/images/Vision.png" alt="Mision" />
+    <button (click)="showTextVision()">
+      <img src="../../../assets/images/Vision.png" alt="Mision" />
+    </button>
   </div>
 </div>
 
 <div class="sponsors-container">
-
+  <div class="slide-track">
+    <div class="slide">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png"
+        height="100"
+        width="250"
+        alt=""
+      />
+    </div>
+    <div class="slide">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png"
+        height="100"
+        width="250"
+        alt=""
+      />
+    </div>
+    <div class="slide">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png"
+        height="100"
+        width="250"
+        alt=""
+      />
+    </div>
+    <div class="slide">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png"
+        height="100"
+        width="250"
+        alt=""
+      />
+    </div>
+    <div class="slide">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"
+        height="100"
+        width="250"
+        alt=""
+      />
+    </div>
+    <div class="slide">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png"
+        height="100"
+        width="250"
+        alt=""
+      />
+    </div>
+    <div class="slide">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png"
+        height="100"
+        width="250"
+        alt=""
+      />
+    </div>
+    <div class="slide">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png"
+        height="100"
+        width="250"
+        alt=""
+      />
+    </div>
+    <div class="slide">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png"
+        height="100"
+        width="250"
+        alt=""
+      />
+    </div>
+    <div class="slide">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png"
+        height="100"
+        width="250"
+        alt=""
+      />
+    </div>
+    <div class="slide">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png"
+        height="100"
+        width="250"
+        alt=""
+      />
+    </div>
+    <div class="slide">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"
+        height="100"
+        width="250"
+        alt=""
+      />
+    </div>
+    <div class="slide">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png"
+        height="100"
+        width="250"
+        alt=""
+      />
+    </div>
+    <div class="slide">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png"
+        height="100"
+        width="250"
+        alt=""
+      />
+    </div>
+  </div>
 </div>

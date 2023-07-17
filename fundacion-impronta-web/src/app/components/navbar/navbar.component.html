@@ -12,8 +12,8 @@
       <img src="../../../assets/svg/back-row-icon.svg" class="back-mobile-btn" alt="volver">
     </button>
     <ul>
-      <li><a href="">Inicio</a></li>
-      <li><a href="">Nosotros</a></li>
+      <li><a (click)="toogleMenu()" [routerLink]="['inicio']" routerLinkActive="active" href="">Inicio</a></li>
+      <li><a (click)="toogleMenu()" [routerLink]="['nosotros']" routerLinkActive="active" href="">Nosotros</a></li>
       <li><a href="">Proyectos</a></li>
       <li><a href="">Contactanos</a></li>
     </ul>
@@ -34,8 +34,8 @@
     </div>
     <nav>
       <ul>
-        <li><a href="">Inicio</a></li>
-        <li><a href="">Nosotros</a></li>
+        <li><a [routerLink]="['inicio']" href="">Inicio</a></li>
+        <li><a [routerLink]="['nosotros']" href="">Nosotros</a></li>
         <li><a href="">Proyectos</a></li>
         <li><a href="">Contactanos</a></li>
       </ul>

@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SocialbarComponent } from './components/socialbar/socialbar.component';
 import { SliderComponent } from './components/slider/slider.component';
-import { ContainerComponent } from './components/container/container.component';
 import { CardinfoComponent } from './components/cardinfo/cardinfo.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CardAboutUsComponent } from './components/card-about-us/card-about-us.component';
 
 @NgModule({
   declarations: [
@@ -16,9 +16,9 @@ import { FooterComponent } from './components/footer/footer.component';
     NavbarComponent,
     SocialbarComponent,
     SliderComponent,
-    ContainerComponent,
     CardinfoComponent,
-    FooterComponent
+    FooterComponent,
+    CardAboutUsComponent
   ],
   imports: [
     BrowserModule,
