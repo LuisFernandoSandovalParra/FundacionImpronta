@@ -13,6 +13,50 @@
     </div>
   </div>
   <div class="history-logo">
-    <img src="../../../assets/images/historia.svg" alt="Historia">
+    <img src="../../../assets/images/historia.svg" alt="Historia" />
+  </div>
+</div>
+
+<div class="team-container">
+  <div class="info-team">
+    <div class="title-team">
+      <h2>Fundadores</h2>
+    </div>
+    <div class="text-team">
+      <ul class="names">
+        <li
+          *ngFor="let founder of founders"
+          (click)="toogleNamePerson(founder.id)"
+        >
+          {{ founder.name }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div [class.activeCard]="activeCardPersonalInfo" class="personal-container">
+    <div class="hide-personalcard">
+      <div class="personal-name">
+        <h3>{{ name }}</h3>
+      </div>
+      <button>
+        <img
+          (click)="toogleCardPerson()"
+          src="../../../assets/svg/back-row-icon.svg"
+          alt="Ocultar"
+          width="5%"
+        />
+      </button>
+    </div>
+    <div class="content-card">
+      <div class="personal-info">
+        <div class="personal-description">
+          <p>{{ description }}</p>
+        </div>
+      </div>
+      <div class="personal-photo">
+        <img [src]="photo" alt="User" width="30%" />
+      </div>
+    </div>
   </div>
 </div>

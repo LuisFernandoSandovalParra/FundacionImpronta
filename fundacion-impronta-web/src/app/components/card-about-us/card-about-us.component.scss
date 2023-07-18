@@ -1,68 +1,341 @@
-*{
+* {
   padding: 0;
   margin: 0;
 }
 
-.history-container{
+.history-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-color: #ECECEC;
-  .history-info{
+  background-color: #ececec;
+  .history-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
-    .history-title{
+    .history-title {
       display: flex;
       justify-content: center;
       align-items: center;
       align-content: center;
-      background-color: #FEB100;
-      font-family: 'IsidoraBlack';
+      background-color: #feb100;
+      font-family: "IsidoraBlack";
       font-size: 1.5em;
       color: white;
       border-radius: 0.8em;
       padding: 0 1em;
       margin: 2em;
     }
-    .history-text{
+    .history-text {
       display: flex;
       text-align: justify;
-      font-family: 'IsidoraSemiBold';
+      font-family: "IsidoraSemiBold";
       font-size: 1.2em;
       padding: 0 15%;
-      strong{
-        font-family: 'IsidoraBlack';
+      strong {
+        font-family: "IsidoraBlack";
       }
     }
   }
-  .history-logo{
+  .history-logo {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
-    img{
+    img {
       width: 50%;
     }
   }
 }
+.team-container{
+  background-image: url("../../../assets/images/Equipo-mobile.svg");
+  background-size: cover;
+  background-position: right;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column-reverse;
+  .personal-container {
+    display: none;
+    background-color: transparent;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: none;
+    padding: 2%;
+    transform: translateX(-110%);
+    transition: all ease 0.5s;
+    background-image: linear-gradient(to bottom, #ecb004, #00b1da);
+    border-radius: 0px;
+    &.activeCard {
+      display: block;
+      background-image: linear-gradient(to bottom, #ecb004, #00b1da);
+      border-radius: 8px;
+      transform: translateX(0);
+    }
+    .hide-personalcard {
+      display: flex;
+      justify-content: right;
+      align-content: center;
+      padding: 0 4%;
+      gap: 0 15%;
+      .personal-name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        font-family: "IsidoraBlack";
+        color: white;
+        font-size: 1.5em;
+      }
+    }
+    button {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      border: none;
+      background: none;
+      cursor: pointer;
+      object-fit: contain;
+      width: 15%;
+      height: 15%;
+      img{
+        width: 100%;
+      }
+    }
+    .content-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      .personal-photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 0;
+        margin: 0;
+        width:90%;
+        img{
+          width: 100%;
+        }
+      }
+      .personal-info {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 5%;
+        .personal-description {
+          text-align: justify;
+          font-family: "IsidoraSemiBold";
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+  .info-team {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    min-width: 30%;
+    padding: 5% 0;
+    .title-team {
+      font-family: "IsidoraBlack";
+      background-color: #afb800;
+      color: white;
+      padding: 0 1.2em;
+      margin: 1.2em;
+      h2 {
+        font-size: 1.7em;
+      }
+    }
+    .text-team {
+      font-family: "IsidoraSemiBold";
+      font-size: 1.3em;
+      color: white;
+      .names{
+        margin-bottom: 20%;
+      }
+      li{
+        margin: 10% 0;
+        cursor: pointer;
+      }
+      li:hover{
+        color: #ECB004;
+      }
+    }
+  }
+}
 
-
-@media screen and (min-width: 40em) and (max-width: 63.9375em){
-  .history-container{
-    .history-info{
-      .history-text{
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .history-container {
+    .history-info {
+      .history-text {
         padding: 0 10%;
+        font-size: 1.5em;
       }
     }
   }
 }
 
 @media screen and (min-width: 64em) {
+  .history-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    .history-info {
+      display: flex;
+      justify-content: right;
+      padding: 10% 0 10% 8%;
+      .history-title {
+        margin: 1.5em;
+      }
+      .history-text {
+        font-size: 1.8em;
+      }
+    }
+    .history-logo {
+      display: flex;
+      justify-content: left;
+      padding: 0 0;
+      width: 100%;
+      img {
+        width: 75%;
+      }
+    }
+  }
 
+  .team-container {
+    display: flex;
+    width: 100%;
+    background-image: url("../../../assets/images/Equipo.svg");
+    background-size: cover;
+    background-position: center;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    flex-direction: row-reverse;
+    .personal-container {
+      display: flex;
+      background-color: transparent;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      border: none;
+      padding: 2%;
+      transform: translateX(-110%);
+      transition: all ease 0.5s;
+      box-shadow: 2px 2px 2px 1px #c1b7009f;
+      background-image: linear-gradient(to bottom, #ecb004, #00b1da);
+      border-radius: 8px;
+      &.activeCard {
+        background-image: linear-gradient(to bottom, #ecb004, #00b1da);
+        border-radius: 8px;
+        transform: translateX(0);
+      }
+      .hide-personalcard {
+        display: flex;
+        justify-content: right;
+        align-content: center;
+        padding: 0 4%;
+        gap: 0 15%;
+        .personal-name {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          font-family: "IsidoraBlack";
+          color: white;
+          font-size: 2em;
+        }
+      }
+      button {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: none;
+        cursor: pointer;
+        object-fit: contain;
+        width: 10%;
+        height: 10%;
+        img{
+          width: 100%;
+        }
+      }
+      .content-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        .personal-photo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          padding: 0;
+          margin: 0;
+          width:90%;
+          img{
+            width: 100%;
+          }
+        }
+        .personal-info {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          margin: 0 5%;
+          .personal-description {
+            text-align: justify;
+            font-family: "IsidoraSemiBold";
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+    .info-team {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      min-width: 30%;
+      padding: 12%;
+      .title-team {
+        font-family: "IsidoraBlack";
+        background-color: #afb800;
+        color: white;
+        padding: 0 1.2em;
+        margin: 1.2em;
+        h2 {
+          font-size: 1.7em;
+        }
+      }
+      .text-team {
+        font-family: "IsidoraSemiBold";
+        font-size: 1.7em;
+        color: white;
+        li{
+          cursor: pointer;
+        }
+        li:hover{
+          color: #ECB004;
+        }
+      }
+    }
+  }
 }
