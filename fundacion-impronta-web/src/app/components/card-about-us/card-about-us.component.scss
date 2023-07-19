@@ -33,7 +33,7 @@
       display: flex;
       text-align: justify;
       font-family: "IsidoraSemiBold";
-      font-size: 1.2em;
+      font-size: 1.3em;
       padding: 0 15%;
       strong {
         font-family: "IsidoraBlack";
@@ -70,12 +70,11 @@
     padding: 2%;
     transform: translateX(-110%);
     transition: all ease 0.5s;
-    background-image: linear-gradient(to bottom, #ecb004, #00b1da);
+    background-image: linear-gradient(to bottom, #00b1da, #ecb004);
     border-radius: 0px;
     &.activeCard {
       display: block;
-      background-image: linear-gradient(to bottom, #ecb004, #00b1da);
-      border-radius: 8px;
+      transition: all ease 1s;
       transform: translateX(0);
     }
     .hide-personalcard {
@@ -105,6 +104,7 @@
       object-fit: contain;
       width: 15%;
       height: 15%;
+      transform: rotate(90deg);
       img{
         width: 100%;
       }
@@ -176,6 +176,90 @@
   }
 }
 
+.general-objetive-container{
+  background-color: #ECECEC;
+  width: 100%;
+  .general-objetive-info{
+    width: 100%;
+    .general-objetive-title{
+      padding: 10% 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      font-family: 'IsidoraBlack';
+      font-size: 1.2em;
+      color: #F41B83;
+    }
+    .general-objetive-text{
+      padding: 0 15%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      text-align: justify;
+      font-family: 'IsidoraSemiBold';
+      font-size: 1.3em;
+      strong{
+        font-family: 'IsidoraBlack';
+      }
+    }
+  }
+  .general-objetive-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    img{
+      width: 80%;
+    }
+  }
+}
+
+.accordion{
+  width: 100%;
+  background-color: #ECB004;
+  .accordion-item{
+    border:2px solid #afb800;
+    .accordion-header{
+      text-align: center;
+      background-color: #00b1da;
+      background-image: linear-gradient(to bottom right, #00b1da, #7C664A);
+      font-family: 'IsidoraBlack';
+      color: white;
+      padding: 5%;
+      font-size: 1.3em;
+      cursor: pointer;
+    }
+    .accordion-content{
+      background-image: linear-gradient(to bottom right, #FFB000, #87b800);
+      display: none;
+      overflow: hidden;
+      width: 100%;
+      .content-text{
+        font-family: 'IsidoraSemiBold';
+        text-align: justify;
+        font-size: 1.3em;
+        padding: 5% 15%;
+      }
+      .content-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 2% 0;
+        img{
+          border-radius: 100%;
+          box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.75);
+        }
+      }
+    }
+    .open{
+      display: block;
+    }
+  }
+}
+
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
   .history-container {
     .history-info {
@@ -185,12 +269,155 @@
       }
     }
   }
+  .team-container {
+    .personal-container {
+      .hide-personalcard {
+        display: flex;
+        justify-content: right;
+        align-content: center;
+        padding: 0 4%;
+        gap: 0 15%;
+        .personal-name {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          font-family: "IsidoraBlack";
+          color: white;
+          font-size: 2em;
+        }
+      }
+      button {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: none;
+        cursor: pointer;
+        object-fit: contain;
+        width: 9%;
+        height: 9%;
+        transform: rotate(90deg);
+        img{
+          width: 100%;
+        }
+      }
+      .content-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        .personal-photo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          padding: 0;
+          margin: 0;
+          width:90%;
+          img{
+            width: 100%;
+          }
+        }
+        .personal-info {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          margin: 0 5%;
+          .personal-description {
+            text-align: justify;
+            font-family: "IsidoraSemiBold";
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+    .info-team {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      min-width: 30%;
+      padding: 12%;
+      .title-team {
+        font-family: "IsidoraBlack";
+        background-color: #afb800;
+        color: white;
+        padding: 0 1.2em;
+        margin: 1.2em;
+        h2 {
+          font-size: 1.7em;
+        }
+      }
+      .text-team {
+        font-family: "IsidoraSemiBold";
+        font-size: 1.7em;
+        color: white;
+        li{
+          margin: 3% 0;
+          cursor: pointer;
+        }
+        li:hover{
+          color: #ECB004;
+        }
+      }
+    }
+  }
+  .general-objetive-container{
+    .general-objetive-info{
+      .general-objetive-title{
+        padding: 8% 0;
+        font-size: 1.5em;
+      }
+      .general-objetive-text{
+        padding: 0 10%;
+        font-size: 1.5em;
+      }
+    }
+    .general-objetive-logo{
+      img{
+        width: 60%;
+      }
+
+    }
+  }
+
+  .accordion{
+    .accordion-item{
+      .accordion-header{
+        padding: 3%;
+        font-size: 1.5em;
+      }
+      .accordion-content{
+        .content-text{
+          font-size: 1.5em;
+          padding: 5% 10%;
+        }
+        .content-image{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          padding: 5% 0;
+          img{
+            box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.75);
+          }
+        }
+      }
+      .open{
+        display: block;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 64em) {
   .history-container {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -272,6 +499,7 @@
         object-fit: contain;
         width: 10%;
         height: 10%;
+        transform: rotate(0deg);
         img{
           width: 100%;
         }
@@ -330,11 +558,77 @@
         font-size: 1.7em;
         color: white;
         li{
+          margin: 0% 0;
           cursor: pointer;
         }
         li:hover{
           color: #ECB004;
         }
+      }
+    }
+  }
+
+  .general-objetive-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    .general-objetive-info{
+      .general-objetive-title{
+        padding: 4% 0% 1.5% 20%;
+        font-size: 1.9em;
+      }
+      .general-objetive-text{
+        padding: 1.5% 0% 4% 20%;
+        font-size: 1.7em;
+      }
+    }
+    .general-objetive-logo{
+      width: 90%;
+      img{
+        width: 90%;
+      }
+    }
+  }
+
+  .accordion{
+    .accordion-item{
+      .accordion-header{
+        text-align: center;
+        background-color: #00b1da;
+        background-image: linear-gradient(to bottom right, #00b1da, #7C664A);
+        font-family: 'IsidoraBlack';
+        color: white;
+        padding: 2%;
+        font-size: 1.6em;
+        cursor: pointer;
+      }
+      .accordion-content{
+        background-image: linear-gradient(to bottom right, #FFB000, #87b800);
+        display: none;
+        overflow: hidden;
+        width: 100%;
+        .content-text{
+          font-family: 'IsidoraSemiBold';
+          text-align: justify;
+          font-size: 1.3em;
+          padding: 5% 15%;
+        }
+        .content-image{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          padding: 2% 0;
+          img{
+            width: 25%;
+            border-radius: 100%;
+            box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.75);
+          }
+        }
+      }
+      .open{
+        display: block;
       }
     }
   }
