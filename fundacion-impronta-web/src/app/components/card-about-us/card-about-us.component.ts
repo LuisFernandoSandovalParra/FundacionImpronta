@@ -46,19 +46,19 @@ export class CardAboutUsComponent {
 
   accordionItems: Item[] = [
     {
-      title: 'Objetivo especifico 1',
+      title: 'Objetivo particular 1',
       text: 'Propiciar espacios que permitan el diseño, aplicación y evaluación de programas y proyectos a favor de la salud física y mental en relación con las habilidades para la vida de la primera infancia, que se ajusten a las características personales, familiares y sociales del ciclo vital al que pertenece esta población.',
       image: '../../../assets/images/objetivo-especifico-1.svg',
       open: false
     },
     {
-      title: 'Objetivo específico 2',
+      title: 'Objetivo particular 2',
       text: 'Favorecer escenarios de promoción de la salud física y mental en relación con las habilidades para la vida, de las poblaciones vulnerables por condiciones o situaciones particulares, teniendo en cuenta las características personales, familiares, sociales y culturales de las mismas. ',
       image: '../../../assets/images/objetivo-especifico-2.svg',
       open: false
     },
     {
-      title: 'Objetivo específico 3',
+      title: 'Objetivo particular 3',
       text: 'Generar estrategias que, desde las características propias de su ciclo vital, promuevan la salud física y mental del adulto mayor en relación con las habilidades para la vida. ',
       image: '../../../assets/images/objetivo-especifico-3.svg',
       open: false

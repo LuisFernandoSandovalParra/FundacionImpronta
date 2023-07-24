@@ -19,10 +19,14 @@ export class NavbarComponent implements OnInit{
   }
 
   goToInit(){
-    this.router.navigate(['/inicio'])
+    this.router.navigate(['/inicio']);
   }
 
   goToAboutUs(){
-    this.router.navigate(['/nosotros'])
+    this.router.navigate(['/nosotros']);
+  }
+
+  goToProjects(){
+    this.router.navigate(['/proyectos']);
   }
 }

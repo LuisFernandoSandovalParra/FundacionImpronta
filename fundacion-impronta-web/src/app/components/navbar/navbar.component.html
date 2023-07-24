@@ -14,7 +14,7 @@
     <ul>
       <li><a (click)="toogleMenu()" [routerLink]="['inicio']" routerLinkActive="active" href="">Inicio</a></li>
       <li><a (click)="toogleMenu()" [routerLink]="['nosotros']" routerLinkActive="active" href="">Nosotros</a></li>
-      <li><a href="">Proyectos</a></li>
+      <li><a (click)="toogleMenu()" [routerLink]="['proyectos']" routerLinkActive="active" href="">Proyectos</a></li>
       <li><a href="">Contactanos</a></li>
     </ul>
     <div>
@@ -36,7 +36,7 @@
       <ul>
         <li><a [routerLink]="['inicio']" href="">Inicio</a></li>
         <li><a [routerLink]="['nosotros']" href="">Nosotros</a></li>
-        <li><a href="">Proyectos</a></li>
+        <li><a [routerLink]="['proyectos']" href="">Proyectos</a></li>
         <li><a href="">Contactanos</a></li>
       </ul>
     </nav>

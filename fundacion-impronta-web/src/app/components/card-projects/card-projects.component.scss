@@ -1,0 +1,830 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.general-tricycle-container{
+  display: none;
+  &.activeGeneralTricycleContainer{
+    display: block;
+  }
+}
+.tricycle-container {
+  display: flex;
+  background-color: #81a10d;
+  width: 100%;
+  .tricycle-info {
+    width: 100%;
+    .tricycle-title {
+      width: 100%;
+      font-family: "IsidoraBlack";
+      color: white;
+      font-size: 1.5em;
+      text-align: center;
+      padding: 10% 0;
+    }
+    .tricycle-text {
+      font-family: "IsidoraSemiBold";
+      color: white;
+      font-size: 1.3em;
+      text-align: justify;
+      padding: 0 15%;
+    }
+    .tricycle-more-info-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      padding: 10% 0;
+      button {
+        font-family: "IsidoraBlack";
+        background-color: #ffb000;
+        color: white;
+        border: 1px solid #ffb000;
+        border-radius: 50px;
+        padding: 0 0.5em;
+        font-size: 1.5em;
+      }
+      button:hover {
+        background-color: #00abd3;
+      }
+    }
+  }
+}
+.tri-container {
+  display: flex;
+  flex-direction: column-reverse;
+  .tri-image {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    img {
+      width: 80%;
+    }
+  }
+  .tri-info {
+    .tri-title {
+      width: 100%;
+      text-align: center;
+      font-family: "IsidoraBlack";
+      font-size: 1.5em;
+      color: #00a9d1;
+      padding: 8% 0;
+    }
+    .tri-description {
+      font-family: "IsidoraSemiBold";
+      font-size: 1.3em;
+      padding: 5% 10%;
+    }
+    .tri-allies {
+      font-family: "IsidoraSemiBold";
+      font-size: 1.3em;
+      padding: 2% 15%;
+      .tri-allies-title {
+        font-family: "IsidoraBlack";
+      }
+    }
+  }
+}
+.separator-container{
+  padding: 5%;
+  .separator-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    img{
+      width: 20%;
+    }
+  }
+  hr{
+    border: 2px solid #81a10d;
+  }
+}
+.ci-container {
+  display: flex;
+  flex-direction: column;
+  .ci-image {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    img {
+      width: 80%;
+    }
+  }
+  .ci-info {
+    .ci-title {
+      width: 100%;
+      text-align: center;
+      font-family: "IsidoraBlack";
+      font-size: 1.5em;
+      color: #F41B83;
+      padding: 8% 0;
+    }
+    .ci-description {
+      font-family: "IsidoraSemiBold";
+      font-size: 1.3em;
+      padding: 5% 10%;
+    }
+    .ci-allies {
+      font-family: "IsidoraSemiBold";
+      font-size: 1.3em;
+      padding: 2% 15%;
+      .ci-allies-title {
+        font-family: "IsidoraBlack";
+      }
+    }
+  }
+}
+.separator-two-container{
+  padding: 5%;
+  .separator-two-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    img{
+      width: 20%;
+    }
+  }
+  hr{
+    border: 2px solid #E91A7D;
+  }
+}
+.clo-container {
+  display: flex;
+  flex-direction: column-reverse;
+  .clo-image {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    img {
+      width: 80%;
+    }
+  }
+  .clo-info {
+    .clo-title {
+      width: 100%;
+      text-align: center;
+      font-family: "IsidoraBlack";
+      font-size: 1.5em;
+      color: #B0B900;
+      padding: 8% 0;
+    }
+    .clo-description {
+      font-family: "IsidoraSemiBold";
+      font-size: 1.3em;
+      padding: 5% 10%;
+    }
+    .clo-allies {
+      font-family: "IsidoraSemiBold";
+      font-size: 1.3em;
+      padding: 2% 15%;
+      .clo-allies-title {
+        font-family: "IsidoraBlack";
+      }
+    }
+  }
+}
+.tricycle-structure-container{
+  .phrase-and-logo{
+    padding: 2%;
+    .phrase{
+      font-family: 'IsidoraBlack';
+      color: #303030;
+      text-align: center;
+    }
+    .logo{
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      width: 100%;
+      img{
+        width: 70%;
+      }
+    }
+  }
+  .wheels-and-pedals{
+    padding: 0 10%;
+    .wheels{
+      background-color: #B0B900;
+      border: 2px solid #B0B900;
+      border-radius: 20px;
+      margin: 5% 0;
+      .wheels-title{
+        font-family: 'IsidoraBlack';
+        font-size: 2em;
+        text-align: center;
+        color:#B0B900;
+        -webkit-text-stroke: 3px white;
+        }
+      .wheels-text{
+        padding: 8%;
+        font-family: 'IsidoraSemiBold';
+        font-size: 1.3em;
+        text-align: justify;
+      }
+    }
+    .pedals{
+      background-color: #B0B900;
+      border: 2px solid #B0B900;
+      border-radius: 20px;
+      margin: 10% 0;
+      .pedals-title{
+        font-family: 'IsidoraBlack';
+        font-size: 2em;
+        text-align: center;
+        color:#B0B900;
+        -webkit-text-stroke: 3px white;
+        }
+      .pedals-text{
+        padding: 8%;
+        font-family: 'IsidoraSemiBold';
+        font-size: 1.3em;
+        text-align: justify;
+      }
+    }
+  }
+}
+.habilities-container{
+  .habilities-phrase{
+      font-family: 'IsidoraBlack';
+      color: #303030;
+      text-align: center;
+  }
+  .habilities{
+    text-align: center;
+    padding: 0% 10%;
+    .hability-title{
+      text-align: center;
+      font-family: 'IsidoraBlack';
+      color: white;
+      font-size: 1.3em;
+    }
+    .hability{
+      border-radius: 20px;
+      padding: 5% 15%;
+      text-align: left;
+      font-family: 'IsidoraSemiBold';
+      color:white;
+      font-size: 1.5em;
+      margin: 10% 0;
+      ul{
+        padding: 5%;
+      }
+    }
+    .emotional{
+      background-color: #00ABD3;
+    }
+    .social{
+      background-color: #F01B83;
+    }
+    .cognitive{
+      background-color: #FEB100;
+    }
+  }
+}
+
+.color-container{
+  background-image: url("../../../assets/images/Color-banner.svg");
+  background-size: cover;
+  background-position: right;
+  padding: 10%;
+  .color-info{
+    text-align: center;
+    .color-title{
+      font-family: 'IsidoraBlack';
+      color: white;
+      font-size: 2.4em;
+    }
+    .color-text{
+      font-family: 'IsidoraSemiBold';
+      color: white;
+      font-size: 1.7em;
+      text-align: justify;
+    }
+  }
+}
+
+.to-sa-bri-container{
+  margin: 10%;
+  .to-sa-bri{
+    display: flex;
+    border: 2px;
+    flex-direction: column;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 5% 0;
+    .color-box{
+      border: 30px solid white;
+      border-radius: 12px;
+      width: 150px;
+      height: 150px;
+      margin: 10%;
+    }
+    .to-sa-bri-info{
+      .to-sa-bri-title{
+        font-family: 'IsidoraBlack';
+        font-size: 2em;
+        text-align: center;
+      }
+      .to-sa-bri-description{
+        font-family: 'IsidoraSemiBold';
+        font-size: 1.2em;
+        text-align: justify;
+        padding: 10%;
+      }
+    }
+  }
+  .tone{
+    color:#4C0024;
+    background-color: #F01B83;
+  }
+  .tone-box{
+    background-color: #FEB100;
+  }
+  .saturation{
+    color: #3C3C00;
+    background-color: #B0B900;
+  }
+  .saturation-box{
+    background-image: linear-gradient(to bottom, white, #F01B83);
+  }
+  .glow{
+    color: #003742;
+    background-color: #00ABD3;
+  }
+  .glow-box{
+    background-image: linear-gradient(to top, black, #B0B900, white);
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .tricycle-container {
+    background-image: url("../../../assets/images/TricicloPosterPrincipal.svg");
+    background-size: cover;
+    background-position: right;
+    .tricycle-info {
+      .tricycle-title {
+        text-align: left;
+        font-size: 2em;
+        padding: 0% 0%;
+        h1 {
+          padding: 6% 6%;
+        }
+      }
+      .tricycle-text {
+        width: 50%;
+        font-size: 1.7em;
+        padding: 0 6%;
+        color: black;
+      }
+      .tricycle-more-info-btn {
+        padding: 6% 0;
+        button {
+          font-size: 1.8em;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .tri-container {
+    display: flex;
+    flex-direction: column-reverse;
+    .tri-image {
+      display: flex;
+      width: 100%;
+      img {
+        width: 50%;
+      }
+    }
+    .tri-info {
+      width: 100%;
+      .tri-title {
+        width: auto;
+        font-size: 1.7em;
+        padding: 8% 10%;
+      }
+      .tri-description {
+        font-family: "IsidoraSemiBold";
+        font-size: 1.7em;
+        padding: 0 10%;
+      }
+      .tri-allies {
+        font-size: 1.7em;
+        padding: 5% 15%;
+      }
+    }
+  }
+  .separator-container{
+    padding: 5% 20%;
+    .separator-image{
+      img{
+        width: 20%;
+      }
+    }
+  }
+  .ci-container {
+    display: flex;
+    flex-direction: column;
+    .ci-image {
+      width: 100%;
+      img {
+        width: 50%;
+      }
+    }
+    .ci-info {
+      width: 100%;
+      .ci-title {
+        width: auto;
+        font-size: 1.7em;
+        color: #F41B83;
+        padding: 8% 10%;
+      }
+      .ci-description {
+        font-size: 1.7em;
+        padding: 0 10%;
+      }
+      .ci-allies {
+        font-size: 1.7em;
+        padding: 5% 15%;
+      }
+    }
+  }
+  .separator-two-container{
+    padding: 5% 20%;
+    .separator-two-image{
+      img{
+        width: 20%;
+      }
+    }
+  }
+  .clo-container {
+    display: flex;
+    flex-direction: column-reverse;
+    .clo-image {
+      display: flex;
+      width: 100%;
+      img {
+        width: 50%;
+      }
+    }
+    .clo-info {
+      width: 100%;
+      .clo-title {
+        width: auto;
+        font-size: 1.7em;
+        padding: 8% 10%;
+      }
+      .clo-description {
+        font-family: "IsidoraSemiBold";
+        font-size: 1.7em;
+        padding: 0 10%;
+      }
+      .clo-allies {
+        font-size: 1.7em;
+        padding: 5% 15%;
+      }
+    }
+  }
+  .tricycle-structure-container{
+    .phrase-and-logo{
+      padding: 5%;
+      .phrase{
+        font-size: 2em;
+      }
+      .logo{
+        width: 100%;
+        img{
+          width: 40%;
+        }
+      }
+    }
+    .wheels-and-pedals{
+      display: flex;
+      padding: 0 10%;
+      margin: 0 0 5% 0;
+      .wheels{
+        margin: 0 4%;
+        width: 50%;
+        .wheels-title{
+          font-size: 2.7em;
+        }
+        .wheels-text{
+          font-size: 1.7em;
+        }
+      }
+      .pedals{
+        margin: 0 4%;
+        width: 50%;
+        .pedals-title{
+          font-size: 2.7em;
+          }
+        .pedals-text{
+          font-size: 1.7em;
+        }
+      }
+    }
+  }
+  .habilities-container{
+    .habilities-phrase{
+        font-size: 2em;
+    }
+    .habilities{
+      text-align: center;
+      padding: 0% 10%;
+      .hability-title{
+        font-size: 1.5em;
+      }
+      .hability{
+        padding: 5% 10%;
+        font-size: 1.7em;
+        margin: 7% 10%;
+        ul{
+          padding: 3%;
+        }
+      }
+    }
+  }
+  .color-container{
+    background-position: right;
+    padding: 10%;
+    .color-info{
+      width: 50%;
+      .color-title{
+        font-size: 5em;
+      }
+      .color-text{
+        font-size: 1.7em;
+        text-align: justify;
+      }
+    }
+  }
+  .to-sa-bri-container{
+    margin: 10%;
+    .to-sa-bri{
+      flex-direction: row;
+      .color-box{
+        width: 150px;
+        height: 150px;
+        margin: 10% 0% 10% 5%;
+        width:40%;
+      }
+      .to-sa-bri-info{
+        width: 100%;
+        .to-sa-bri-title{
+          font-family: 'IsidoraBlack';
+          font-size: 2em;
+          text-align: center;
+        }
+        .to-sa-bri-description{
+          font-family: 'IsidoraSemiBold';
+          font-size: 1.2em;
+          text-align: justify;
+          padding: 5%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .tricycle-container {
+    background-image: url("../../../assets/images/TricicloPosterPrincipal.svg");
+    background-size: cover;
+    background-position: right;
+    .tricycle-info {
+      width: 60%;
+      .tricycle-title {
+        width: auto;
+        font-size: 3.5em;
+        padding: 10% 10% 0 10%;
+      }
+      .tricycle-text {
+        padding: 0 26%;
+        font-size: 1.8em;
+      }
+      .tricycle-more-info-btn {
+        padding: 10% 0 10% 0;
+        button {
+          font-size: 2em;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .tri-container {
+    display: flex;
+    flex-direction: row;
+    padding: 5% 8% 0% 8%;
+    .tri-image {
+      width: 100%;
+      img {
+        width: 90%;
+      }
+    }
+    .tri-info {
+      width: 100%;
+      .tri-title {
+        width: auto;
+        font-size: 1.9em;
+        color: #00a9d1;
+        padding: 0%;
+      }
+      .tri-description {
+        font-size: 1.7em;
+        padding: 5% 10%;
+      }
+      .tri-allies {
+        font-size: 1.7em;
+        padding: 5% 15%;
+      }
+    }
+  }
+  .separator-container{
+    padding: 0 25%;
+    .separator-image{
+      img{
+        width: 15%;
+      }
+    }
+  }
+  .ci-container {
+    display: flex;
+    flex-direction: row;
+    padding: 5% 8% 0% 8%;
+    .ci-image {
+      width: 100%;
+      img {
+        width: 90%;
+      }
+    }
+    .ci-info {
+      width: 100%;
+      .ci-title {
+        width: auto;
+        font-size: 1.9em;
+        color: #F41B83;
+        padding: 0%;
+      }
+      .ci-description {
+        font-size: 1.7em;
+        padding: 5% 10%;
+      }
+      .ci-allies {
+        font-size: 1.7em;
+        padding: 5% 15%;
+      }
+    }
+  }
+  .separator-two-container{
+    padding: 0 25%;
+    .separator-two-image{
+      img{
+        width: 15%;
+      }
+    }
+  }
+  .clo-container {
+    display: flex;
+    flex-direction: row;
+    padding: 5% 8% 0% 8%;
+    .clo-image {
+      width: 100%;
+      img {
+        width: 90%;
+      }
+    }
+    .clo-info {
+      width: 100%;
+      .clo-title {
+        width: auto;
+        font-size: 1.9em;
+        color: #00a9d1;
+        padding: 0%;
+      }
+      .clo-description {
+        font-size: 1.7em;
+        padding: 5% 10%;
+      }
+      .clo-allies {
+        font-size: 1.7em;
+        padding: 5% 15%;
+      }
+    }
+  }
+  .tricycle-structure-container{
+    .phrase-and-logo{
+      padding: 5% 5% 0 5%;
+      .phrase{
+        font-size: 2em;
+      }
+      .logo{
+        width: 100%;
+        img{
+          width: 20%;
+        }
+      }
+    }
+    .wheels-and-pedals{
+      display: flex;
+      padding: 0 10%;
+      .wheels{
+        margin: 0 4%;
+        width: 50%;
+        .wheels-title{
+          font-size: 2.9em;
+        }
+        .wheels-text{
+          font-size: 1.7em;
+        }
+      }
+      .pedals{
+        margin: 0 4%;
+        width: 50%;
+        .pedals-title{
+          font-size: 2.9em;
+          }
+        .pedals-text{
+          font-size: 1.7em;
+        }
+      }
+    }
+  }
+  .habilities-container{
+    width: 100%;
+    .habilities-phrase{
+      padding: 5cqi;
+      font-size: 2em;
+    }
+    .habilities{
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      text-align: center;
+      padding: 0%;
+      margin: 0% 10%;
+      .hability-title{
+        font-size: 1.5em;
+        padding: 6% 0;
+      }
+      .hability{
+        width: 100%;
+        padding: 0;
+        font-size: 1.8em;
+        margin: 1.5%;
+        ul{
+          padding: 4% 20%;
+        }
+      }
+    }
+  }
+  .color-container{
+    justify-content: left;
+    padding: 8%;
+    margin: 5% 0;
+    .color-info{
+      width: 50%;
+      .color-title{
+        font-size: 5em;
+      }
+      .color-text{
+        padding: 0 0 0 25%;
+      }
+    }
+  }
+  .to-sa-bri-container{
+    margin: 10%;
+    .to-sa-bri{
+      flex-direction: row;
+      .color-box{
+        width: 200px;
+        height: 200px;
+        margin: 5% 0% 5% 5%;
+        width: 25%;
+      }
+      .to-sa-bri-info{
+        width: 100%;
+        .to-sa-bri-title{
+          font-family: 'IsidoraBlack';
+          font-size: 2.3em;
+          text-align: left;
+          padding: 0 5%;
+        }
+        .to-sa-bri-description{
+          font-family: 'IsidoraSemiBold';
+          font-size: 1.8em;
+          text-align: justify;
+          padding: 2% 5%;
+        }
+      }
+    }
+  }
+}

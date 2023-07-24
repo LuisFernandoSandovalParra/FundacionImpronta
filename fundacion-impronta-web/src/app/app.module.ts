@@ -9,6 +9,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { CardinfoComponent } from './components/cardinfo/cardinfo.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardAboutUsComponent } from './components/card-about-us/card-about-us.component';
+import { CardProjectsComponent } from './components/card-projects/card-projects.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CardAboutUsComponent } from './components/card-about-us/card-about-us.c
     SliderComponent,
     CardinfoComponent,
     FooterComponent,
-    CardAboutUsComponent
+    CardAboutUsComponent,
+    CardProjectsComponent
   ],
   imports: [
     BrowserModule,
