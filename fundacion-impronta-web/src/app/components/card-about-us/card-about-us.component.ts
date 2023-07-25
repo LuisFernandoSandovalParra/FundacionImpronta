@@ -85,6 +85,5 @@ export class CardAboutUsComponent {
 
   toogleAccordion(item: Item){
     item.open = !item.open;
-    console.log(item.open)
   }
 }

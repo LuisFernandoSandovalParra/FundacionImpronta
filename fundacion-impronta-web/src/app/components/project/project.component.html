@@ -1,0 +1,101 @@
+<div class="general-container" [class.activeInfo] = "activeMoreInfoProject">
+  <div class="general-title">
+    <h2>Proyectos en marcha</h2>
+  </div>
+  <div class="projects-container">
+    <div *ngFor="let project of projects" class="project">
+      <div class="project-image">
+        <img [src]="project.image" [alt]="project.title" />
+      </div>
+      <div class="project-title">
+        <h3>{{ project.title }}</h3>
+      </div>
+      <div class="project-description">
+        <p>{{ project.abstract }}</p>
+      </div>
+      <div class="project-progress-bar">
+        <div class="progress-title">
+          <h4>Presupuesto</h4>
+        </div>
+        <progress
+          [value]="calculateProgressProject(project.id)"
+          max="100"
+        ></progress>
+        <div class="progress-text">
+          {{ covertToMoney(project.current_budget, "COP") }} /
+          {{ covertToMoney(project.expected_budget, "COP") }}
+        </div>
+      </div>
+      <div class="btns">
+        <button (click)="showMoreProjectInfo(project.id)" class="btn-show-more">Ver mas</button>
+        <button class="btn-donate">Donar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="projectEsp" class="specific-project-container" [class.activeInfo] = "activeMoreInfoProject">
+  <div class="btn-back">
+    <button (click)="showAllProjects()"><img src="../../../assets/svg/back-row-icon.svg" alt="Volver"></button>
+  </div>
+  <div class="title-project-info">
+    <h1>{{currentProject.title}}</h1>
+  </div>
+  <div class="project-video">
+    <iframe
+      [src] = "getCurrentVideoUrl()"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="description-project-info">
+    <h2>Descripción: </h2>
+    <p>{{currentProject.description}}</p>
+  </div>
+  <div class="topic-project-info">
+    <h2>Tema del proyecto:</h2>
+    <p>{{currentProject.topic}}</p>
+  </div>
+  <div class="problematic-project-info">
+    <h2>Problematica:</h2>
+    <p>{{currentProject.problematic}}</p>
+  </div>
+  <div class="proposal-project-info">
+    <h2>Propuesta:</h2>
+    <p>{{currentProject.proposal}}</p>
+  </div>
+  <div class="population-project-info">
+    <h2>Poblacion:</h2>
+    <p>{{currentProject.population}}</p>
+  </div>
+  <div class="place-application-project-info">
+    <h2>Lugar de aplicación:</h2>
+    <p>{{currentProject.place_application}}</p>
+  </div>
+  <div class="representative-project-info">
+    <h2>Representante del proyecto:</h2>
+    <p>{{currentProject.representative}}</p>
+  </div>
+  <div class="expected-budget-project-info">
+    <h2>Presupuesto para ejecutar el proyecto:</h2>
+    <p>{{convertToCop(currentProject.expected_budget)}}</p>
+  </div>
+  <div class="project-progress-bar">
+    <h2>Presupuesto actual:</h2>
+    <div class="progress-title">
+    </div>
+    <progress
+      [value]="calculateProgressProject(currentProject.id)"
+      max="100"
+    ></progress>
+    <div class="progress-text">
+      {{ covertToMoney(currentProject.current_budget, "COP") }} /
+      {{ covertToMoney(currentProject.expected_budget, "COP") }}
+    </div>
+  </div>
+  <div class="btn-donation">
+    <button>Donar</button>
+  </div>
+</div>

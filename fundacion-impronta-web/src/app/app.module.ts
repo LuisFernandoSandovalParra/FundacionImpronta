@@ -10,6 +10,8 @@ import { CardinfoComponent } from './components/cardinfo/cardinfo.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardAboutUsComponent } from './components/card-about-us/card-about-us.component';
 import { CardProjectsComponent } from './components/card-projects/card-projects.component';
+import { ProjectComponent } from './components/project/project.component';
+import { CardContactUsComponent } from './components/card-contact-us/card-contact-us.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { CardProjectsComponent } from './components/card-projects/card-projects.
     CardinfoComponent,
     FooterComponent,
     CardAboutUsComponent,
-    CardProjectsComponent
+    CardProjectsComponent,
+    ProjectComponent,
+    CardContactUsComponent
   ],
   imports: [
     BrowserModule,

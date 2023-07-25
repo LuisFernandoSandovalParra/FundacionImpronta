@@ -610,6 +610,7 @@
         width: 100%;
         justify-content: center;
         flex-direction: row;
+        transition: all .5;
         .content-text{
           font-family: 'IsidoraSemiBold';
           text-align: justify;

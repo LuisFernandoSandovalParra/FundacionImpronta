@@ -7,14 +7,15 @@ import { Component } from '@angular/core';
 })
 export class CardProjectsComponent {
   activeTricycleInfo: boolean = false;
-  textBtnReadMore: string = "Ver mas";
+  textBtnReadMore: string = 'Ver mas';
 
-  toogleTricycleInfo(){
+
+  toogleTricycleInfo() {
     this.activeTricycleInfo = !this.activeTricycleInfo;
-    if(this.activeTricycleInfo){
-      this.textBtnReadMore = "Ver menos";
-    }else{
-      this.textBtnReadMore = "Ver mas";
+    if (this.activeTricycleInfo) {
+      this.textBtnReadMore = 'Ver menos';
+    } else {
+      this.textBtnReadMore = 'Ver mas';
     }
   }
 }
