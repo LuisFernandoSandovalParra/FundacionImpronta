@@ -2,6 +2,28 @@
   margin: 0;
   padding: auto;
 }
+@font-face {
+  font-family: 'IsidoraBlack';
+  src: url('./assets/fonts/Isidora Soft Black.otf');
+}
+
+@font-face {
+  font-family: 'IsidoraSemiBold';
+  src: url('./assets/fonts/IsidoraSansSemiBold.otf');
+}
+
+body{
+  margin: 0;
+}
+
+strong{
+  font-family: 'IsidoraBlack';
+}
+
+button{
+  cursor: pointer;
+}
+
 .general-container {
   background-image: linear-gradient(to bottom, #04a9d0, white);
   &.activeInfo {

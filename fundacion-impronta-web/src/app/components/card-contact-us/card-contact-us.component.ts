@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-contact-us.component.scss']
 })
 export class CardContactUsComponent {
+  name: string = "";
+  phone: number = 0;
+  email: string = "";
+  message: string = "";
 
+
+
+  sendEmail(){}
 }

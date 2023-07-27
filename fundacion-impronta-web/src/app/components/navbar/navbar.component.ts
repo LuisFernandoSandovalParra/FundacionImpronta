@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,24 +8,11 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit{
   activeMenu = false;
 
-  constructor(private router: Router){
-  }
+  constructor(){}
 
   ngOnInit(): void {}
 
   toogleMenu(){
     this.activeMenu = !this.activeMenu;
-  }
-
-  goToInit(){
-    this.router.navigate(['/inicio']);
-  }
-
-  goToAboutUs(){
-    this.router.navigate(['/nosotros']);
-  }
-
-  goToProjects(){
-    this.router.navigate(['/proyectos']);
   }
 }

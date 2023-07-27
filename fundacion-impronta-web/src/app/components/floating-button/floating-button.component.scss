@@ -1,0 +1,60 @@
+.floating-button-container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+.floating-button{
+  width: 50px; /* Ajusta el tamaño del botón según tus necesidades */
+  height: 50px; /* Ajusta el tamaño del botón según tus necesidades */
+  border-radius: 50%; /* Hace que el botón tenga forma de círculo */
+  background-color: #00ABD3; /* Cambia el color de fondo del botón si lo deseas */
+  border: none; /* Quita el borde para que el botón sea redondo */
+  padding: 0; /* Quita el padding para que la imagen ocupe todo el espacio del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón para indicar que es interactivo */
+  overflow: hidden; /* Asegura que la imagen no sobresalga del botón */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+}
+
+.floating-button:hover{
+  background-color: #F21B83;
+}
+
+.floating-button img{
+  width: 60%; /* Asegura que la imagen ocupe todo el espacio del botón */
+  height: 60%; /* Asegura que la imagen ocupe todo el espacio del botón */
+  object-fit: cover;
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .floating-button-container {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .floating-button{
+    width: 70px; /* Ajusta el tamaño del botón según tus necesidades */
+    height: 70px; /* Ajusta el tamaño del botón según tus necesidades */
+  }
+  .floating-button img{
+    width: 80%; /* Asegura que la imagen ocupe todo el espacio del botón */
+    height: 80%; /* Asegura que la imagen ocupe todo el espacio del botón */
+  }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+  .floating-button-container {
+    bottom: 20px;
+    right: 20px;
+  }
+  .floating-button{
+    width: 70px; /* Ajusta el tamaño del botón según tus necesidades */
+    height: 70px; /* Ajusta el tamaño del botón según tus necesidades */
+  }
+  .floating-button img{
+    width: 80%; /* Asegura que la imagen ocupe todo el espacio del botón */
+    height: 80%; /* Asegura que la imagen ocupe todo el espacio del botón */
+  }
+}

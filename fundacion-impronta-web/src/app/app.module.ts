@@ -12,6 +12,8 @@ import { CardAboutUsComponent } from './components/card-about-us/card-about-us.c
 import { CardProjectsComponent } from './components/card-projects/card-projects.component';
 import { ProjectComponent } from './components/project/project.component';
 import { CardContactUsComponent } from './components/card-contact-us/card-contact-us.component';
+import { FormsModule } from '@angular/forms';
+import { FloatingButtonComponent } from './components/floating-button/floating-button.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +26,13 @@ import { CardContactUsComponent } from './components/card-contact-us/card-contac
     CardAboutUsComponent,
     CardProjectsComponent,
     ProjectComponent,
-    CardContactUsComponent
+    CardContactUsComponent,
+    FloatingButtonComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

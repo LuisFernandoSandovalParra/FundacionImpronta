@@ -1,3 +1,22 @@
+@font-face {
+  font-family: 'IsidoraBlack';
+  src: url('../../../assets/fonts/Isidora Soft Black.otf');
+}
+
+@font-face {
+  font-family: 'IsidoraSemiBold';
+  src: url('../../../assets/fonts/IsidoraSansSemiBold.otf');
+}
+
+body{
+  margin: 0;
+}
+
+strong{
+  font-family: 'IsidoraBlack';
+}
+
+
 *{
   padding: 0;
   margin: 0;
@@ -41,12 +60,18 @@
       justify-content: center;
       gap:0.6em;
       padding: 0.3em;
+      img{
+        width: 7%;
+      }
     }
     .phone{
       display: flex;
       justify-content: center;
       gap:0.6em;
       padding: 0.4em;
+      img{
+        width: 7%;
+      }
     }
   }
   .rights{
@@ -72,6 +97,16 @@
     .info-bar{
       font-size: 1.5em;
       padding: 5%;
+      .email{
+        img{
+          width: 5%;
+        }
+      }
+      .phone{
+        img{
+          width: 5%;
+        }
+      }
     }
     .rights{
       font-size: 1.4em;
@@ -115,10 +150,16 @@
       .email{
         margin: 0;
         padding: 0;
+        img{
+          width: 3%;
+        }
       }
       .phone{
         margin: 0;
         padding: 0;
+        img{
+          width: 3%;
+        }
       }
     }
     .rights{

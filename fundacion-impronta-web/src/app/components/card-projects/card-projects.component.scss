@@ -2,6 +2,25 @@
   padding: 0;
   margin: 0;
 }
+
+@font-face {
+  font-family: 'IsidoraBlack';
+  src: url('../../../assets/fonts/Isidora Soft Black.otf');
+}
+
+@font-face {
+  font-family: 'IsidoraSemiBold';
+  src: url('../../../assets/fonts/IsidoraSansSemiBold.otf');
+}
+
+body{
+  margin: 0;
+}
+
+strong{
+  font-family: 'IsidoraBlack';
+}
+
 .general-tricycle-container{
   display: none;
   &.activeGeneralTricycleContainer{

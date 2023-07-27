@@ -3,6 +3,24 @@
   margin: 0;
 }
 
+@font-face {
+  font-family: 'IsidoraBlack';
+  src: url('../../../assets/fonts/Isidora Soft Black.otf');
+}
+
+@font-face {
+  font-family: 'IsidoraSemiBold';
+  src: url('../../../assets/fonts/IsidoraSansSemiBold.otf');
+}
+
+body{
+  margin: 0;
+}
+
+strong{
+  font-family: 'IsidoraBlack';
+}
+
 .history-container {
   display: flex;
   justify-content: center;
@@ -218,9 +236,10 @@
 
 .accordion{
   width: 100%;
-  background-color: #ECB004;
+  background-image: linear-gradient(to top, white, #00b1da, white);
   .accordion-item{
-    border:2px solid #afb800;
+    margin: 10%;
+    border-radius: 20px;
     .accordion-header{
       text-align: center;
       background-color: #00b1da;
@@ -229,12 +248,14 @@
       color: white;
       padding: 5%;
       font-size: 1.3em;
+      border-radius: 20px;
       cursor: pointer;
     }
     .accordion-content{
-      background-image: linear-gradient(to bottom right, #FFB000, #87b800);
+      background-image: linear-gradient(to bottom, #00b1da, #ecb004);
       display: none;
       overflow: hidden;
+      border-radius: 20px;
       width: 100%;
       .content-text{
         font-family: 'IsidoraSemiBold';
@@ -387,11 +408,13 @@
 
   .accordion{
     .accordion-item{
+      margin: 3% 10%;
       .accordion-header{
         padding: 3%;
         font-size: 1.5em;
       }
       .accordion-content{
+        background-image: linear-gradient(to bottom, #00b1da, #ecb004);
         .content-text{
           font-size: 1.5em;
           padding: 5% 10%;
@@ -560,9 +583,11 @@
         li{
           margin: 0% 0;
           cursor: pointer;
+          transition: all 0.5s;
         }
         li:hover{
           color: #ECB004;
+          transform: translatex(10px);
         }
       }
     }
@@ -593,6 +618,7 @@
 
   .accordion{
     .accordion-item{
+      margin: 2% 20%;
       .accordion-header{
         text-align: center;
         background-color: #00b1da;
@@ -604,7 +630,7 @@
         cursor: pointer;
       }
       .accordion-content{
-        background-image: linear-gradient(to bottom right, #FFB000, #87b800);
+        background-image: linear-gradient(to bottom, #00b1da, #ecb004);
         display: none;
         overflow: hidden;
         width: 100%;

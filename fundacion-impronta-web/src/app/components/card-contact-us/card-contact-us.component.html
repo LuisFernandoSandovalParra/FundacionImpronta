@@ -11,25 +11,27 @@
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
+      <div class="direction">
+        <img src="../../../assets/svg/location-icon.svg" alt="Ubicación">
+        <p>Av. Universitaria No. 38 - 46, Piso 4. Tunja (Boyacá).</p>
+      </div>
     </div>
     <div class="contact-form">
       <div class="title-form">
-        <h2>Formulario de contácto</h2>
+        <h2>FORMULARIO DE CONTACTO</h2>
       </div>
-      <input type="text" placeholder="Nombre" required>
-      <input type="number" placeholder="Telefono" required>
-      <input type="email" placeholder="Email" required>
-      <input type="text" placeholder="Mensaje" required>
-      <button type="submit">Enviar</button>
+      <form (ngSubmit)="sendEmail()">
+        <input type="text" [(ngModel)]="name" placeholder="Nombre" required/>
+        <input type="number" [(ngModel)]="phone" placeholder="Telefono" required />
+        <input type="email" [(ngModel)]="email" placeholder="Email" required />
+        <textarea name="message" [(ngModel)]="message" cols="21" rows="10" placeholder="Mensaje"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
     </div>
   </div>
   <div class="aditional-info">
-    <div class="direction">
-      <img src="" alt="">
-      <p>Av. Universitaria No. 38 - 46, Piso 4.</p>
-    </div>
     <div class="phone">
-      <img src="" alt="">
+      <img src="../../../assets/svg/phone-white-icon.svg" alt="Telefono">
       <p>311 889 9277</p>
     </div>
   </div>
