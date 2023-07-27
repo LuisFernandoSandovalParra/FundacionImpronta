@@ -619,6 +619,7 @@ strong{
   .accordion{
     .accordion-item{
       margin: 2% 20%;
+      transition: all 0.25s;
       .accordion-header{
         text-align: center;
         background-color: #00b1da;
@@ -659,6 +660,10 @@ strong{
       .open{
         display: flex;
       }
+    }
+    .accordion-item:hover{
+      transform: translateY(-10px);
+      box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.4);
     }
   }
 }

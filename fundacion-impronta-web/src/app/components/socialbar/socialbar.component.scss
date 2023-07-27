@@ -1,11 +1,17 @@
-.main-container{
+.main-container {
   display: flex;
   margin: 0;
-  padding:0.5em;
-  background-color: #AFB800;
+  padding: 0.5em;
+  background-color: #afb800;
   justify-content: center;
   align-items: right;
-  a{
-    padding: 0.4em
+  a {
+    padding: 0.4em;
+    img {
+      transition: all 0.25s;
+    }
+    img:hover {
+      transform: translateY(5px);
+    }
   }
 }

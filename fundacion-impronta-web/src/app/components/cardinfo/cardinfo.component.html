@@ -82,117 +82,114 @@
 
 <div class="sponsors-container">
   <div class="slide-track">
+    <div *ngFor="let patner of patners" class="slide">
+      <a [href]="patner.url_page" target="_blank">
+        <img
+        [src]="patner.url_image"
+        height="{{patner.image_proportion}}"
+        [alt] = "patner.name"
+      />
+      </a>
+    </div>
+    <div *ngFor="let patner of patners" class="slide">
+      <a [href]="patner.url_page" target="_blank">
+        <img
+        [src]="patner.url_image"
+        height="{{patner.image_proportion}}"
+        [alt] = "patner.name"
+      />
+      </a>
+    </div>
+    <!--
     <div class="slide">
       <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png"
-        height="100"
-        width="250"
+        src="../../../assets/images/HSEQ-Logo.png"
+        height="90%"
         alt=""
       />
     </div>
     <div class="slide">
       <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png"
-        height="100"
-        width="250"
+        src="../../../assets/images/Concorde-Logo.png"
+        height="90%"
         alt=""
       />
     </div>
     <div class="slide">
       <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png"
-        height="100"
-        width="250"
+        src="../../../assets/images/Ertrac-Logo.jpg"
+        height="50%"
         alt=""
       />
     </div>
     <div class="slide">
       <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png"
-        height="100"
-        width="250"
+        src="../../../assets/images/1000Sabores-Logo.jpg"
+        height="90%"
         alt=""
       />
     </div>
     <div class="slide">
       <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"
-        height="100"
-        width="250"
+        src="../../../assets/images/Tanit-Logo.png"
+        height= "90%"
         alt=""
       />
     </div>
     <div class="slide">
       <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png"
-        height="100"
-        width="250"
+        src="../../../assets/images/Deus-Logo.png"
+        height="90%"
         alt=""
       />
-    </div>
-    <div class="slide">
-      <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png"
-        height="100"
-        width="250"
-        alt=""
-      />
-    </div>
-    <div class="slide">
-      <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png"
-        height="100"
-        width="250"
-        alt=""
-      />
-    </div>
-    <div class="slide">
-      <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png"
-        height="100"
-        width="250"
-        alt=""
-      />
-    </div>
-    <div class="slide">
-      <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png"
-        height="100"
-        width="250"
-        alt=""
-      />
-    </div>
-    <div class="slide">
-      <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png"
-        height="100"
-        width="250"
-        alt=""
-      />
-    </div>
-    <div class="slide">
-      <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"
-        height="100"
-        width="250"
-        alt=""
-      />
-    </div>
-    <div class="slide">
-      <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png"
-        height="100"
-        width="250"
-        alt=""
-      />
-    </div>
-    <div class="slide">
-      <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png"
-        height="100"
-        width="250"
-        alt=""
-      />
-    </div>
   </div>
+  <div class="slide">
+    <img
+      src="../../../assets/images/AsociacionTuVida-Logo.png"
+      height="90%"
+    />
+  </div>
+  <div class="slide">
+    <img
+      src="../../../assets/images/HSEQ-Logo.png"
+      height="90%"
+      alt=""
+    />
+  </div>
+  <div class="slide">
+    <img
+      src="../../../assets/images/Concorde-Logo.png"
+      height="90%"
+      alt=""
+    />
+  </div>
+  <div class="slide">
+    <img
+      src="../../../assets/images/Ertrac-Logo.jpg"
+      height="90%"
+      alt=""
+    />
+  </div>
+  <div class="slide">
+    <img
+      src="../../../assets/images/1000Sabores-Logo.jpg"
+      height="90%"
+      alt=""
+    />
+  </div>
+  <div class="slide">
+    <img
+      src="../../../assets/images/Tanit-Logo.png"
+      height="90%"
+      alt=""
+    />
+  </div>
+  <div class="slide">
+    <img
+      src="../../../assets/images/Deus-Logo.png"
+      height="90%"
+      alt=""
+    />
+  </div>
+   -->
 </div>

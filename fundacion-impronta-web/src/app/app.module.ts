@@ -14,6 +14,7 @@ import { ProjectComponent } from './components/project/project.component';
 import { CardContactUsComponent } from './components/card-contact-us/card-contact-us.component';
 import { FormsModule } from '@angular/forms';
 import { FloatingButtonComponent } from './components/floating-button/floating-button.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,14 +28,10 @@ import { FloatingButtonComponent } from './components/floating-button/floating-b
     CardProjectsComponent,
     ProjectComponent,
     CardContactUsComponent,
-    FloatingButtonComponent
+    FloatingButtonComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

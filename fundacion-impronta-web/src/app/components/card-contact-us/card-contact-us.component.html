@@ -21,10 +21,10 @@
         <h2>FORMULARIO DE CONTACTO</h2>
       </div>
       <form (ngSubmit)="sendEmail()">
-        <input type="text" [(ngModel)]="name" placeholder="Nombre" required/>
-        <input type="number" [(ngModel)]="phone" placeholder="Telefono" required />
-        <input type="email" [(ngModel)]="email" placeholder="Email" required />
-        <textarea name="message" [(ngModel)]="message" cols="21" rows="10" placeholder="Mensaje"></textarea>
+        <input type="text" [(ngModel)]="name" name="name" placeholder="Nombre"/>
+        <input type="number" [(ngModel)]="phone" name="phone" placeholder="Telefono" />
+        <input type="email" [(ngModel)]="email" name="email" placeholder="Email"/>
+        <textarea name="message" [(ngModel)]="message" cols="21" rows="10" name="message" placeholder="Mensaje"></textarea>
         <button type="submit">Enviar</button>
       </form>
     </div>
