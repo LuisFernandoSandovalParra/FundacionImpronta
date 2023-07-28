@@ -14,7 +14,11 @@ import { ProjectComponent } from './components/project/project.component';
 import { CardContactUsComponent } from './components/card-contact-us/card-contact-us.component';
 import { FormsModule } from '@angular/forms';
 import { FloatingButtonComponent } from './components/floating-button/floating-button.component';
+import { DialogInfoProjectComponent } from './components/dialog-info-project/dialog-info-project.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -29,8 +33,17 @@ import { HttpClientModule } from '@angular/common/http';
     ProjectComponent,
     CardContactUsComponent,
     FloatingButtonComponent,
+    DialogInfoProjectComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule,
+    MatDialogModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

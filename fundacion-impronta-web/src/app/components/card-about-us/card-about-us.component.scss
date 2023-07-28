@@ -380,9 +380,11 @@ strong{
         li{
           margin: 3% 0;
           cursor: pointer;
+          transition: all 0.5s;
         }
         li:hover{
           color: #ECB004;
+          transform: translatex(10px);
         }
       }
     }
@@ -409,6 +411,7 @@ strong{
   .accordion{
     .accordion-item{
       margin: 3% 10%;
+      transition: all 0.25s;
       .accordion-header{
         padding: 3%;
         font-size: 1.5em;
@@ -433,6 +436,10 @@ strong{
       .open{
         display: block;
       }
+    }
+    .accordion-item:hover{
+      transform: translateY(-10px);
+      box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.4);
     }
   }
 }

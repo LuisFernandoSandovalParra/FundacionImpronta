@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: auto;
+}
+@font-face {
+  font-family: "IsidoraBlack";
+  src: url("../../../assets/fonts/Isidora Soft Black.otf");
+}
+
+@font-face {
+  font-family: "IsidoraSemiBold";
+  src: url("../../../assets/fonts/IsidoraSansSemiBold.otf");
+}
+
+h2 {
+  font-family: "IsidoraBlack";
+}
+
+.general-container-info-project {
+  width: 100%;
+  height: 80vh;
+  font-family: "IsidoraSemiBold";
+  .close-dialog {
+    display: flex;
+    justify-content: right;
+    padding: 1em;
+    border: none;
+    background-color: #feb100;
+    button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  .title-project-info {
+    font-family: "IsidoraBlack";
+    text-align: center;
+    color: #00ABD3;
+    padding: 3%  0% 3% 3%;
+    background-image: linear-gradient(to bottom, #feb100, white);
+  }
+  .project-video {
+    text-align: center;
+    background-color: black;
+  }
+  .sub-topic {
+    padding: 5% 10%;
+    text-align: justify;
+    font-size: 1.2em;
+    background-color: #fad889;
+  }
+  .init-sub-topic{
+    background-image: linear-gradient(to top, #fad889, white);
+  }
+  .end-sub-topic{
+    background-image: linear-gradient(to bottom, #fad889, white);
+  }
+  .project-progress-bar {
+    padding: 5% 10%;
+    text-align: center;
+    background-color: #fad889;
+    progress {
+      font-size: 1.5em;
+    }
+  }
+  .btn-donation {
+    text-align: center;
+    background-color: #fad889;
+    button {
+      padding: 2.5% 12%;
+      border-radius: 20px;
+      font-size: 1.2em;
+      font-family: "IsidoraBlack";
+      color: white;
+      background-color: #70a200;
+      border: 1px solid #70a200;
+      cursor: pointer;
+      margin: 10%;
+    }
+    button:hover {
+      background-color: #91d302;
+    }
+    button:active {
+      background-color: #537902;
+    }
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .general-container-info-project {
+    .title-project-info {
+      font-size: 1.6em;
+      padding: 3%  0% 3% 3%;
+    }
+    .sub-topic {
+      font-size: 1.5em;
+      padding: 2% 10%;
+    }
+    .project-video {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      background: transparent;
+      margin: 5% 0;
+      iframe {
+        width: 80%;
+        height: 40vh;
+        box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.5);
+      }
+    }
+    .project-progress-bar {
+      padding: 5% 10%;
+      text-align: center;
+      font-size: 1.2em;
+      progress {
+        font-size: 2.1em;
+      }
+    }
+    .btn-donation {
+      button {
+        padding: 2% 5%;
+        border-radius: 35px;
+        margin: 4%;
+        font-size: 1.7em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .general-container-info-project {
+    .title-project-info {
+      font-size: 1.6em;
+      padding: 3%  0% 3% 3%;
+    }
+    .sub-topic {
+      font-size: 1.2em;
+      padding: 1.5% 10%;
+    }
+    .project-video {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      background-color: transparent;
+      margin: 5% 0;
+      iframe {
+        width: 60%;
+        height: 60vh;
+        box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.5);
+      }
+    }
+    .project-progress-bar {
+      font-size: 1.3em;
+      padding: 2% 10%;
+      text-align: center;
+      progress {
+        font-size: 1.5em;
+      }
+    }
+    .btn-donation {
+      padding: 0%;
+      margin: 0;
+      button {
+        margin: 5%;
+        padding: 0.5% 3.5%;
+        border-radius: 35px;
+      }
+    }
+  }
+}

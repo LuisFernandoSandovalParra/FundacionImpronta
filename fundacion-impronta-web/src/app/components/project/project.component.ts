@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Project } from 'src/app/models/project.model';
 import { DomSanitizer } from '@angular/platform-browser';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogInfoProjectComponent } from '../dialog-info-project/dialog-info-project.component';
+
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
@@ -8,9 +11,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class ProjectComponent {
 
-  constructor(private sanitizer: DomSanitizer){}
-
-  activeMoreInfoProject: boolean = false;
+  constructor(private sanitizer: DomSanitizer, private dialog: MatDialog){}
 
   currentProject: Project = {
     id: 0,
@@ -98,16 +99,28 @@ export class ProjectComponent {
     for (let i = 0; i < this.projects.length; i++) {
       if (this.projects[i].id === project_id) {
         this.currentProject = this.projects[i];
+        this.openDialog();
       }
     }
-    this.activeMoreInfoProject = true;
-  }
 
-  showAllProjects(){
-    this.activeMoreInfoProject = !this.activeMoreInfoProject;
   }
 
   getCurrentVideoUrl(){
     return this.sanitizer.bypassSecurityTrustResourceUrl(this.currentProject.video)
+  }
+
+  openDialog(){
+    const dialogRef = this.dialog.open(DialogInfoProjectComponent, {
+      data: {
+        project: this.currentProject,
+        exp_budget: this.convertToCop(this.currentProject.expected_budget),
+        curr_budget: this.convertToCop(this.currentProject.current_budget),
+        progress: this.calculateProgressProject(this.currentProject.id),
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('El diálogo ha sido cerrado', result);
+    });
   }
 }

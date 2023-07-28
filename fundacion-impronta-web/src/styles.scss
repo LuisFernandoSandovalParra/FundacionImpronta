@@ -1,3 +1,24 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 body{
   margin: 0;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-mdc-snack-bar-container {
+  &.green-snackbar {
+    --mdc-snackbar-container-color: rgb(49, 224, 0);
+    --mat-mdc-snack-bar-button-color: rgb(220, 0, 224);
+    --mdc-snackbar-supporting-text-color: #fff;
+  }
+}
+
+.mat-mdc-snack-bar-container {
+  &.red-snackbar{
+    --mdc-snackbar-container-color: #F44336;
+    --mat-mdc-snack-bar-button-color: white;
+    --mdc-snackbar-supporting-text-color: #fff;
+  }
 }

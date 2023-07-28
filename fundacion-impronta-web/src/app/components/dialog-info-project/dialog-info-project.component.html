@@ -1,0 +1,65 @@
+<div class="general-container-info-project">
+  <div class="close-dialog">
+    <button (click)="closeDialog()"><img src="../../../assets/svg/close-icon.svg" alt="Volver"></button>
+  </div>
+  <div class="title-project-info">
+    <h1>{{data.project.title}}</h1>
+  </div>
+  <div class="project-video">
+    <iframe
+      [src] = "getCurrentVideoUrl()"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="sub-topic init-sub-topic">
+    <h2>Descripción: </h2>
+    <p>{{data.project.description}}</p>
+  </div>
+  <div class="sub-topic">
+    <h2>Tema del proyecto:</h2>
+    <p>{{data.project.topic}}</p>
+  </div>
+  <div class="sub-topic">
+    <h2>Problematica:</h2>
+    <p>{{data.project.problematic}}</p>
+  </div>
+  <div class="sub-topic">
+    <h2>Propuesta:</h2>
+    <p>{{data.project.proposal}}</p>
+  </div>
+  <div class="sub-topic">
+    <h2>Poblacion:</h2>
+    <p>{{data.project.population}}</p>
+  </div>
+  <div class="sub-topic">
+    <h2>Lugar de aplicación:</h2>
+    <p>{{data.project.place_application}}</p>
+  </div>
+  <div class="sub-topic">
+    <h2>Representante del proyecto:</h2>
+    <p>{{data.project.representative}}</p>
+  </div>
+  <div class="sub-topic">
+    <h2>Presupuesto para ejecutar el proyecto:</h2>
+    <p>{{data.exp_budget}}</p>
+  </div>
+  <div class="project-progress-bar">
+    <h2>Presupuesto actual:</h2>
+    <div class="progress-title">
+    </div>
+    <progress
+      [value]="data.progress"
+      max="100"
+    ></progress>
+    <div class="progress-text">
+      {{ data.curr_budget }} /
+      {{ data.exp_budget}}
+    </div>
+  </div>
+  <div class="btn-donation end-sub-topic">
+    <button>Donar</button>
+  </div>
+</div>
