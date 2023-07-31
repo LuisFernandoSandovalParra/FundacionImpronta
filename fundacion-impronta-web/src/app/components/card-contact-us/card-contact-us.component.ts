@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class CardContactUsComponent {
   name: string = '';
   phone: string = '';
-  email: string = '';
+  emailUser: string = '';
   message: string = '';
 
   constructor(
@@ -21,13 +21,13 @@ export class CardContactUsComponent {
 
   sendEmail() {
     this.dataService
-      .sendMessage(this.name, this.email, this.phone, this.message)
+      .sendMessage(this.name, this.emailUser, this.phone, this.message)
       .subscribe((data) => {
         this.openSnackBar(data.ok);
       });
     this.name = '';
     this.phone = '';
-    this.email = '';
+    this.emailUser = '';
     this.message = '';
   }
 

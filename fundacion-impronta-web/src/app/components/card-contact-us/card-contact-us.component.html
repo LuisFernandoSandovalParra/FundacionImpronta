@@ -23,7 +23,7 @@
       <form (ngSubmit)="sendEmail()">
         <input type="text" [(ngModel)]="name" name="name" placeholder="Nombre"/>
         <input type="number" [(ngModel)]="phone" name="phone" placeholder="Telefono" />
-        <input type="email" [(ngModel)]="email" name="email" placeholder="Email"/>
+        <input type="text" [(ngModel)]="emailUser" name="emailUser" placeholder="Email"/>
         <textarea name="message" [(ngModel)]="message" cols="21" rows="10" name="message" placeholder="Mensaje"></textarea>
         <button type="submit">Enviar</button>
       </form>
