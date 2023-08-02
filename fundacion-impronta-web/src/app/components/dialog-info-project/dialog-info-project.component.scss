@@ -37,35 +37,35 @@ h2 {
     text-align: center;
     color: #00ABD3;
     padding: 3%  0% 3% 3%;
-    background-image: linear-gradient(to bottom, #feb100, white);
+    background-color: #feb100;
   }
   .project-video {
     text-align: center;
-    background-color: black;
+    background-color: #feb100;
   }
   .sub-topic {
     padding: 5% 10%;
     text-align: justify;
     font-size: 1.2em;
-    background-color: #fad889;
+    background-color: #feb100;
   }
   .init-sub-topic{
-    background-image: linear-gradient(to top, #fad889, white);
+    background-color: #feb100;
   }
   .end-sub-topic{
-    background-image: linear-gradient(to bottom, #fad889, white);
+    background-color: #feb100;
   }
   .project-progress-bar {
     padding: 5% 10%;
     text-align: center;
-    background-color: #fad889;
+    background-color: #feb100;
     progress {
       font-size: 1.5em;
     }
   }
   .btn-donation {
     text-align: center;
-    background-color: #fad889;
+    background-color: #feb100;
     button {
       padding: 2.5% 12%;
       border-radius: 20px;

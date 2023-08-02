@@ -12,5 +12,7 @@ export interface Project{
   image: string,
   expected_budget: number,
   current_budget: number,
-  video: string
+  video: string,
+  state: string,
+  project_type: string
 }

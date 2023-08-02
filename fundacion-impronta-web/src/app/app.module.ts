@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
+import { CardVolunteersComponent } from './components/card-volunteers/card-volunteers.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     CardContactUsComponent,
     FloatingButtonComponent,
     DialogInfoProjectComponent,
+    CardVolunteersComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     HttpClientModule,
     BrowserAnimationsModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

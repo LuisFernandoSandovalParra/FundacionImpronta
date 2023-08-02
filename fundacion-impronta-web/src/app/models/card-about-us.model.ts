@@ -4,10 +4,3 @@ export interface Founder{
   photo: string,
   description: string
 }
-
-export interface Item{
-  title: string,
-  text: string,
-  image: string,
-  open: boolean
-}

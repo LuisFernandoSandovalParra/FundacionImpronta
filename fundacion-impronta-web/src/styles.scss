@@ -1,4 +1,5 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import 'node_modules/aos/src/sass/aos.scss';
 
 body{
   margin: 0;
@@ -21,4 +22,40 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     --mat-mdc-snack-bar-button-color: white;
     --mdc-snackbar-supporting-text-color: #fff;
   }
+}
+
+@keyframes fadeInRightToLeft {
+  0% { opacity: 0; transform: translateX(100px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.fade-in-Right-To-Left {
+  animation: fadeInRightToLeft 1.5s ease-out;
+}
+
+@keyframes fadeInLeftToRight {
+  0% { opacity: 0; transform: translateX(-200px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.fade-in-Left-To-Right {
+  animation: fadeInLeftToRight 1.5s ease-out;
+}
+
+@keyframes fadeInBottomToTop {
+  0% { opacity: 0; transform: translateY(200px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-Bottom-To-Top {
+  animation: fadeInBottomToTop 1.5s ease-out;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-out{
+  animation: fadeOut 1s ease-out;
 }

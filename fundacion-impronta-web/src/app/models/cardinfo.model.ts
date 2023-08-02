@@ -5,3 +5,11 @@ export interface Patner{
   url_image: string,
   image_proportion: number
 }
+
+export interface Item{
+  title: string,
+  text: string,
+  image: string,
+  open: boolean
+}
+

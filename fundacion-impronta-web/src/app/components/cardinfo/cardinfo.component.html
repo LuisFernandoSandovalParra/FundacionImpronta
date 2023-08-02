@@ -1,6 +1,6 @@
 <app-slider></app-slider>
 <div class="container">
-  <div class="logo-phrase">
+  <div data-aos="fade-right" data-aos-duration="800" class="logo-phrase">
     <div class="logo">
       <img src="../../../assets/images/Triciclo.png" alt="Triciclo" />
     </div>
@@ -8,16 +8,16 @@
     <h2>Reconociendo, empoderando y resignificando.</h2>
   </div>
 
-  <div class="title-container">
+  <div class="title-container" data-aos="flip-up" data-aos-duration="800">
     <div class="title">
       <h1>Fundación Impronta</h1>
     </div>
   </div>
   <div class="info-container">
-    <div class="image">
+    <div class="image" data-aos="fade-right" data-aos-duration="800">
       <img src="../../../assets/images/boy.png" alt="Fundación Impronta" />
     </div>
-    <div class="description-part-one">
+    <div class="description-part-one" data-aos="fade-left" data-aos-duration="800">
       <p>
         La Fundación Impronta es una institución de utilidad común y sin ánimo
         de lucro, tiene un carácter permanente, independiente y autónomo, la
@@ -49,11 +49,11 @@
 
 <div class="mision-container">
   <div class="mision-logo">
-    <button (click)="showTextMision()">
+    <button (click)="showTextMision()" data-aos="zoom-in-up" data-aos-duration="800">
       <img src="../../../assets/images/mision.png" alt="Mision" />
     </button>
   </div>
-  <div [class.activeMision]="showTextMisionActive" class="mision-info">
+  <div [class.activeMision]="showTextMisionActive" class="mision-info" data-aos="zoom-in-left" data-aos-duration="800">
     <p>
       Diseñar, aplicar y evaluar en pro de la mejora continua,
       <strong>programas y proyectos</strong> que busquen movilizar la vida
@@ -63,7 +63,7 @@
   </div>
 </div>
 <div class="vision-container">
-  <div [class.activeVision]="showTextVisionActive" class="vision-info">
+  <div [class.activeVision]="showTextVisionActive" class="vision-info" data-aos="zoom-in-right" data-aos-duration="800">
     <p>
       Para el 2030 ser considerados un <strong>referente</strong> en torno al
       <strong>diseño de programas y proyectos de índole social</strong>
@@ -74,13 +74,57 @@
     </p>
   </div>
   <div class="vision-logo">
-    <button (click)="showTextVision()">
+    <button (click)="showTextVision()" data-aos="zoom-in-up" data-aos-duration="800">
       <img src="../../../assets/images/Vision.png" alt="Mision" />
     </button>
   </div>
 </div>
 
-<div class="sponsors-container">
+<div class="general-objetive-container">
+  <div class="general-objetive-info">
+    <div class="general-objetive-title" data-aos="fade-left" data-aos-duration="800">
+      <h2>Objetivo General</h2>
+    </div>
+    <div class="general-objetive-text" data-aos="zoom-in-left" data-aos-duration="800">
+      <p>
+        Dinamizar programas y proyectos que favorezcan,
+        <strong>procesos transformadores</strong>
+        de índole circular para la <strong>salud y física y mental</strong> en
+        relación con las habilidades para la vida, de las poblaciones
+        vulnerables tanto por el ciclo vital como por sus circunstancias de
+        vida.
+      </p>
+    </div>
+  </div>
+  <div class="general-objetive-logo" data-aos="zoom-in-up" data-aos-duration="800">
+    <img
+      src="../../../assets/images/objetivo-general.svg"
+      alt="Objetivo general"
+    />
+  </div>
+</div>
+
+<div class="accordion" data-aos="flip-down" data-aos-duration="800">
+  <div class="accordion-item" *ngFor="let item of accordionItems">
+    <div class="accordion-header" (click)="toogleAccordion(item)">
+      <h3>{{item.title}}</h3>
+    </div>
+    <div class="accordion-content" [ngClass]="{'open': item.open}">
+      <div class="content-text">
+        <p>{{item.text}}</p>
+      </div>
+      <div class="content-image">
+        <img [src]="item.image" [alt]="item.title" width="50%">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="title-strategic-allies" data-aos="flip-right" data-aos-duration="800">
+  <h2>Aliados estrategicos</h2>
+</div>
+
+<div class="sponsors-container" data-aos="fade-left" data-aos-duration="800">
   <div class="slide-track">
     <div *ngFor="let patner of patners" class="slide">
       <a [href]="patner.url_page" target="_blank">
@@ -100,96 +144,4 @@
       />
       </a>
     </div>
-    <!--
-    <div class="slide">
-      <img
-        src="../../../assets/images/HSEQ-Logo.png"
-        height="90%"
-        alt=""
-      />
-    </div>
-    <div class="slide">
-      <img
-        src="../../../assets/images/Concorde-Logo.png"
-        height="90%"
-        alt=""
-      />
-    </div>
-    <div class="slide">
-      <img
-        src="../../../assets/images/Ertrac-Logo.jpg"
-        height="50%"
-        alt=""
-      />
-    </div>
-    <div class="slide">
-      <img
-        src="../../../assets/images/1000Sabores-Logo.jpg"
-        height="90%"
-        alt=""
-      />
-    </div>
-    <div class="slide">
-      <img
-        src="../../../assets/images/Tanit-Logo.png"
-        height= "90%"
-        alt=""
-      />
-    </div>
-    <div class="slide">
-      <img
-        src="../../../assets/images/Deus-Logo.png"
-        height="90%"
-        alt=""
-      />
-  </div>
-  <div class="slide">
-    <img
-      src="../../../assets/images/AsociacionTuVida-Logo.png"
-      height="90%"
-    />
-  </div>
-  <div class="slide">
-    <img
-      src="../../../assets/images/HSEQ-Logo.png"
-      height="90%"
-      alt=""
-    />
-  </div>
-  <div class="slide">
-    <img
-      src="../../../assets/images/Concorde-Logo.png"
-      height="90%"
-      alt=""
-    />
-  </div>
-  <div class="slide">
-    <img
-      src="../../../assets/images/Ertrac-Logo.jpg"
-      height="90%"
-      alt=""
-    />
-  </div>
-  <div class="slide">
-    <img
-      src="../../../assets/images/1000Sabores-Logo.jpg"
-      height="90%"
-      alt=""
-    />
-  </div>
-  <div class="slide">
-    <img
-      src="../../../assets/images/Tanit-Logo.png"
-      height="90%"
-      alt=""
-    />
-  </div>
-  <div class="slide">
-    <img
-      src="../../../assets/images/Deus-Logo.png"
-      height="90%"
-      alt=""
-    />
-  </div>
-   -->
 </div>

@@ -19,34 +19,18 @@
     <p>{{data.project.description}}</p>
   </div>
   <div class="sub-topic">
-    <h2>Tema del proyecto:</h2>
-    <p>{{data.project.topic}}</p>
-  </div>
-  <div class="sub-topic">
     <h2>Problematica:</h2>
     <p>{{data.project.problematic}}</p>
   </div>
   <div class="sub-topic">
-    <h2>Propuesta:</h2>
+    <h2>Impacto:</h2>
     <p>{{data.project.proposal}}</p>
   </div>
-  <div class="sub-topic">
-    <h2>Poblacion:</h2>
-    <p>{{data.project.population}}</p>
-  </div>
-  <div class="sub-topic">
-    <h2>Lugar de aplicación:</h2>
-    <p>{{data.project.place_application}}</p>
-  </div>
-  <div class="sub-topic">
-    <h2>Representante del proyecto:</h2>
-    <p>{{data.project.representative}}</p>
-  </div>
-  <div class="sub-topic">
+  <div *ngIf="data.project.project_type === 'extension'" class="sub-topic">
     <h2>Presupuesto para ejecutar el proyecto:</h2>
     <p>{{data.exp_budget}}</p>
   </div>
-  <div class="project-progress-bar">
+  <div *ngIf="data.project.project_type === 'extension'" class="project-progress-bar">
     <h2>Presupuesto actual:</h2>
     <div class="progress-title">
     </div>
