@@ -1,9 +1,41 @@
 <div class="slider">
   <div class="container">
-    <div class="slide" *ngFor="let image of images; let i = index" [class.active]="i === currentImageIndex">
-      <!--<h2 class="caption">{{ image.caption }}</h2>-->
-      <img [src]="image.url" alt="{{ image.caption }}" />
+    <div class="slide">
+      <div class="volunteer-banner">
+        <div class="text-one">
+          <p>
+            En pro de
+            <strong>desarrollar nuestros programas y proyectos,</strong> tus
+            competencias disciplinares, técnicas o profesionales son de
+            <strong> gran importancia para nosotros.</strong>
+          </p>
+        </div>
+        <div class="text-two">
+          <p>¡Únete a nuestro programa de voluntarios!</p>
+        </div>
+        <div class="btn-volunteer-redirect">
+          <button>Ir</button>
+        </div>
+      </div>
     </div>
+    <div class="slide">
+      <div class="coral-banner">
+        <div class="coral-text-one">
+          <p>
+            Los arrecifes de coral, son ecosistemas resistentes con el potencial
+            para recuperarse de los eventos que causan su destrucción. Esta es
+            la razón por la que nuestro observatorio se llama
+          </p>
+        </div>
+        <div class="coral-title-image">
+          <img src="../../../assets/svg/coral-titulo-decorado.svg" alt="Coral">
+        </div>
+        <div class="coral-text-two">
+          <p>puesto que las <strong>HABILIDADES PARA LA VIDA,</strong> de
+            estos arrecifes inspiran nuestra razón de ser. </p>
+        </div>
+      </div>
+    </div>
+    <div class="slide"></div>
   </div>
 </div>
-

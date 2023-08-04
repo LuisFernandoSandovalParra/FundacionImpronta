@@ -29,13 +29,6 @@ button{
   &.activeInfo {
     display: none;
   }
-  .general-title {
-    font-family: "IsidoraBlack";
-    font-size: 1.8em;
-    color: white;
-    text-align: center;
-    padding: 10% 0 0 0;
-  }
   .projects-container {
     width: 100%;
     display: flex;
@@ -252,9 +245,6 @@ button{
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
   .general-container {
-    .general-title {
-      font-size: 2.5em;
-    }
     .projects-container {
       font-size: 1.5em;
       .project-card{
@@ -328,10 +318,6 @@ button{
 
 @media screen and (min-width: 64em) {
   .general-container {
-    .general-title {
-      font-size: 2.7em;
-      padding: 5% 0 0 0 ;
-    }
     .projects-container {
       .project-card{
         margin: 0 1%;

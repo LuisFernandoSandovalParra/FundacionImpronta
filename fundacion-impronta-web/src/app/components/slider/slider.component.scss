@@ -3,10 +3,24 @@
   margin: 0;
 }
 
+@font-face {
+  font-family: 'IsidoraBlack';
+  src: url('../../../assets/fonts/Isidora Soft Black.otf');
+}
+
+@font-face {
+  font-family: 'IsidoraSemiBold';
+  src: url('../../../assets/fonts/IsidoraSansSemiBold.otf');
+}
+
+strong{
+  font-family: 'IsidoraBlack';
+}
+
 *.slider{
   width: 100%;
   height: auto;
-  background-color: rgb(255, 244, 25);
+  background-color: transparent;
   margin: auto;
   overflow: hidden;
   .container{
@@ -15,14 +29,75 @@
     //grid template (Se debe poner un 100% de acuerdo a la cantidad de imagenes)
     grid-template-columns: 100% 100% 100%;
     animation-name: mover;
-    animation-duration: 20s;
+    animation-duration: 30s;
     animation-iteration-count: infinite;
-    img{
-      width: 100%;
-      background-size: cover;
-      background-position: center;
+  }
+}
+
+.volunteer-banner{
+  width: 100%;
+  background-image: url('../../../assets/images/Voluntariado-Banner.svg');
+  background-size: cover;
+  background-position: center;
+  .text-one{
+    font-family: 'IsidoraSemiBold';
+    font-size: 1.7em;
+    text-align: center;
+    padding: 2%;
+  }
+  .text-two{
+    font-family: 'IsidoraBlack';
+    font-size: 2.5em;
+    color: white;
+    text-align: center;
+    padding: 2%;
+  }
+  .btn-volunteer-redirect{
+    text-align: center;
+    padding: 2%;
+    button{
+      padding: 1.5% 10%;
+      font-family: 'IsidoraBlack';
+      font-size: 1.2em;
+      color: white;
+      background-color: #FFB000;
+      border: 2px solid #FFB000;
+      border-radius: 35px;
+      cursor: pointer;
+    }
+    button:hover{
+      background-color: #04A9D0;
     }
   }
+}
+
+.coral-banner{
+  width: 100%;
+  background-image: url('../../../assets/images/Coral-Banner.svg');
+  background-size: cover;
+  background-position: center;
+  .coral-text-one{
+    font-family: 'IsidoraSemiBold';
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    padding: 3%;
+  }
+  .coral-title-image{
+
+  }
+  .coral-text-two{
+    font-family: 'IsidoraSemiBold';
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    padding: 3%;
+  }
+}
+
+.tricycle-banner{
+  background-image: url('../../../assets/images/Triciclo-Banner.svg');
+  background-size: cover;
 }
 
 @keyframes mover{
@@ -46,5 +121,117 @@
   }
   100%{
     margin-left: 0%;
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em){
+  .slider{
+    width: 100%;
+    height: auto;
+    .container{
+      display: grid;
+      width: 100%;
+      //grid template (Se debe poner un 100% de acuerdo a la cantidad de imagenes)
+      grid-template-columns: 100% 100% 100%;
+      animation-name: mover;
+      animation-duration: 20s;
+      animation-iteration-count: infinite;
+    }
+  }
+  .volunteer-banner{
+    width: 100%;
+    background-image: url('../../../assets/images/Voluntariado-Banner.svg');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    .text-one{
+      width: 50%;
+      padding: 3% 2%;
+    }
+    .text-two{
+      width: 50%;
+    }
+    .btn-volunteer-redirect{
+      width: 50%;
+      padding: 2%;
+      button{
+        padding: 1.5% 10%;
+        font-size: 1.2em;
+        border-radius: 35px;
+      }
+    }
+  }
+
+  .coral-banner{
+    width: 100%;
+    background-image: url('../../../assets/images/Coral-Banner.svg');
+    background-size: cover;
+    background-position: right;
+    .coral-text-one{
+      display: flex;
+      justify-content: center;
+      font-size: 1.4em;
+      text-align: center;
+      padding: 10% 25% 0 25%;
+    }
+    .coral-title-image{
+      width: 100%;
+      text-align: center;
+      img{
+        width: 50%;
+      }
+    }
+    .coral-text-two{
+      display: flex;
+      justify-content: center;
+      font-size: 1.4em;
+      text-align: center;
+      padding: 0 25% 10% 25%;
+    }
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .slider{
+    width: 100%;
+    height: auto;
+    .container{
+      display: grid;
+      width: 100%;
+      //grid template (Se debe poner un 100% de acuerdo a la cantidad de imagenes)
+      grid-template-columns: 100% 100% 100%;
+      animation-name: mover;
+      animation-duration: 20s;
+      animation-iteration-count: infinite;
+      .slide{
+        width: 100%;
+        .volunteer-banner{
+          .text-one{
+            width: auto;
+            padding: 9% 30% 1% 30%;
+          }
+          .text-two{
+            width: auto;
+            padding: 1% 30% 1% 30%;
+          }
+          .btn-volunteer-redirect{
+            width: auto;
+            padding: 2% 0% 5% 0%;
+            button{
+              padding: 0.5% 4%;
+              font-size: 1.4em;
+              border-radius: 35px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .volunteer-banner{
+    width: 100%;
+    background-image: url('../../../assets/images/Voluntariado-Banner.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }

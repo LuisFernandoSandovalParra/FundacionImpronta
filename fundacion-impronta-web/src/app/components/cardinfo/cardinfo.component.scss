@@ -112,7 +112,7 @@ strong{
       margin: 10%;
       margin-top: 0;
       &.active {
-        display: block;
+        display: flex;
       }
     }
   }
@@ -147,7 +147,7 @@ strong{
     margin: 0 14%;
     margin-bottom: 2em;
     &.activeMision{
-      display: block;
+      display: flex;
     }
   }
 }
@@ -183,7 +183,7 @@ strong{
     margin: 0 14%;
     margin-bottom: 2em;
     &.activeVision{
-      display: block;
+      display: flex;
     }
   }
 }
@@ -270,7 +270,7 @@ strong{
       }
     }
     .open{
-      display: block;
+      display: flex;
     }
   }
 }
@@ -489,7 +489,7 @@ $animationSpeed: 20s;
         }
       }
       .open{
-        display: block;
+        display: flex;
       }
     }
     .accordion-item:hover{
@@ -590,7 +590,7 @@ $animationSpeed: 20s;
         margin: 0;
         font-size: 1em;
         &.active {
-          display: block;
+          display: flex;
         }
       }
     }

@@ -1,8 +1,5 @@
 <div class="general-container">
-  <div class="general-title">
-    <h2>Proyectos en marcha</h2>
-  </div>
-  <div class="container-projects-separator">
+  <div class="container-projects-separator" data-aos="zoom-in" data-aos-duration="1500">
     <div (click)="changeProjectTypeSelected('convocatoria')" [class.activeBtnProjectType]="btnProjectTypeSelectedActive" class="btn-section-projects">
       <p>Proyección social</p>
     </div>
@@ -11,7 +8,7 @@
     </div>
   </div>
   <div class="projects-container">
-    <div *ngFor="let project of projects" class="project-card">
+    <div *ngFor="let project of projects" class="project-card" data-aos="zoom-in" data-aos-duration="1500">
       <div *ngIf="project.project_type === projectTypeSelected" class="project">
         <div class="project-image">
           <img [src]="project.image" [alt]="project.title" />

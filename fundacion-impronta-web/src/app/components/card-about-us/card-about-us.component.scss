@@ -80,9 +80,16 @@ strong{
 }
 
 .general-tricycle-container{
-  display: none;
-  &.activeGeneralTricycleContainer{
-    display: block;
+  width: 100%;
+  display: stretch;
+  .tri-container{
+    width: 100%;
+  }
+  .ci-container{
+    width: 100%;
+  }
+  .clo-container{
+    width: 100%;
   }
   .btn-show-less{
     display: flex;

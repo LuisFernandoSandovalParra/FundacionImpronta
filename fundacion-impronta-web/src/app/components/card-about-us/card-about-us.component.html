@@ -1,53 +1,62 @@
 <div class="history-container">
   <div class="history-info">
     <div class="history-title">
-      <h2>Historia</h2>
+      <h2 data-aos="fade-down-right" data-aos-duration="800">Historia</h2>
     </div>
     <div class="history-text">
-      <p>
+      <p data-aos="fade-up-right" data-aos-duration="800">
         Entendiendo que la Impronta es el Rasgo peculiar y distintivo que una
         persona deja en sus obras y que las distingue de otras, emerge la
         fundación ante la intención de que esta se configure como un escenario
-        que impulse el <strong>diseño de programas</strong> y <strong>proyectos de extensión y proyección
-          social</strong>  a favor de nuestra axial: El programa <strong>TRICICLO</strong>, el cual nos da un
+        que impulse el <strong>diseño de programas</strong> y
+        <strong>proyectos de extensión y proyección social</strong> a favor de
+        nuestra axial: El programa <strong>TRICICLO</strong>, el cual nos da un
         precepto para nuestro funcionamiento inspirado en la estructura mecánica
         de los triciclos: Tres ruedas: Adulto Mayor, Primera infancia,
-        Poblaciones vulnerables por circunstancias de vida Dos pedales: Salud
+        Poblaciones vulnerables por circunstancias de vida. Dos pedales: Salud
         física – Salud mental (los dos en conexidad con las habilidades para la
         vida).
       </p>
     </div>
   </div>
   <div class="history-logo">
-    <img src="../../../assets/images/historia.svg" alt="Historia" />
+    <img
+      src="../../../assets/images/historia.svg"
+      alt="Historia"
+      data-aos="fade-left"
+      data-aos-duration="800"
+    />
   </div>
 </div>
 
 <div class="title-our-essence">
-  <h2>Nuestra Esencia</h2>
+  <h2 data-aos="flip-right" data-aos-duration="800">Nuestra Esencia</h2>
 </div>
 
 <div class="tricycle-container">
   <div class="tricycle-info">
     <div class="tricycle-title">
-      <h1>Triciclo</h1>
+      <h1 data-aos="fade-down-right" data-aos-duration="800">Triciclo</h1>
     </div>
     <div class="tricycle-text">
-      <p>
-        Es nuestra esencia, puesto que nuestra razón social se moviliza en torno
+      <p data-aos="fade-up-right" data-aos-duration="800">
+        Puesto que nuestra razón social se moviliza en torno
         a <strong>tres ruedas y dos pedales.</strong> Queremos convertirlo en un
         lenguaje donde...
       </p>
     </div>
     <div class="tricycle-more-info-btn">
-      <button (click)="toogleTricycleInfo()">{{ textBtnReadMore }}</button>
+      <button
+        (click)="toogleTricycleInfo()"
+        data-aos="fade-up"
+        data-aos-duration="800"
+      >
+        {{ textBtnReadMore }}
+      </button>
     </div>
   </div>
 </div>
-<div
-  class="general-tricycle-container"
-  [class.activeGeneralTricycleContainer]="activeTricycleInfo"
->
+<div *ngIf="activeTricycleInfo" class="general-tricycle-container">
   <div class="tri-container">
     <div class="tri-image">
       <img
@@ -263,10 +272,10 @@
           </div>
           <div class="to-sa-bri-description">
             <p>
-              Debido a que la saturación va de la mano con la pureza del color se
-              realizó una asociación con la Integridad, para este contexto social
-              se enfoca específicamente en mantener la Integridad de la primera
-              infancia.
+              Debido a que la saturación va de la mano con la pureza del color
+              se realizó una asociación con la Integridad, para este contexto
+              social se enfoca específicamente en mantener la Integridad de la
+              primera infancia.
             </p>
           </div>
         </div>
@@ -279,11 +288,11 @@
           </div>
           <div class="to-sa-bri-description">
             <p>
-              Finalmente se habla del brillo del color el cual hace énfasis en la
-              intensidad del mismo, lo cual transformado al ámbito social de
+              Finalmente se habla del brillo del color el cual hace énfasis en
+              la intensidad del mismo, lo cual transformado al ámbito social de
               nuestras ruedas tiene la principal tarea aumentar el Nivel de
-              energía de las personas vulnerables por situaciones ajenas, mediante
-              la minimización de enfermedades mentales y físicas.
+              energía de las personas vulnerables por situaciones ajenas,
+              mediante la minimización de enfermedades mentales y físicas.
             </p>
           </div>
         </div>
@@ -298,10 +307,10 @@
 <div class="team-container">
   <div class="info-team">
     <div class="title-team">
-      <h2>Fundadores</h2>
+      <h2 data-aos="flip-down" data-aos-duration="800">Fundadores</h2>
     </div>
     <div class="text-team">
-      <ul class="names">
+      <ul class="names" data-aos="fade-up" data-aos-duration="800">
         <li
           *ngFor="let founder of founders"
           (click)="toogleNamePerson(founder.id)"

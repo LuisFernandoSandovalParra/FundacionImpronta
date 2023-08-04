@@ -1,24 +1,24 @@
 <app-slider></app-slider>
 <div class="container">
-  <div data-aos="fade-right" data-aos-duration="800" class="logo-phrase">
+  <div class="logo-phrase">
     <div class="logo">
-      <img src="../../../assets/images/Triciclo.png" alt="Triciclo" />
+      <img data-aos="fade-right" data-aos-duration="800" src="../../../assets/images/Triciclo.png" alt="Triciclo" />
     </div>
     <hr />
-    <h2>Reconociendo, empoderando y resignificando.</h2>
+    <h2 data-aos="fade-down" data-aos-duration="800">Reconociendo, empoderando y resignificando.</h2>
   </div>
 
-  <div class="title-container" data-aos="flip-up" data-aos-duration="800">
+  <div class="title-container">
     <div class="title">
-      <h1>Fundación Impronta</h1>
+      <h1 data-aos="flip-up" data-aos-duration="800">Fundación Impronta</h1>
     </div>
   </div>
   <div class="info-container">
-    <div class="image" data-aos="fade-right" data-aos-duration="800">
-      <img src="../../../assets/images/boy.png" alt="Fundación Impronta" />
+    <div class="image">
+      <img src="../../../assets/images/boy.png" alt="Fundación Impronta" data-aos="fade-right" data-aos-duration="800"/>
     </div>
-    <div class="description-part-one" data-aos="fade-left" data-aos-duration="800">
-      <p>
+    <div class="description-part-one">
+      <p data-aos="zoom-in" data-aos-duration="800">
         La Fundación Impronta es una institución de utilidad común y sin ánimo
         de lucro, tiene un carácter permanente, independiente y autónomo, la
         principal motivación de la fundación es contribuir al mejoramiento de la
@@ -49,12 +49,12 @@
 
 <div class="mision-container">
   <div class="mision-logo">
-    <button (click)="showTextMision()" data-aos="zoom-in-up" data-aos-duration="800">
-      <img src="../../../assets/images/mision.png" alt="Mision" />
+    <button (click)="showTextMision()">
+      <img src="../../../assets/images/mision.png" alt="Mision" data-aos="zoom-in-right" data-aos-duration="800"/>
     </button>
   </div>
-  <div [class.activeMision]="showTextMisionActive" class="mision-info" data-aos="zoom-in-left" data-aos-duration="800">
-    <p>
+  <div [class.activeMision]="showTextMisionActive" class="mision-info">
+    <p data-aos="fade-left" data-aos-duration="800">
       Diseñar, aplicar y evaluar en pro de la mejora continua,
       <strong>programas y proyectos</strong> que busquen movilizar la vida
       <strong>de las poblaciones vulnerables</strong>
@@ -63,8 +63,8 @@
   </div>
 </div>
 <div class="vision-container">
-  <div [class.activeVision]="showTextVisionActive" class="vision-info" data-aos="zoom-in-right" data-aos-duration="800">
-    <p>
+  <div [class.activeVision]="showTextVisionActive" class="vision-info">
+    <p data-aos="fade-right" data-aos-duration="800">
       Para el 2030 ser considerados un <strong>referente</strong> en torno al
       <strong>diseño de programas y proyectos de índole social</strong>
       dirigidos a movilizar la <strong>salud física y mental</strong> en
@@ -74,19 +74,19 @@
     </p>
   </div>
   <div class="vision-logo">
-    <button (click)="showTextVision()" data-aos="zoom-in-up" data-aos-duration="800">
-      <img src="../../../assets/images/Vision.png" alt="Mision" />
+    <button (click)="showTextVision()">
+      <img src="../../../assets/images/Vision.png" alt="Mision" data-aos="zoom-in-down" data-aos-duration="800"/>
     </button>
   </div>
 </div>
 
 <div class="general-objetive-container">
   <div class="general-objetive-info">
-    <div class="general-objetive-title" data-aos="fade-left" data-aos-duration="800">
-      <h2>Objetivo General</h2>
+    <div class="general-objetive-title">
+      <h2 data-aos="fade-down" data-aos-duration="800">Objetivo General</h2>
     </div>
-    <div class="general-objetive-text" data-aos="zoom-in-left" data-aos-duration="800">
-      <p>
+    <div class="general-objetive-text">
+      <p data-aos="zoom-in" data-aos-duration="800">
         Dinamizar programas y proyectos que favorezcan,
         <strong>procesos transformadores</strong>
         de índole circular para la <strong>salud y física y mental</strong> en
@@ -96,17 +96,18 @@
       </p>
     </div>
   </div>
-  <div class="general-objetive-logo" data-aos="zoom-in-up" data-aos-duration="800">
+  <div class="general-objetive-logo">
     <img
       src="../../../assets/images/objetivo-general.svg"
       alt="Objetivo general"
+      data-aos="zoom-in-up" data-aos-duration="800"
     />
   </div>
 </div>
 
-<div class="accordion" data-aos="flip-down" data-aos-duration="800">
+<div class="accordion">
   <div class="accordion-item" *ngFor="let item of accordionItems">
-    <div class="accordion-header" (click)="toogleAccordion(item)">
+    <div class="accordion-header" (click)="toogleAccordion(item)"  data-aos="flip-down" data-aos-duration="800">
       <h3>{{item.title}}</h3>
     </div>
     <div class="accordion-content" [ngClass]="{'open': item.open}">
@@ -120,11 +121,11 @@
   </div>
 </div>
 
-<div class="title-strategic-allies" data-aos="flip-right" data-aos-duration="800">
-  <h2>Aliados estrategicos</h2>
+<div class="title-strategic-allies">
+  <h2  data-aos="flip-down" data-aos-duration="800">Aliados estrategicos</h2>
 </div>
 
-<div class="sponsors-container" data-aos="fade-left" data-aos-duration="800">
+<div class="sponsors-container">
   <div class="slide-track">
     <div *ngFor="let patner of patners" class="slide">
       <a [href]="patner.url_page" target="_blank">

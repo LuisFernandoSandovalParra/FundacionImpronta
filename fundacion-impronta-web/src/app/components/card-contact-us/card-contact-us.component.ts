@@ -19,6 +19,14 @@ export class CardContactUsComponent {
     private snackBar: MatSnackBar
   ) {}
 
+  validateForm(form: any){
+    if(form.valid){
+      this.sendEmail();
+    }else{
+      this.openSnackBar(false);
+    }
+  }
+
   sendEmail() {
     this.dataService
       .sendMessage(this.name, this.emailUser, this.phone, this.message)
