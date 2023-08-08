@@ -25,7 +25,8 @@ button{
 }
 
 .general-container {
-  background-image: linear-gradient(to bottom, #04a9d0, white);
+  //background-image: linear-gradient(to bottom, #04a9d0, white);
+  background-color: #04a9d0;
   &.activeInfo {
     display: none;
   }

@@ -1,89 +1,113 @@
 <div class="container-volunteer-form">
-  <form (submit)="sendVolunteerEmail()">
-    <div class="container-first-name">
-      <label for="firstName">Nombres</label>
-      <input
-        type="text"
-        [(ngModel)]="first_name"
-        name="first_name"
-        placeholder="Nombres"
-      />
+  <div class="formulary">
+    <div class="head-form">
+      <div class="form-icon">
+        <img data-aos="flip-down" data-aos-duration="1000" src="../../../assets/svg/volunteer-icon.svg" alt="Voluntariado">
+      </div>
+      <div class="form-title">
+        <h1 data-aos="fade-down" data-aos-duration="1000">Inscripción Voluntario</h1>
+      </div>
     </div>
-    <div class="container-last-name">
-      <label for="lastName">Apellidos</label>
-      <input
-        type="text"
-        [(ngModel)]="last_name"
-        name="last_name"
-        placeholder="Apellidos"
-      />
-    </div>
-    <div class="container-email">
-      <label for="email">Correo</label>
-      <input
-        type="email"
-        [(ngModel)]="email"
-        name="email"
-        placeholder="Correo"
-      />
-    </div>
-    <div class="container-phone">
-      <label for="phone">Telefono</label>
-      <input
-        type="number"
-        [(ngModel)]="phone"
-        name="phone"
-        placeholder="Telefono"
-      />
-    </div>
-    <div class="container-academic-level">
-      <label for="academicLevel">Nivel academico</label>
-      <select name="academic_level" [(ngModel)]="academic_level">
-        <option value="Bachiller">Bachiller</option>
-        <option value="Tecnico">Tecnico</option>
-        <option value="Profesional">Profesional</option>
-      </select>
-    </div>
-    <div class="container-habilities">
-      <label for="habilities">Profesión/experiencias tecnicas</label>
-      <input
-        type="text"
-        name="habilities"
-        [(ngModel)]="habilities"
-        placeholder="Profesión, experiencias tecnicas"
-      />
-    </div>
-    <div class="container-work-hours">
-      <label for="workHours">Nro. horas de disposición</label>
-      <input
-        type="number"
-        name="work_hours"
-        [(ngModel)]="work_hours"
-        min="1"
-        max="1000"
-        placeholder="Horas de trabajo"
-      />
-    </div>
-    <div class="container-modality">
-      <label for="modality">Modalidad</label>
-      <select name="modality" [(ngModel)]="modality">
-        <option value="Presencial">Presencial</option>
-        <option value="Virtual">Virtual</option>
-        <option value="Hibrido">Hibrido</option>
-      </select>
-    </div>
-    <div class="container-interest-population">
-      <label for="interestPopulation">Población de interes</label>
-      <select name="interest_population" [(ngModel)]="interest_population">
-        <option value="Primera infancia">Primera infancia</option>
-        <option value="Adulto mayor">Adulto mayor</option>
-        <option value="Vulnerables circ vida">
-          Poblaciones vulnerables por circunstancias de vida
-        </option>
-      </select>
-    </div>
-    <div class="container-btn">
-      <button type="submit">Enviar</button>
-    </div>
-  </form>
+    <form (submit)="sendVolunteerEmail()">
+      <div class="container-first-name inputs">
+        <label for="first_name">Nombres: </label>
+        <input
+          type="text"
+          [(ngModel)]="first_name"
+          name="first_name"
+          placeholder="Ej: Luis Arturo"
+          required
+        />
+      </div>
+      <div class="container-last-name inputs">
+        <label for="last_name">Apellidos: </label>
+        <input
+          type="text"
+          [(ngModel)]="last_name"
+          name="last_name"
+          placeholder="Ej: Sanchez Ramirez"
+          required
+        />
+      </div>
+      <div class="container-email inputs">
+        <label for="email">Correo: </label>
+        <input
+          type="email"
+          [(ngModel)]="email"
+          name="email"
+          placeholder="Ej: LuisArt@correo.com"
+          required
+        />
+      </div>
+      <div class="container-phone inputs">
+        <label for="phone">Teléfono: </label>
+        <input
+          type="number"
+          [(ngModel)]="phone"
+          name="phone"
+          placeholder="Telefono"
+          required
+        />
+      </div>
+      <div class="container-academic-level inputs">
+        <label for="academic_level">Nivel academico: </label>
+        <select name="academic_level" [(ngModel)]="academic_level">
+          <option disabled selected value="">Seleccione una opción</option>
+          <option value="Bachiller">Bachiller</option>
+          <option value="Tecnico">Tecnico</option>
+          <option value="Profesional">Profesional</option>
+        </select>
+      </div>
+      <div class="container-habilities inputs">
+        <label for="habilities">Profesión/experiencias tecnicas: </label>
+        <input
+          type="text"
+          name="habilities"
+          [(ngModel)]="habilities"
+          placeholder="Profesión, experiencias tecnicas y/o artisticas"
+          required
+        />
+      </div>
+      <div class="container-work-hours inputs">
+        <label for="work_hours">Horas voluntariado: </label>
+        <input
+          type="number"
+          name="work_hours"
+          [(ngModel)]="work_hours"
+          min="1"
+          max="1000"
+          placeholder="Horas de trabajo"
+          required
+        />
+      </div>
+      <div class="container-modality inputs">
+        <label for="modality">Modalidad: </label>
+        <select name="modality" [(ngModel)]="modality">
+          <option disabled selected value="">Seleccione una modalidad</option>
+          <option value="Presencial">Presencial</option>
+          <option value="Virtual">Virtual</option>
+          <option value="Hibrido">Hibrido</option>
+        </select>
+      </div>
+      <div class="container-interest-population inputs">
+        <label for="interestPopulation">Población de interes: </label>
+        <select name="interest_population" [(ngModel)]="interest_population">
+          <option disabled selected value="">
+            Seleccione una población de interes
+          </option>
+          <option value="Primera infancia">Primera infancia</option>
+          <option value="Adulto mayor">Adulto mayor</option>
+          <option value="Vulnerables circ vida">
+            Poblaciones vulnerables por circunstancias de vida
+          </option>
+        </select>
+      </div>
+      <div class="read-more">
+        <p>Lee mas acerca del <a href="../../../assets/docs/Programa de voluntarios.pdf" target="_blank"><strong>Programa de voluntarios Fundación Impronta</strong></a></p>
+      </div>
+      <div class="container-btn">
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
+  </div>
 </div>

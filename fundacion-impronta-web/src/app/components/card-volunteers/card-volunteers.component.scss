@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "IsidoraBlack";
+  src: url("../../../assets/fonts/Isidora Soft Black.otf");
+}
+
+@font-face {
+  font-family: "IsidoraSemiBold";
+  src: url("../../../assets/fonts/IsidoraSansSemiBold.otf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+strong {
+  font-family: "IsidoraBlack";
+}
+
+.container-volunteer-form {
+  background-color: #e4e4e4;
+  box-shadow: 1px 2px 3px 10px rgba(0, 0, 0, 0.1);
+  .formulary {
+    padding: 8%;
+    .head-form {
+      display: flex;
+      flex-direction: column;
+      .form-icon {
+        width: 100%;
+        text-align: center;
+        img {
+          width: 60%;
+          border: 5px solid #ef1c82;
+          border-radius: 100px;
+          background-color: white;
+        }
+      }
+      .form-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        font-family: "IsidoraBlack";
+        text-align: center;
+        h1 {
+          background-color: #00a3cb;
+          font-size: 1.7em;
+          color: white;
+          border-radius: 50px;
+          padding: 5% 10%;
+        }
+      }
+    }
+    .read-more{
+      font-family: 'IsidoraSemiBold';
+      text-align: center;
+    }
+    .container-btn {
+      text-align: center;
+      button{
+        margin-top: 10%;
+        padding: 3% 10%;
+        font-family: 'IsidoraBlack';
+        font-size: 1.2em;
+        color: white;
+        background-color: #85BF3F;
+        border-radius: 40px;
+        border: 1px solid #85BF3F;
+        cursor: pointer;
+      }
+      button:hover{
+        background-color: #adf753;
+      }
+      button:active{
+        background-color: #6c9b33;
+      }
+    }
+  }
+  label {
+    font-family: "IsidoraBlack";
+    color: #4d4d4d;
+  }
+  input {
+    width: 100%;
+    color: black;
+    font-family: "IsidoraSemiBold";
+    border: none;
+    height: 100%;
+    font-size: 1em;
+  }
+  select {
+    border: none;
+    font-family: "IsidoraSemiBold";
+    font-size: 1em;
+    width: 100%;
+  }
+}
+
+.inputs {
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 2%;
+  background-color: #ffffff;
+  margin: 5% 0%;
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .container-volunteer-form {
+    margin: 10%;
+    border-radius: 30px;
+    .formulary {
+      padding: 10%;
+      .head-form {
+        .form-icon {
+          img {
+            width: 50%;
+            border: 10px solid #ef1c82;
+            border-radius: 200px;
+          }
+        }
+        .form-title {
+          h1 {
+            font-size: 2.3em;
+            border-radius: 50px;
+            padding: 5% 10%;
+          }
+        }
+      }
+      .read-more{
+        font-size: 1.4em;
+      }
+      .container-btn {
+        button{
+          font-size: 1.5em;
+          color: white;
+        }
+      }
+    }
+    label {
+      font-size: 1.5em;
+    }
+    input {
+      font-size: 1.5em;
+    }
+    select {
+      font-size: 1.5em;
+    }
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .container-volunteer-form {
+    background-color: #e4e4e4;
+    margin: 3% 10%;
+    border-radius: 30px;
+    .formulary {
+      padding: 5% 5%;
+      form{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 50px;
+      }
+      .head-form {
+        .form-icon {
+          img {
+            width: 20%;
+            border: 10px solid #ef1c82;
+            border-radius: 200px;
+          }
+        }
+        .form-title {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          font-family: "IsidoraBlack";
+          text-align: center;
+          h1 {
+            background-color: #00a3cb;
+            font-size: 2.5em;
+            color: white;
+            border-radius: 50px;
+            padding: 2% 5%;
+          }
+        }
+      }
+      .read-more{
+        font-size: 1.4em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+      }
+      .container-btn {
+        grid-column: span 2;
+        display: flex;
+        padding: 1%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        button{
+          margin: 0;
+          padding: 1.5% 5%;
+          font-family: 'IsidoraBlack';
+          font-size: 1.5em;
+          color: white;
+          background-color: #85BF3F;
+          border-radius: 40px;
+          border: 1px solid #85BF3F;
+        }
+      }
+    }
+    label {
+      font-family: "IsidoraBlack";
+      font-size: 1.3em;
+      color: #4d4d4d;
+    }
+    input {
+      width: 100%;
+      color: black;
+      font-family: "IsidoraSemiBold";
+      border: none;
+      height: 60%;
+      font-size: 1.3em;
+    }
+    select {
+      border: none;
+      font-family: "IsidoraSemiBold";
+      font-size: 1.3em;
+      width: 100%;
+    }
+  }
+
+  .inputs {
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 2%;
+    background-color: #ffffff;
+    margin: 5% 0%;
+    padding: 2%;
+  }
+}

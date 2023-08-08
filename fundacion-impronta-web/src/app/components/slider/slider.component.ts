@@ -46,4 +46,7 @@ export class SliderComponent implements OnInit, OnDestroy{
       this.currentImageIndex = this.images.length - 1;
     }
   }
+  print(){
+    console.log('si sirve')
+  }
 }

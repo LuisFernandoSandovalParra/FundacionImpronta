@@ -19,29 +19,29 @@ export class CardAboutUsComponent {
   founders: Founder[] = [
     {
       id: 'f1',
-      name: 'Admr. Ángela Yohana Molina',
-      photo: '../../../assets/svg/user-default-icon.svg',
+      name: 'Ángela Yohana Molina',
+      photo: '../../../assets/images/Angela1.jpg',
       description:
         'Administradora y contadora con mas de 10 años de experiencia en el area.',
     },
     {
       id: 'f2',
-      name: 'Psic. Laura Natalia Ostos',
-      photo: '../../../assets/svg/user-default-icon.svg',
+      name: 'Laura Natalia Ostos',
+      photo: '../../../assets/images/Laura1.jpg',
       description:
         'Psicologa especialista con mas de 10 años de experiencia en el area.',
     },
     {
       id: 'f3',
-      name: 'Psic. Néstor Ricardo Ávila',
-      photo: '../../../assets/svg/user-default-icon.svg',
+      name: 'Néstor Ricardo Ávila',
+      photo: '../../../assets/images/Doc1.jpg',
       description:
         'Psicologo especialista con mas de 15 años de experiencia en el area.',
     },
     {
       id: 'f4',
-      name: 'Ing. Cesar Augusto Niño',
-      photo: '../../../assets/svg/user-default-icon.svg',
+      name: 'Cesar Augusto Niño',
+      photo: '../../../assets/images/Cesar1.jpg',
       description:
         'Ingeniero quimico con mas de 15 años de experiencia en el area.',
     },

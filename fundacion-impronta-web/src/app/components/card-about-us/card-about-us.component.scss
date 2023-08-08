@@ -83,13 +83,13 @@ strong{
   width: 100%;
   display: stretch;
   .tri-container{
-    width: 100%;
+    width: auto;
   }
   .ci-container{
-    width: 100%;
+    width: auto;
   }
   .clo-container{
-    width: 100%;
+    width: auto;
   }
   .btn-show-less{
     display: flex;
@@ -115,7 +115,6 @@ strong{
 .tricycle-container {
   display: flex;
   background-color: #81a10d;
-  width: 100%;
   .tricycle-info {
     width: 100%;
     .tricycle-title {
@@ -157,6 +156,7 @@ strong{
 
 .tri-container {
   display: flex;
+  width: auto;
   flex-direction: column-reverse;
   .tri-image {
     display: flex;
@@ -545,6 +545,12 @@ strong{
         width:90%;
         img{
           width: 100%;
+          object-fit: cover;
+          clip-path: circle(40% at center);
+          transition: transform 0.3s ease;
+        }
+        img:hover{
+          transform: scale(1.5);
         }
       }
       .personal-info {
@@ -884,11 +890,16 @@ strong{
           justify-content: center;
           align-items: center;
           align-content: center;
-          padding: 0;
+          padding: 0 5%;
           margin: 0;
           width:90%;
           img{
             width: 100%;
+            clip-path: circle(40% at center);
+            transition: transform 0.3s ease;
+          }
+          img:hover{
+            transform: scale(1.2);
           }
         }
         .personal-info {
@@ -977,6 +988,7 @@ strong{
   }
 
   .general-tricycle-container{
+    width: 100%;
     .btn-show-less{
       padding: 0% 0% 5% 0%;
       button {
@@ -1010,6 +1022,7 @@ strong{
     }
   }
   .tri-container {
+    width: auto;
     display: flex;
     flex-direction: row;
     padding: 5% 8% 0% 8%;
@@ -1230,7 +1243,7 @@ strong{
   .team-container {
     display: flex;
     width: 100%;
-    background-image: url("../../../assets/images/Equipo.svg");
+    background-image: url("../../../assets/images/Final-team.svg");
     background-size: cover;
     background-position: center;
     justify-content: flex-end;

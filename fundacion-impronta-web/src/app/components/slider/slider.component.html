@@ -14,7 +14,7 @@
           <p>¡Únete a nuestro programa de voluntarios!</p>
         </div>
         <div class="btn-volunteer-redirect">
-          <button>Ir</button>
+          <button (click)="print()" [routerLink]="['/voluntarios']" routerLinkActive="active">Ir</button>
         </div>
       </div>
     </div>
@@ -36,6 +36,28 @@
         </div>
       </div>
     </div>
-    <div class="slide"></div>
+    <div class="slide">
+      <div class="tricycle-banner">
+        <div class="title-container">
+          <div class="tri-container">
+            <h3 class="tri">Tri</h3>
+            <p>Tejiendo redes integrales</p>
+          </div>
+          <div class="ci-container">
+            <h3 class="ci">Ci</h3>
+            <p>Construyendo integración</p>
+          </div>
+          <div class="clo-container">
+            <h3 class="clo">Clo</h3>
+            <p>Cultivando los origenes</p>
+          </div>
+        </div>
+        <div class="tricycle-text">
+          <p><strong>Tres ruedas</strong> (adulto mayor, primera infancia, poblaciones vulnerables
+            por circunstancias de vida); dos pedales (Salud física; Salid mental), los
+            dos en conexidad con las habilidades para la vida.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
