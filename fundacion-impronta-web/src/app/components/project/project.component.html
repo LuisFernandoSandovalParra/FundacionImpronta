@@ -8,8 +8,8 @@
     </div>
   </div>
   <div class="projects-container">
-    <div *ngFor="let project of projects" class="project-card" data-aos="zoom-in" data-aos-duration="1500">
-      <div *ngIf="project.project_type === projectTypeSelected" class="project">
+    <div *ngFor="let project of getListProject(projectTypeSelected)" class="project-card">
+      <div class="project" data-aos="fade-up" data-aos-duration="1500">
         <div class="project-image">
           <img [src]="project.image" [alt]="project.title" />
         </div>

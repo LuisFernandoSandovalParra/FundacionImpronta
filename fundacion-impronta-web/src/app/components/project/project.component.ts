@@ -186,6 +186,16 @@ export class ProjectComponent {
     },
   ];
 
+  getListProject(type: string): Project[] {
+    let projects: Project[] = [];
+    for (let i = 0; i < this.projects.length; i++) {
+      if(this.projects[i].project_type === type){
+        projects.push(this.projects[i]);
+      }
+    }
+    return projects;
+  }
+
   changeProjectTypeSelected(project_type: string) {
     switch (project_type) {
       case 'social':

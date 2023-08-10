@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Founder } from '../../models/card-about-us.model'
+import { Founder } from '../../models/card-about-us.model';
 
 @Component({
   selector: 'app-card-about-us',
@@ -29,14 +29,14 @@ export class CardAboutUsComponent {
       name: 'Laura Natalia Ostos',
       photo: '../../../assets/images/Laura1.jpg',
       description:
-        'Psicologa especialista con mas de 10 años de experiencia en el area.',
+        'Psicóloga del área clínica, con habilidades en intervenciones desde un enfoque cognitivo-conductual, así mismo, cuenta con destrezas en intervenciones a usuarios de diversas edades (primera infancia, infancia, adulto y adulto mayor). Muestra habilidades investigativas, así como, evaluativas e interventivas. Es gestora de programas y proyectos, sobresaliendo aquellos enfocados en la salud  física y mental.',
     },
     {
       id: 'f3',
       name: 'Néstor Ricardo Ávila',
       photo: '../../../assets/images/Doc1.jpg',
       description:
-        'Psicologo especialista con mas de 15 años de experiencia en el area.',
+        'Psicólogo, Especialista y Magister en psicología Jurídica. Docente Universitario, Investigador Junior (MINCIENCIAS), Perito en procesos civiles y Penales, experto en el diseño de programas de reparación a victimas basados en mecanismos alternativos de justicia. ',
     },
     {
       id: 'f4',
@@ -73,5 +73,4 @@ export class CardAboutUsComponent {
   toogleCardPerson() {
     this.activeCardPersonalInfo = !this.activeCardPersonalInfo;
   }
-
 }

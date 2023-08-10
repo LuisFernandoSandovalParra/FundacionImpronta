@@ -22,7 +22,7 @@ strong {
 }
 
 .container-volunteer-form {
-  background-color: #e4e4e4;
+  background-color: #B6BF00;
   box-shadow: 1px 2px 3px 10px rgba(0, 0, 0, 0.1);
   .formulary {
     padding: 8%;
@@ -67,16 +67,16 @@ strong {
         font-family: 'IsidoraBlack';
         font-size: 1.2em;
         color: white;
-        background-color: #85BF3F;
+        background-color: #00A3CB;
         border-radius: 40px;
-        border: 1px solid #85BF3F;
+        border: 1px solid #00A3CB;
         cursor: pointer;
       }
       button:hover{
-        background-color: #adf753;
+        background-color: #2fbee1;
       }
       button:active{
-        background-color: #6c9b33;
+        background-color: #017592;
       }
     }
   }
@@ -154,7 +154,6 @@ strong {
 
 @media screen and (min-width: 64em) {
   .container-volunteer-form {
-    background-color: #e4e4e4;
     margin: 3% 10%;
     border-radius: 30px;
     .formulary {
@@ -208,7 +207,6 @@ strong {
           font-family: 'IsidoraBlack';
           font-size: 1.5em;
           color: white;
-          background-color: #85BF3F;
           border-radius: 40px;
           border: 1px solid #85BF3F;
         }

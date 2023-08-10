@@ -4,21 +4,21 @@
 }
 
 @font-face {
-  font-family: 'IsidoraBlack';
-  src: url('../../../assets/fonts/Isidora Soft Black.otf');
+  font-family: "IsidoraBlack";
+  src: url("../../../assets/fonts/Isidora Soft Black.otf");
 }
 
 @font-face {
-  font-family: 'IsidoraSemiBold';
-  src: url('../../../assets/fonts/IsidoraSansSemiBold.otf');
+  font-family: "IsidoraSemiBold";
+  src: url("../../../assets/fonts/IsidoraSansSemiBold.otf");
 }
 
-body{
+body {
   margin: 0;
 }
 
-strong{
-  font-family: 'IsidoraBlack';
+strong {
+  font-family: "IsidoraBlack";
 }
 
 .history-container {
@@ -70,28 +70,28 @@ strong{
   }
 }
 
-.title-our-essence{
+.title-our-essence {
   text-align: center;
   padding: 10% 0;
-  font-family: 'IsidoraBlack';
+  font-family: "IsidoraBlack";
   font-size: 1.5em;
-  background-color: #04A9D0;
+  background-color: #04a9d0;
   color: white;
 }
 
-.general-tricycle-container{
+.general-tricycle-container {
   width: 100%;
   display: stretch;
-  .tri-container{
+  .tri-container {
     width: auto;
   }
-  .ci-container{
+  .ci-container {
     width: auto;
   }
-  .clo-container{
+  .clo-container {
     width: auto;
   }
-  .btn-show-less{
+  .btn-show-less {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,18 +192,18 @@ strong{
     }
   }
 }
-.separator-container{
+.separator-container {
   padding: 5%;
-  .separator-image{
+  .separator-image {
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
-    img{
+    img {
       width: 20%;
     }
   }
-  hr{
+  hr {
     border: 2px solid #81a10d;
   }
 }
@@ -226,7 +226,7 @@ strong{
       text-align: center;
       font-family: "IsidoraBlack";
       font-size: 1.5em;
-      color: #F41B83;
+      color: #f41b83;
       padding: 8% 0;
     }
     .ci-description {
@@ -244,19 +244,19 @@ strong{
     }
   }
 }
-.separator-two-container{
+.separator-two-container {
   padding: 5%;
-  .separator-two-image{
+  .separator-two-image {
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
-    img{
+    img {
       width: 20%;
     }
   }
-  hr{
-    border: 2px solid #E91A7D;
+  hr {
+    border: 2px solid #e91a7d;
   }
 }
 .clo-container {
@@ -278,7 +278,7 @@ strong{
       text-align: center;
       font-family: "IsidoraBlack";
       font-size: 1.5em;
-      color: #B0B900;
+      color: #b0b900;
       padding: 8% 0;
     }
     .clo-description {
@@ -296,120 +296,120 @@ strong{
     }
   }
 }
-.tricycle-structure-container{
-  .phrase-and-logo{
+.tricycle-structure-container {
+  .phrase-and-logo {
     padding: 2%;
-    .phrase{
-      font-family: 'IsidoraBlack';
+    .phrase {
+      font-family: "IsidoraBlack";
       color: #303030;
       text-align: center;
     }
-    .logo{
+    .logo {
       display: flex;
       justify-content: center;
       align-content: center;
       width: 100%;
-      img{
+      img {
         width: 70%;
       }
     }
   }
-  .wheels-and-pedals{
+  .wheels-and-pedals {
     padding: 0 10%;
-    .wheels{
-      background-color: #B0B900;
-      border: 2px solid #B0B900;
+    .wheels {
+      background-color: #b0b900;
+      border: 2px solid #b0b900;
       border-radius: 20px;
       margin: 5% 0;
-      .wheels-title{
-        font-family: 'IsidoraBlack';
+      .wheels-title {
+        font-family: "IsidoraBlack";
         font-size: 2em;
         text-align: center;
-        color:#B0B900;
+        color: #b0b900;
         -webkit-text-stroke: 3px white;
-        }
-      .wheels-text{
+      }
+      .wheels-text {
         padding: 8%;
-        font-family: 'IsidoraSemiBold';
+        font-family: "IsidoraSemiBold";
         font-size: 1.3em;
         text-align: justify;
       }
     }
-    .pedals{
-      background-color: #B0B900;
-      border: 2px solid #B0B900;
+    .pedals {
+      background-color: #b0b900;
+      border: 2px solid #b0b900;
       border-radius: 20px;
       margin: 10% 0;
-      .pedals-title{
-        font-family: 'IsidoraBlack';
+      .pedals-title {
+        font-family: "IsidoraBlack";
         font-size: 2em;
         text-align: center;
-        color:#B0B900;
+        color: #b0b900;
         -webkit-text-stroke: 3px white;
-        }
-      .pedals-text{
+      }
+      .pedals-text {
         padding: 8%;
-        font-family: 'IsidoraSemiBold';
+        font-family: "IsidoraSemiBold";
         font-size: 1.3em;
         text-align: justify;
       }
     }
   }
 }
-.habilities-container{
-  .habilities-phrase{
-      font-family: 'IsidoraBlack';
-      color: #303030;
-      text-align: center;
+.habilities-container {
+  .habilities-phrase {
+    font-family: "IsidoraBlack";
+    color: #303030;
+    text-align: center;
   }
-  .habilities{
+  .habilities {
     text-align: center;
     padding: 0% 10%;
-    .hability-title{
+    .hability-title {
       text-align: center;
-      font-family: 'IsidoraBlack';
+      font-family: "IsidoraBlack";
       color: white;
       font-size: 1.3em;
     }
-    .hability{
+    .hability {
       border-radius: 20px;
       padding: 5% 15%;
       text-align: left;
-      font-family: 'IsidoraSemiBold';
-      color:white;
+      font-family: "IsidoraSemiBold";
+      color: white;
       font-size: 1.5em;
       margin: 10% 0;
-      ul{
+      ul {
         padding: 5%;
       }
     }
-    .emotional{
-      background-color: #00ABD3;
+    .emotional {
+      background-color: #00abd3;
     }
-    .social{
-      background-color: #F01B83;
+    .social {
+      background-color: #f01b83;
     }
-    .cognitive{
-      background-color: #FEB100;
+    .cognitive {
+      background-color: #feb100;
     }
   }
 }
 
-.color-container{
-//  background-image: url("../../../assets/images/Color-banner.svg");
-  background-color: #00ABD3;
-//  background-size: cover;
-//  background-position: right;
+.color-container {
+  //  background-image: url("../../../assets/images/Color-banner.svg");
+  background-color: #00abd3;
+  //  background-size: cover;
+  //  background-position: right;
   padding: 10%;
-  .color-info{
+  .color-info {
     text-align: center;
-    .color-title{
-      font-family: 'IsidoraBlack';
+    .color-title {
+      font-family: "IsidoraBlack";
       color: white;
       font-size: 2.4em;
     }
-    .color-text{
-      font-family: 'IsidoraSemiBold';
+    .color-text {
+      font-family: "IsidoraSemiBold";
       color: white;
       font-size: 1.7em;
       text-align: justify;
@@ -417,9 +417,9 @@ strong{
   }
 }
 
-.to-sa-bri-container{
+.to-sa-bri-container {
   margin: 10%;
-  .to-sa-bri{
+  .to-sa-bri {
     display: flex;
     border: 2px;
     flex-direction: column;
@@ -428,51 +428,51 @@ strong{
     align-items: center;
     align-content: center;
     margin: 5% 0;
-    .color-box{
+    .color-box {
       border: 30px solid white;
       border-radius: 12px;
       width: 150px;
       height: 150px;
       margin: 10%;
     }
-    .to-sa-bri-info{
-      .to-sa-bri-title{
-        font-family: 'IsidoraBlack';
+    .to-sa-bri-info {
+      .to-sa-bri-title {
+        font-family: "IsidoraBlack";
         font-size: 2em;
         text-align: center;
       }
-      .to-sa-bri-description{
-        font-family: 'IsidoraSemiBold';
+      .to-sa-bri-description {
+        font-family: "IsidoraSemiBold";
         font-size: 1.2em;
         text-align: justify;
         padding: 10%;
       }
     }
   }
-  .tone{
-    color:#4C0024;
-    background-color: #F01B83;
+  .tone {
+    color: #4c0024;
+    background-color: #f01b83;
   }
-  .tone-box{
-    background-color: #FEB100;
+  .tone-box {
+    background-color: #feb100;
   }
-  .saturation{
-    color: #3C3C00;
-    background-color: #B0B900;
+  .saturation {
+    color: #3c3c00;
+    background-color: #b0b900;
   }
-  .saturation-box{
-    background-image: linear-gradient(to bottom, white, #F01B83);
+  .saturation-box {
+    background-image: linear-gradient(to bottom, white, #f01b83);
   }
-  .glow{
+  .glow {
     color: #003742;
     background-color: #5ec4db;
   }
-  .glow-box{
-    background-image: linear-gradient(to top, black, #B0B900, white);
+  .glow-box {
+    background-image: linear-gradient(to top, black, #b0b900, white);
   }
 }
 
-.team-container{
+.team-container {
   background-image: url("../../../assets/images/Equipo-mobile.svg");
   background-size: cover;
   background-position: right;
@@ -491,7 +491,7 @@ strong{
     padding: 2%;
     transform: translateX(-110%);
     transition: all ease 0.5s;
-    background-color: #AFB800;
+    background-color: #afb800;
     border-radius: 0px;
     &.activeCard {
       display: block;
@@ -526,12 +526,13 @@ strong{
       width: 15%;
       height: 15%;
       transform: rotate(90deg);
-      img{
+      img {
         width: 100%;
       }
     }
     .content-card {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       align-content: center;
@@ -540,16 +541,17 @@ strong{
         justify-content: center;
         align-items: center;
         align-content: center;
+        flex-direction: column;
         padding: 0;
         margin: 0;
-        width:90%;
-        img{
+        width: 90%;
+        img {
           width: 100%;
           object-fit: cover;
           clip-path: circle(40% at center);
           transition: transform 0.3s ease;
         }
-        img:hover{
+        img:hover {
           transform: scale(1.5);
         }
       }
@@ -589,20 +591,19 @@ strong{
       font-family: "IsidoraSemiBold";
       font-size: 1.3em;
       color: white;
-      .names{
+      .names {
         margin-bottom: 20%;
       }
-      li{
+      li {
         margin: 10% 0;
         cursor: pointer;
       }
-      li:hover{
-        color: #ECB004;
+      li:hover {
+        color: #ecb004;
       }
     }
   }
 }
-
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
   .history-container {
@@ -614,7 +615,7 @@ strong{
     }
   }
 
-  .title-our-essence{
+  .title-our-essence {
     padding: 5% 0;
     font-size: 2.2em;
   }
@@ -675,10 +676,10 @@ strong{
       }
     }
   }
-  .separator-container{
+  .separator-container {
     padding: 5% 20%;
-    .separator-image{
-      img{
+    .separator-image {
+      img {
         width: 20%;
       }
     }
@@ -697,7 +698,7 @@ strong{
       .ci-title {
         width: auto;
         font-size: 1.7em;
-        color: #F41B83;
+        color: #f41b83;
         padding: 8% 10%;
       }
       .ci-description {
@@ -710,10 +711,10 @@ strong{
       }
     }
   }
-  .separator-two-container{
+  .separator-two-container {
     padding: 5% 20%;
-    .separator-two-image{
-      img{
+    .separator-two-image {
+      img {
         width: 20%;
       }
     }
@@ -746,97 +747,97 @@ strong{
       }
     }
   }
-  .tricycle-structure-container{
-    .phrase-and-logo{
+  .tricycle-structure-container {
+    .phrase-and-logo {
       padding: 5%;
-      .phrase{
+      .phrase {
         font-size: 2em;
       }
-      .logo{
+      .logo {
         width: 100%;
-        img{
+        img {
           width: 40%;
         }
       }
     }
-    .wheels-and-pedals{
+    .wheels-and-pedals {
       display: flex;
       padding: 0 10%;
       margin: 0 0 5% 0;
-      .wheels{
+      .wheels {
         margin: 0 4%;
         width: 50%;
-        .wheels-title{
+        .wheels-title {
           font-size: 2.7em;
         }
-        .wheels-text{
+        .wheels-text {
           font-size: 1.7em;
         }
       }
-      .pedals{
+      .pedals {
         margin: 0 4%;
         width: 50%;
-        .pedals-title{
+        .pedals-title {
           font-size: 2.7em;
-          }
-        .pedals-text{
+        }
+        .pedals-text {
           font-size: 1.7em;
         }
       }
     }
   }
-  .habilities-container{
-    .habilities-phrase{
-        font-size: 2em;
+  .habilities-container {
+    .habilities-phrase {
+      font-size: 2em;
     }
-    .habilities{
+    .habilities {
       text-align: center;
       padding: 0% 10%;
-      .hability-title{
+      .hability-title {
         font-size: 1.5em;
       }
-      .hability{
+      .hability {
         padding: 5% 10%;
         font-size: 1.7em;
         margin: 7% 10%;
-        ul{
+        ul {
           padding: 3%;
         }
       }
     }
   }
-  .color-container{
+  .color-container {
     background-position: right;
     padding: 10%;
-    .color-info{
+    .color-info {
       width: 100%;
-      .color-title{
+      .color-title {
         font-size: 5em;
       }
-      .color-text{
+      .color-text {
         font-size: 1.7em;
         text-align: justify;
       }
     }
-    .to-sa-bri-container{
+    .to-sa-bri-container {
       margin: 5%;
-      .to-sa-bri{
+      .to-sa-bri {
         flex-direction: row;
-        .color-box{
+        .color-box {
           width: 150px;
           height: 150px;
           margin: 10% 0% 10% 5%;
-          width:40%;
+          width: 40%;
         }
-        .to-sa-bri-info{
+        .to-sa-bri-info {
           width: 100%;
-          .to-sa-bri-title{
-            font-family: 'IsidoraBlack';
+          .to-sa-bri-title {
+            font-family: "IsidoraBlack";
             font-size: 2em;
             text-align: center;
           }
-          .to-sa-bri-description{
-            font-family: 'IsidoraSemiBold';
+          .to-sa-bri-description {
+            font-family: "IsidoraSemiBold";
             font-size: 1.2em;
             text-align: justify;
             padding: 5%;
@@ -848,6 +849,16 @@ strong{
 
   .team-container {
     .personal-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      border: none;
+      padding: 2%;
+      transform: translateX(-110%);
+      transition: all ease 0.5s;
+      background-color: #afb800;
+      border-radius: 0px;
       .hide-personalcard {
         display: flex;
         justify-content: right;
@@ -876,12 +887,13 @@ strong{
         width: 9%;
         height: 9%;
         transform: rotate(90deg);
-        img{
+        img {
           width: 100%;
         }
       }
       .content-card {
         display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         align-content: center;
@@ -892,13 +904,13 @@ strong{
           align-content: center;
           padding: 0 5%;
           margin: 0;
-          width:90%;
-          img{
+          width: 90%;
+          img {
             width: 100%;
             clip-path: circle(40% at center);
             transition: transform 0.3s ease;
           }
-          img:hover{
+          img:hover {
             transform: scale(1.2);
           }
         }
@@ -938,13 +950,13 @@ strong{
         font-family: "IsidoraSemiBold";
         font-size: 1.7em;
         color: white;
-        li{
+        li {
           margin: 3% 0;
           cursor: pointer;
           transition: all 0.5s;
         }
-        li:hover{
-          color: #ECB004;
+        li:hover {
+          color: #ecb004;
           transform: translatex(10px);
         }
       }
@@ -982,14 +994,14 @@ strong{
     }
   }
 
-  .title-our-essence{
+  .title-our-essence {
     padding: 1.5% 0;
     font-size: 4em;
   }
 
-  .general-tricycle-container{
+  .general-tricycle-container {
     width: 100%;
-    .btn-show-less{
+    .btn-show-less {
       padding: 0% 0% 5% 0%;
       button {
         font-size: 2em;
@@ -1050,10 +1062,10 @@ strong{
       }
     }
   }
-  .separator-container{
+  .separator-container {
     padding: 0 25%;
-    .separator-image{
-      img{
+    .separator-image {
+      img {
         width: 15%;
       }
     }
@@ -1073,7 +1085,7 @@ strong{
       .ci-title {
         width: auto;
         font-size: 1.9em;
-        color: #F41B83;
+        color: #f41b83;
         padding: 0%;
       }
       .ci-description {
@@ -1086,10 +1098,10 @@ strong{
       }
     }
   }
-  .separator-two-container{
+  .separator-two-container {
     padding: 0 25%;
-    .separator-two-image{
-      img{
+    .separator-two-image {
+      img {
         width: 15%;
       }
     }
@@ -1122,73 +1134,73 @@ strong{
       }
     }
   }
-  .tricycle-structure-container{
-    .phrase-and-logo{
+  .tricycle-structure-container {
+    .phrase-and-logo {
       padding: 5% 5% 0 5%;
-      .phrase{
+      .phrase {
         font-size: 2em;
       }
-      .logo{
+      .logo {
         width: 100%;
-        img{
+        img {
           width: 20%;
         }
       }
     }
-    .wheels-and-pedals{
+    .wheels-and-pedals {
       display: flex;
       padding: 0 10%;
-      .wheels{
+      .wheels {
         margin: 0 4%;
         width: 50%;
-        .wheels-title{
+        .wheels-title {
           font-size: 2.9em;
         }
-        .wheels-text{
+        .wheels-text {
           font-size: 1.7em;
         }
       }
-      .pedals{
+      .pedals {
         margin: 0 4%;
         width: 50%;
-        .pedals-title{
+        .pedals-title {
           font-size: 2.9em;
-          }
-        .pedals-text{
+        }
+        .pedals-text {
           font-size: 1.7em;
         }
       }
     }
   }
-  .habilities-container{
+  .habilities-container {
     width: 100%;
-    .habilities-phrase{
+    .habilities-phrase {
       padding: 5cqi;
       font-size: 2em;
     }
-    .habilities{
+    .habilities {
       display: flex;
       justify-content: center;
       align-items: stretch;
       text-align: center;
       padding: 0%;
       margin: 0% 10%;
-      .hability-title{
+      .hability-title {
         font-size: 1.5em;
         padding: 6% 0;
       }
-      .hability{
+      .hability {
         width: 100%;
         padding: 0;
         font-size: 1.8em;
         margin: 1.5%;
-        ul{
+        ul {
           padding: 4% 20%;
         }
       }
     }
   }
-  .color-container{
+  .color-container {
     background-image: url("../../../assets/images/Color-banner.svg");
     background-size: cover;
     background-position: right;
@@ -1196,41 +1208,41 @@ strong{
     padding: 3%;
     margin: 5% 0;
     display: flex;
-    .color-info{
+    .color-info {
       width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-content: center;
       align-items: center;
-      .color-title{
+      .color-title {
         font-size: 5em;
       }
-      .color-text{
+      .color-text {
         padding: 3% 7%;
       }
     }
-    .to-sa-bri-container{
+    .to-sa-bri-container {
       width: 100%;
       margin: 0%;
-      .to-sa-bri{
+      .to-sa-bri {
         flex-direction: row;
-        .color-box{
+        .color-box {
           width: 100px;
           height: 100px;
           margin: 5% 0% 5% 5%;
           width: 25%;
         }
-        .to-sa-bri-info{
+        .to-sa-bri-info {
           width: 100%;
-          .to-sa-bri-title{
-            font-family: 'IsidoraBlack';
+          .to-sa-bri-title {
+            font-family: "IsidoraBlack";
             font-size: 2.3em;
             text-align: left;
             padding: 0 5%;
           }
-          .to-sa-bri-description{
-            font-family: 'IsidoraSemiBold';
+          .to-sa-bri-description {
+            font-family: "IsidoraSemiBold";
             font-size: 1em;
             text-align: justify;
             padding: 2% 5%;
@@ -1262,10 +1274,10 @@ strong{
       transform: translateX(-110%);
       transition: all ease 0.5s;
       box-shadow: 2px 2px 2px 1px #c1b7009f;
-      background-color: #AFB800;
+      background-color: #afb800;
       border-radius: 8px;
       &.activeCard {
-        background-color: #AFB800;
+        background-color: #afb800;
         border-radius: 8px;
         transform: translateX(0);
       }
@@ -1297,12 +1309,13 @@ strong{
         width: 10%;
         height: 10%;
         transform: rotate(0deg);
-        img{
+        img {
           width: 100%;
         }
       }
       .content-card {
         display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         align-content: center;
@@ -1313,8 +1326,8 @@ strong{
           align-content: center;
           padding: 0;
           margin: 0;
-          width:90%;
-          img{
+          width: 90%;
+          img {
             width: 100%;
           }
         }
@@ -1354,13 +1367,13 @@ strong{
         font-family: "IsidoraSemiBold";
         font-size: 1.7em;
         color: white;
-        li{
+        li {
           margin: 0% 0;
           cursor: pointer;
           transition: all 0.5s;
         }
-        li:hover{
-          color: #ECB004;
+        li:hover {
+          color: #ecb004;
           transform: translatex(10px);
         }
       }
