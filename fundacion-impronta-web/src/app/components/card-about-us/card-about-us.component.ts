@@ -43,8 +43,9 @@ export class CardAboutUsComponent {
       name: 'Cesar Augusto Niño',
       photo: '../../../assets/images/Cesar1.jpg',
       description:
-        'Ingeniero quimico con mas de 15 años de experiencia en el area.',
+        'Ingeniero Especialista en Gerencia de la Calidad, Finanzas, Seguridad y Salud en el Trabajo e Ingeniería Ambiental. Master en Calidad y Gestión Integral USTA - ICONTEC. Consultor en Gestión empresarial y desarrollo organizacional.',
     },
+    
   ];
 
   constructor() {}

@@ -10,30 +10,122 @@
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-        data-aos="fade-right" data-aos-duration="1000"
+        data-aos="fade-right"
+        data-aos-duration="1000"
       ></iframe>
       <div class="direction">
-        <img src="../../../assets/svg/location-icon.svg" alt="Ubicación">
+        <img src="../../../assets/svg/location-icon.svg" alt="Ubicación" />
         <p>Av. Universitaria No. 38 - 46, Piso 4. Tunja (Boyacá).</p>
       </div>
     </div>
     <div class="contact-form">
       <div class="title-form">
-        <h2  data-aos="fade-down" data-aos-duration="1000">FORMULARIO DE CONTACTO</h2>
+        <h2 data-aos="fade-down" data-aos-duration="1000">
+          FORMULARIO DE CONTACTO
+        </h2>
       </div>
-      <form #myForm ="ngForm" (ngSubmit)="validateForm(myForm)">
-        <input data-aos="fade-down" data-aos-duration="1000" type="text" name="name" [(ngModel)]="name" placeholder="Nombre" required/>
-        <input data-aos="fade-down" data-aos-duration="1000" type="number" name="phone" [(ngModel)]="phone" placeholder="Telefono" required/>
-        <input data-aos="fade-down" data-aos-duration="1000" type="text" name="emailUser" [(ngModel)]="emailUser" placeholder="Email" required/>
-        <textarea data-aos="fade-down" data-aos-duration="1000" name="message" cols="21" rows="10" name="message" [(ngModel)]="message" placeholder="Mensaje" required></textarea>
-        <button data-aos="fade-down" data-aos-duration="1000" type="submit">Enviar</button>
+      <form #myForm="ngForm" (ngSubmit)="validateForm(myForm)">
+        <input
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          type="text"
+          name="name"
+          [(ngModel)]="name"
+          placeholder="Nombre"
+          required
+        />
+        <input
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          type="number"
+          name="phone"
+          [(ngModel)]="phone"
+          placeholder="Telefono"
+          required
+        />
+        <input
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          type="text"
+          name="emailUser"
+          [(ngModel)]="emailUser"
+          placeholder="Email"
+          required
+        />
+        <textarea
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          name="message"
+          cols="21"
+          rows="10"
+          name="message"
+          [(ngModel)]="message"
+          placeholder="Mensaje"
+          required
+        ></textarea>
+        <button data-aos="fade-down" data-aos-duration="1000" type="submit">
+          Enviar
+        </button>
       </form>
     </div>
   </div>
   <div class="aditional-info">
     <div class="phone">
-      <img src="../../../assets/svg/phone-white-icon.svg" alt="Telefono">
+      <img src="../../../assets/svg/phone-white-icon.svg" alt="Telefono" />
       <p>311 889 9277</p>
     </div>
   </div>
+</div>
+
+<div class="container-payment">
+  <form (ngSubmit)="getIntegrityFirm()" #payForm="ngForm">
+    <!-- OBLIGATORIOS -->
+    <input type="hidden" name="public-key" [value]="publicKey" />
+    <input type="hidden" name="currency" [value]="currency" />
+    <input type="hidden" name="reference" [value]="reference" />
+    <input type="hidden" name="signature:integrity" [value]="integrity" />
+    <input
+      type="email"
+      name="customer-data:email"
+      [(ngModel)] = "email"
+      [value]="email"
+      placeholder="Correo"
+    />
+    <input
+      type="text"
+      name="customer-data:full-name"
+      [(ngModel)] = "fullName"
+      [value]="fullName"
+      placeholder="Nombre completo"
+    />
+    <input
+      type="number"
+      name="customer-data:phone-number"
+      [(ngModel)] = "phoneNumber"
+      [value]="phoneNumber"
+      placeholder="Telefono"
+    />
+    <input
+    type="text"
+    name="customer-data:legal-id-type"
+    [(ngModel)] = "documentType"
+    [value]="documentType"
+    placeholder="Tipo de documento"
+  />
+    <input
+      type="number"
+      name="customer-data:legal-id"
+      [(ngModel)] = "documentNum"
+      [value]="documentNum"
+      placeholder="Nro de documento"
+    />
+    <input
+      type="text"
+      name="amount-in-cents"
+      [(ngModel)]="amountInCents"
+      [value]="amountInCents"
+      placeholder="Dinero a donar"
+    />
+    <button type="submit">Pagar con Wompi</button>
+  </form>
 </div>

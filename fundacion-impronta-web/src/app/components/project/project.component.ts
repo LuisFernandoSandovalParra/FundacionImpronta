@@ -184,6 +184,25 @@ export class ProjectComponent {
       state: 'active',
       project_type: 'extension'
     },
+    {
+      id: 9,
+      title: 'Gestión del Emprendimiento',
+      abstract:
+        'En este sentido Impronta creo a través de este proyecto un escenario en el que se pretende brindar las asesorías técnicas y metodológicas necesarias para que las personas pertenecientes al Fondo Emprender.',
+      description:
+        'Ante la clara necesidad de la emergencia de espacios laborales para las personas, emprender se ha consolidado en nuestro tiempo como una opción percibida como pertinente para muchos. En este sentido Impronta creo a través de este proyecto un escenario en el que se pretende brindar las asesorías técnicas y metodológicas necesarias para que las personas pertenecientes al Fondo Emprender, cuenten con la posibilidad de que su emprendimiento sea sostenible en el contexto y se proyecte al crecimiento a mediano y largo plazo. ',
+      problematic:
+        'Tasas de desempleo del contexto en conexidad con la falta de elementos que percibe la población ala momento de buscar gestionar e impulsar emprendimientos. ',
+      proposal:
+        'Mitigar los obstáculos percibidos por las personas pertenecientes al fondo emprender al momento de poner en marcha un emprendimiento. ',
+      image:
+        'https://uploadgerencie.com/imagenes/emprendimiento.png',
+      expected_budget: 100,
+      current_budget: 0,
+      video: 'https://www.youtube.com/embed/YZi5vam33ow',
+      state: 'active',
+      project_type: 'social'
+    },
   ];
 
   getListProject(type: string): Project[] {

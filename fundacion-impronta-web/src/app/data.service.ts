@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class DataService {
-  private apiUrl = 'http://localhost:3000/api';
+  private apiUrl = `http://localhost:3000/api`;
   constructor(private http: HttpClient) {}
 
   sendMessage(
@@ -45,5 +45,9 @@ export class DataService {
       modality: modality,
       interest_population: interest_population,
     });
+  }
+
+  getIntegrity(amount: string): Observable<any> {
+    return this.http.get<any>(this.apiUrl + `/donations/pay/${amount}`);
   }
 }
