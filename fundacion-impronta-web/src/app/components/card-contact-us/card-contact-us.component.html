@@ -63,7 +63,7 @@
           placeholder="Mensaje"
           required
         ></textarea>
-        <button data-aos="fade-down" data-aos-duration="1000" type="submit">
+        <button data-aos="fade-down" data-aos-duration="1000" type="submit" [disabled]="!myForm.form.valid">
           Enviar
         </button>
       </form>
@@ -75,57 +75,4 @@
       <p>311 889 9277</p>
     </div>
   </div>
-</div>
-
-<div class="container-payment">
-  <form (ngSubmit)="getIntegrityFirm()" #payForm="ngForm">
-    <!-- OBLIGATORIOS -->
-    <input type="hidden" name="public-key" [value]="publicKey" />
-    <input type="hidden" name="currency" [value]="currency" />
-    <input type="hidden" name="reference" [value]="reference" />
-    <input type="hidden" name="signature:integrity" [value]="integrity" />
-    <input
-      type="email"
-      name="customer-data:email"
-      [(ngModel)] = "email"
-      [value]="email"
-      placeholder="Correo"
-    />
-    <input
-      type="text"
-      name="customer-data:full-name"
-      [(ngModel)] = "fullName"
-      [value]="fullName"
-      placeholder="Nombre completo"
-    />
-    <input
-      type="number"
-      name="customer-data:phone-number"
-      [(ngModel)] = "phoneNumber"
-      [value]="phoneNumber"
-      placeholder="Telefono"
-    />
-    <input
-    type="text"
-    name="customer-data:legal-id-type"
-    [(ngModel)] = "documentType"
-    [value]="documentType"
-    placeholder="Tipo de documento"
-  />
-    <input
-      type="number"
-      name="customer-data:legal-id"
-      [(ngModel)] = "documentNum"
-      [value]="documentNum"
-      placeholder="Nro de documento"
-    />
-    <input
-      type="text"
-      name="amount-in-cents"
-      [(ngModel)]="amountInCents"
-      [value]="amountInCents"
-      placeholder="Dinero a donar"
-    />
-    <button type="submit">Pagar con Wompi</button>
-  </form>
 </div>

@@ -19,7 +19,7 @@
       <li><a (click)="toogleMenu()" [routerLink]="['contactanos']" routerLinkActive="active" href="">Contactanos</a></li>
     </ul>
     <div>
-      <button class="donation-btn">
+      <button (click)="toogleMenu()" [routerLink]="['donaciones']"  routerLinkActive="active" class="donation-btn">
         <img src="../../../assets/svg/donation-icon.svg" alt="Donaciones">
         Donaciones
       </button>
@@ -43,7 +43,7 @@
       </ul>
     </nav>
     <div class="donation">
-      <button class="donation-btn">
+      <button [routerLink]="['donaciones']" routerLinkActive="active" class="donation-btn">
         <img src="../../../assets/svg/donation-icon.svg" alt="Donaciones">
         Donaciones
       </button>
