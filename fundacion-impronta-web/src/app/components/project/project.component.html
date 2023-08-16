@@ -39,7 +39,7 @@
           >
             Ver mas
           </button>
-          <button class="btn-donate">Donar</button>
+          <button (click)="sendData(project.title)" [routerLink]="['/donaciones']"  routerLinkActive="active" class="btn-donate">Donar</button>
         </div>
       </div>
     </div>

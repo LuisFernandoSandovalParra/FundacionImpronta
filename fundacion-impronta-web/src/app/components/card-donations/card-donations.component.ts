@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/data.service';
 import { environment } from 'environment';
 import { Project } from 'src/app/models/project.model';
+import { DataSharingService } from 'src/app/data-sharing.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-card-donations',
@@ -10,7 +12,34 @@ import { Project } from 'src/app/models/project.model';
   providers: [DataService],
 })
 export class CardDonationsComponent {
-  constructor(private dataService: DataService) {}
+  private selectDataSubscription: Subscription;
+
+  currency: string = 'COP';
+  amountInCents: string = '';
+  reference: string = '';
+  integrity: string = '';
+  publicKey = environment.publicKey;
+  email: string = '';
+  fullName: string = '';
+  phoneNumber: string = '';
+  documentType: string = '';
+  documentNum: string = '';
+  redirectLink: string = 'http:localhost:4200/inicio';
+
+  donationType: string = '';
+  projectSelected: string = '';
+
+  constructor(
+    private dataSharingService: DataSharingService,
+    private dataService: DataService
+  ) {
+    this.selectDataSubscription = this.dataSharingService.selectData$.subscribe(
+      (data) => {
+        this.donationType = 'proyecto'
+        this.projectSelected = data.toString();
+      }
+    );
+  }
 
   projects: Project[] = [
     {
@@ -182,19 +211,9 @@ export class CardDonationsComponent {
     },
   ];
 
-  donationType: string = '';
-
-  currency: string = 'COP';
-  amountInCents: string = '';
-  reference: string = '';
-  integrity: string = '';
-  publicKey = environment.publicKey;
-  email: string = '';
-  fullName: string = '';
-  phoneNumber: string = '';
-  documentType: string = '';
-  documentNum: string = '';
-  redirectLink: string = 'http:localhost:4200/inicio';
+  ngOnDestroy() {
+    this.selectDataSubscription.unsubscribe();
+  }
 
   formatCentCop(amount: string) {
     const cantidadNumerica = amount.replace(/[^0-9.]/g, '');

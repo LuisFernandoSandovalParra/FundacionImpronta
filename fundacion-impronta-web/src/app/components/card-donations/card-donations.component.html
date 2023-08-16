@@ -84,27 +84,16 @@
             Seleccione el tipo de donación
           </option>
           <option value="general">General</option>
-          <option value="programa">Programa</option>
           <option value="proyecto">Proyecto</option>
-        </select>
-      </div>
-      <div *ngIf="donationType === 'programa'" class="input-contain">
-        <label for="program-select">Programa</label>
-        <select name="program-select" required>
-          <option disabled selected value="">
-            Seleccione el programa
-          </option>
-          <option value="social">Proyección social</option>
-          <option value="extension">Por extensión</option>
         </select>
       </div>
       <div *ngIf="donationType === 'proyecto'" class="input-contain">
         <label for="project-select">Proyectos</label>
-        <select name="project-select" required>
-          <option disabled selected value="">
-            Seleccione el proyecto
+        <select name="project-select" [(ngModel)]="projectSelected" required>
+          <option disabled selected value="">Seleccione el proyecto</option>
+          <option *ngFor="let project of projects" [value]="project.title">
+            {{ project.title }}
           </option>
-          <option *ngFor="let project of projects" [value]="project.title">{{project.title}}</option>
         </select>
       </div>
       <div class="input-contain">
@@ -119,7 +108,14 @@
         />
       </div>
       <div class="legal-info">
-        <p>Valoramos tu privacidad. Los datos proporcionados en este formulario de donación se tratarán de manera confidencial y solo se utilizarán con el propósito de procesar y gestionar tu contribución. No compartiremos tus datos con terceros sin tu consentimiento. Puedes obtener más información sobre cómo manejamos y protegemos tus datos en nuestra [Política de Privacidad]. Gracias por apoyarnos.</p>
+        <p>
+          Valoramos tu privacidad. Los datos proporcionados en este formulario
+          de donación se tratarán de manera confidencial y solo se utilizarán
+          con el propósito de procesar y gestionar tu contribución. No
+          compartiremos tus datos con terceros sin tu consentimiento. Puedes
+          obtener más información sobre cómo manejamos y protegemos tus datos en
+          nuestra [Política de Privacidad]. Gracias por apoyarnos.
+        </p>
       </div>
       <div class="btn-contain">
         <button type="submit">Pagar con Wompi</button>

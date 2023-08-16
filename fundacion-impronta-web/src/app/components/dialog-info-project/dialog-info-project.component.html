@@ -44,6 +44,6 @@
     </div>
   </div>
   <div class="btn-donation end-sub-topic">
-    <button>Donar</button>
+    <button (click)="sendData()" [routerLink]="['/donaciones']"  routerLinkActive="active">Donar</button>
   </div>
 </div>

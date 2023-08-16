@@ -3,6 +3,7 @@ import { Project } from 'src/app/models/project.model';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogInfoProjectComponent } from '../dialog-info-project/dialog-info-project.component';
+import { DataSharingService } from 'src/app/data-sharing.service';
 
 @Component({
   selector: 'app-project',
@@ -10,7 +11,11 @@ import { DialogInfoProjectComponent } from '../dialog-info-project/dialog-info-p
   styleUrls: ['./project.component.scss'],
 })
 export class ProjectComponent {
-  constructor(private sanitizer: DomSanitizer, private dialog: MatDialog) {}
+  constructor(
+    private dataSharingService: DataSharingService,
+    private sanitizer: DomSanitizer,
+    private dialog: MatDialog
+  ) {}
 
   projectTypeSelected = 'social';
 
@@ -62,8 +67,7 @@ export class ProjectComponent {
       problematic: 'Violencia intrafamiliar.',
       proposal:
         'Generar estrategias que permitan mitigar las altas cifras de violencia intrafamiliar propias del contexto, desde mecanismos que permitan una reparación real para las victimas y procesos de mediación para los conflictos y no se reduzcan a la judicialización de los victimarios. Igualmente, el proyecto se direcciona a la protección del núcleo fundamental de la sociedad: la familia (ART 42 CPC).',
-      image:
-        'https://images.jifo.co/103439701_1630891647316.jpg',
+      image: 'https://images.jifo.co/103439701_1630891647316.jpg',
       expected_budget: 0,
       current_budget: 0,
       video: 'https://www.youtube.com/embed/6a5BDfLtp6g',
@@ -144,7 +148,7 @@ export class ProjectComponent {
       current_budget: 0,
       video: 'https://www.youtube.com/embed/zBKtZvy5r1A',
       state: 'active',
-      project_type: 'social'
+      project_type: 'social',
     },
     {
       id: 7,
@@ -163,7 +167,7 @@ export class ProjectComponent {
       current_budget: 0,
       video: 'https://www.youtube.com/embed/zBKtZvy5r1A',
       state: 'active',
-      project_type: 'extension'
+      project_type: 'extension',
     },
     {
       id: 8,
@@ -176,13 +180,12 @@ export class ProjectComponent {
         'Afectación de la salud física y mental de los actores viales. ',
       proposal:
         'Promover espacios de prevención y rehabilitación a la salud física mental ante las afectaciones que emergen en estas ante la interacción del hombre en las vías.',
-      image:
-        'https://ufpsbienestar.files.wordpress.com/2014/02/imagen.gif',
+      image: 'https://ufpsbienestar.files.wordpress.com/2014/02/imagen.gif',
       expected_budget: 100,
       current_budget: 0,
       video: 'https://www.youtube.com/embed/zBKtZvy5r1A',
       state: 'active',
-      project_type: 'extension'
+      project_type: 'extension',
     },
     {
       id: 9,
@@ -195,20 +198,19 @@ export class ProjectComponent {
         'Tasas de desempleo del contexto en conexidad con la falta de elementos que percibe la población ala momento de buscar gestionar e impulsar emprendimientos. ',
       proposal:
         'Mitigar los obstáculos percibidos por las personas pertenecientes al fondo emprender al momento de poner en marcha un emprendimiento. ',
-      image:
-        'https://uploadgerencie.com/imagenes/emprendimiento.png',
+      image: 'https://uploadgerencie.com/imagenes/emprendimiento.png',
       expected_budget: 100,
       current_budget: 0,
       video: 'https://www.youtube.com/embed/YZi5vam33ow',
       state: 'active',
-      project_type: 'social'
+      project_type: 'social',
     },
   ];
 
   getListProject(type: string): Project[] {
     let projects: Project[] = [];
     for (let i = 0; i < this.projects.length; i++) {
-      if(this.projects[i].project_type === type){
+      if (this.projects[i].project_type === type) {
         projects.push(this.projects[i]);
       }
     }
@@ -299,5 +301,9 @@ export class ProjectComponent {
     dialogRef.afterClosed().subscribe((result) => {
       console.log('El diálogo ha sido cerrado', result);
     });
+  }
+
+  sendData(projectTitle: string) {
+    this.dataSharingService.updateSelectData(projectTitle);
   }
 }
