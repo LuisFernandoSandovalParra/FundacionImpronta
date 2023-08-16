@@ -6,6 +6,7 @@ import { CardProjectsComponent } from './components/card-projects/card-projects.
 import { CardContactUsComponent } from './components/card-contact-us/card-contact-us.component';
 import { CardVolunteersComponent } from './components/card-volunteers/card-volunteers.component';
 import { CardDonationsComponent } from './components/card-donations/card-donations.component';
+import { CardHealthTrainingComponent } from './components/card-health-training/card-health-training.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'voluntarios', component: CardVolunteersComponent },
   { path: 'contactanos', component: CardContactUsComponent },
   { path: 'donaciones', component: CardDonationsComponent },
+  { path: 'salud', component: CardHealthTrainingComponent },
 ];
 
 @NgModule({

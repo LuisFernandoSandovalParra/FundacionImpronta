@@ -1,0 +1,37 @@
+.banner-container{
+  background-image: url('../../../assets/images/Banner Cursos Fondo.svg');
+  .impronta-logo{
+    width: 100%;
+    text-align: center;
+    img{
+      width: 70%;
+    }
+  }
+  .btns-courses-container{
+    display: flex;
+    justify-content: center;
+    .courses-social-proyection{
+      text-align: center;
+      h1{
+        background-color: #47B8A4;
+      }
+    }
+    .courses-professional-formation{
+      text-align: center;
+      h1{
+        background-color: #2755A2;
+      }
+    }
+    img{
+      width: 80%;
+    }
+    h1{
+      text-align: center;
+      font-size: 0.9em;
+      margin: 0 2%;
+      padding: 2% 0;
+      border-radius: 7px;
+      color: white;
+    }
+  }
+}

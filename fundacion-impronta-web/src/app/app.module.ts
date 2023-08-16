@@ -21,6 +21,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CardVolunteersComponent } from './components/card-volunteers/card-volunteers.component';
 import { CardDonationsComponent } from './components/card-donations/card-donations.component';
+import { CardHealthTrainingComponent } from './components/card-health-training/card-health-training.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { CardDonationsComponent } from './components/card-donations/card-donatio
     FloatingButtonComponent,
     DialogInfoProjectComponent,
     CardVolunteersComponent,
-    CardDonationsComponent
+    CardDonationsComponent,
+    CardHealthTrainingComponent
   ],
   imports: [
     BrowserModule,
