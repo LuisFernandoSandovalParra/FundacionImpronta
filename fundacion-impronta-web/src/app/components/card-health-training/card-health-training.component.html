@@ -1,15 +1,63 @@
 <div class="banner-container">
   <div class="impronta-logo">
-    <img src="../../../assets/images/Banner Cursos Logo.svg" alt="Formación en salud">
+    <img
+      data-aos="fade-down"
+      data-aos-duration="1000"
+      src="../../../assets/images/Banner Cursos Logo.svg"
+      alt="Formación en salud"
+    />
   </div>
   <div class="btns-courses-container">
-    <div class="courses-social-proyection">
-      <img src="../../../assets/images/Banner Cursos-03.svg" alt="Proyección social">
-      <h1>Cursos Proyección Social</h1>
+    <div
+      (click)="changeCoursesTypeSelected('profesional')"
+      class="courses-professional-formation"
+    >
+      <img
+        data-aos="flip-left"
+        data-aos-duration="1500"
+        src="../../../assets/images/Banner Cursos-04.svg"
+        alt="Profesional"
+      />
+      <h1 data-aos="flip-up" data-aos-duration="1000">Formación Profesional</h1>
     </div>
-    <div class="courses-professional-formation">
-      <img src="../../../assets/images/Banner Cursos-04.svg" alt="Profesional">
-      <h1>Formación Profesional</h1>
+    <div
+      (click)="changeCoursesTypeSelected('social')"
+      class="courses-social-proyection"
+    >
+      <img
+        data-aos="flip-right"
+        data-aos-duration="1500"
+        src="../../../assets/images/Banner Cursos-03.svg"
+        alt="Proyección social"
+      />
+      <h1 data-aos="flip-up" data-aos-duration="1000">
+        Cursos Proyección Social
+      </h1>
+    </div>
+  </div>
+</div>
+<div
+  [ngStyle]="{ 'background-color': backgroundColorCoursesType }"
+  class="courses-container"
+>
+  <div class="courses-type-title">
+    <h1 data-aos="flip-down" data-aos-duration="1000">
+      {{ titleCoursesType }}
+    </h1>
+  </div>
+  <div class="courses">
+    <div
+      *ngFor="let course of getListCourses(coursesTypeSelected)"
+      class="card-course"
+      [ngStyle]="{ 'background-color': backgroundColorCoursesType }"
+    >
+      <div class="course" data-aos="fade-up" data-aos-duration="1500">
+        <img [src]="course.image" alt="Curso" />
+        <div class="capa">
+          <h2>Nombre</h2>
+          <p>Precio: $20000</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

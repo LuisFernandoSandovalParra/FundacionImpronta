@@ -10,7 +10,7 @@
     </div>
     <form (submit)="sendVolunteerEmail()">
       <div class="container-first-name inputs">
-        <label for="first_name">Nombres: </label>
+        <label for="first_name" id="first_name">Nombres: </label>
         <input
           type="text"
           [(ngModel)]="first_name"
@@ -20,7 +20,7 @@
         />
       </div>
       <div class="container-last-name inputs">
-        <label for="last_name">Apellidos: </label>
+        <label for="last_name" id="last_name">Apellidos: </label>
         <input
           type="text"
           [(ngModel)]="last_name"
@@ -30,7 +30,7 @@
         />
       </div>
       <div class="container-email inputs">
-        <label for="email">Correo: </label>
+        <label for="email" id="email">Correo: </label>
         <input
           type="email"
           [(ngModel)]="email"
@@ -40,7 +40,7 @@
         />
       </div>
       <div class="container-phone inputs">
-        <label for="phone">Teléfono: </label>
+        <label for="phone" id="phone">Teléfono: </label>
         <input
           type="number"
           [(ngModel)]="phone"
@@ -50,7 +50,7 @@
         />
       </div>
       <div class="container-academic-level inputs">
-        <label for="academic_level">Nivel academico: </label>
+        <label for="academic_level" id="academic_level">Nivel academico: </label>
         <select name="academic_level" [(ngModel)]="academic_level">
           <option disabled selected value="">Seleccione una opción</option>
           <option value="Bachiller">Bachiller</option>
@@ -59,7 +59,7 @@
         </select>
       </div>
       <div class="container-habilities inputs">
-        <label for="habilities">Profesión/experiencias tecnicas: </label>
+        <label for="habilities" id="habilities">Profesión/experiencias tecnicas: </label>
         <input
           type="text"
           name="habilities"
@@ -69,7 +69,7 @@
         />
       </div>
       <div class="container-work-hours inputs">
-        <label for="work_hours">Horas voluntariado: </label>
+        <label for="work_hours" id="work_hours">Horas voluntariado: </label>
         <input
           type="number"
           name="work_hours"
@@ -81,7 +81,7 @@
         />
       </div>
       <div class="container-modality inputs">
-        <label for="modality">Modalidad: </label>
+        <label for="modality" id="modality">Modalidad: </label>
         <select name="modality" [(ngModel)]="modality">
           <option disabled selected value="">Seleccione una modalidad</option>
           <option value="Presencial">Presencial</option>
@@ -90,7 +90,7 @@
         </select>
       </div>
       <div class="container-interest-population inputs">
-        <label for="interestPopulation">Población de interes: </label>
+        <label for="interest_population" id="interest_population">Población de interes: </label>
         <select name="interest_population" [(ngModel)]="interest_population">
           <option disabled selected value="">
             Seleccione una población de interes
