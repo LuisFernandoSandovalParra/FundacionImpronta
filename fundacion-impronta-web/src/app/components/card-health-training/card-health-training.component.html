@@ -51,11 +51,12 @@
       class="card-course"
       [ngStyle]="{ 'background-color': backgroundColorCoursesType }"
     >
-      <div class="course" data-aos="fade-up" data-aos-duration="1500">
+      <div (click)="showMoreCourseInfo(course.id)" class="course" data-aos="fade-up" data-aos-duration="1500">
         <img [src]="course.image" alt="Curso" />
         <div class="capa">
-          <h2>Nombre</h2>
-          <p>Precio: $20000</p>
+          <h2>{{course.name}}</h2>
+          <p>Precio: ${{course.value}}</p>
+          <p>Horas: {{course.hours_num}}</p>
         </div>
       </div>
     </div>

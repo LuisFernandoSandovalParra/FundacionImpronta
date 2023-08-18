@@ -9,7 +9,15 @@ import { DataSharingService } from 'src/app/data-sharing.service';
   styleUrls: ['./dialog-info-project.component.scss']
 })
 export class DialogInfoProjectComponent {
+
   constructor(private dataSharingService: DataSharingService, @Inject(MAT_DIALOG_DATA) public data: any, private dialogRef:MatDialogRef<DialogInfoProjectComponent>, private sanitizer: DomSanitizer) {}
+
+  subscriptionActiveForm: boolean = false;
+
+  viewForm(){
+    this.subscriptionActiveForm = !this.subscriptionActiveForm;
+    console.log(this.subscriptionActiveForm)
+  }
 
   getCurrentVideoUrl(){
     return this.sanitizer.bypassSecurityTrustResourceUrl(this.data.project.video)

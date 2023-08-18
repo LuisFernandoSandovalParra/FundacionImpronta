@@ -291,6 +291,7 @@ export class ProjectComponent {
   openDialog() {
     const dialogRef = this.dialog.open(DialogInfoProjectComponent, {
       data: {
+        type: 'project',
         project: this.currentProject,
         exp_budget: this.convertToCop(this.currentProject.expected_budget),
         curr_budget: this.convertToCop(this.currentProject.current_budget),
@@ -299,7 +300,7 @@ export class ProjectComponent {
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      console.log('El diálogo ha sido cerrado', result);
+      
     });
   }
 
