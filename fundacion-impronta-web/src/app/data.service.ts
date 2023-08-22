@@ -9,6 +9,10 @@ export class DataService {
   private apiUrl = `http://localhost:3000/api`;
   constructor(private http: HttpClient) {}
 
+  getProjectList(): Observable<any>{
+    return this.http.get<any>(this.apiUrl + '/projects/list');
+  }
+
   sendMessage(
     name: string,
     emailUser: string,

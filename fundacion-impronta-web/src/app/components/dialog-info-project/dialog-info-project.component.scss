@@ -21,6 +21,9 @@
   font-family: "PoppinsSemiBold";
   src: url("../../../assets/fonts/Poppins-SemiBold.ttf");
 }
+strong{
+  font-family: 'PoppinsBlack';
+}
 
 h2 {
   font-family: "IsidoraBlack";
@@ -45,8 +48,8 @@ h2 {
   .title-project-info {
     font-family: "IsidoraBlack";
     text-align: center;
-    color: #00ABD3;
-    padding: 3%  0% 3% 3%;
+    color: #00abd3;
+    padding: 3% 0% 3% 3%;
     background-color: #feb100;
   }
   .project-video {
@@ -59,10 +62,10 @@ h2 {
     font-size: 1.2em;
     background-color: #feb100;
   }
-  .init-sub-topic{
+  .init-sub-topic {
     background-color: #feb100;
   }
-  .end-sub-topic{
+  .end-sub-topic {
     background-color: #feb100;
   }
   .project-progress-bar {
@@ -96,7 +99,7 @@ h2 {
   }
 }
 
-.course-general-container{
+.course-general-container {
   display: flex;
   flex-direction: column;
   height: 80vh;
@@ -112,23 +115,23 @@ h2 {
       cursor: pointer;
     }
   }
-  .course-image{
-    img{
+  .course-image {
+    img {
       width: 100%;
     }
   }
-  .text-content{
+  .text-content {
     padding: 5%;
     font-size: 1.2em;
-    h3{
-      font-family: 'PoppinsBlack';
+    h3 {
+      font-family: "PoppinsBlack";
       font-size: 1.2em;
     }
   }
-  .btn-subscription{
+  .btn-subscription {
     text-align: center;
-    button{
-      font-family: 'PoppinsBlack';
+    button {
+      font-family: "PoppinsBlack";
       font-size: 1.4em;
       padding: 2% 5%;
       margin-bottom: 10%;
@@ -138,11 +141,78 @@ h2 {
       color: white;
       cursor: pointer;
     }
-    button:hover{
+    button:hover {
       background-color: #667ca3;
     }
-    button:active{
+    button:active {
       background-color: #0a42a4;
+    }
+  }
+}
+
+.subscription-form {
+  font-family: "PoppinsSemiBold";
+  height: 80vh;
+  .close-dialog {
+    display: flex;
+    justify-content: right;
+    padding: 1em;
+    border: none;
+    button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  .header-subscription-container {
+    h1 {
+      font-family: "PoppinsBlack";
+      text-align: center;
+      color: #2755a2;
+    }
+    p {
+      padding: 5%;
+    }
+  }
+  .info-container {
+    padding: 0 5%;
+  }
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(173, 173, 173);
+    margin: 5%;
+    padding: 2%;
+    border-radius: 20px;
+    label {
+      color: black;
+      font-family: "PoppinsBlack";
+    }
+    input {
+      border: none;
+      background-color: rgb(173, 173, 173);
+      color: black;
+      font-family: 'PoppinsSemiBold';
+    }
+    select {
+      border: none;
+      background-color: rgb(173, 173, 173);
+      color: black;
+      font-family: 'PoppinsSemiBold';
+    }
+  }
+  .btn-send {
+    text-align: center;
+    button {
+      font-family: "PoppinsBlack";
+      font-size: 1.4em;
+      padding: 2% 5%;
+      margin-bottom: 10%;
+      border-radius: 20px;
+      border: 1px solid #2755a2;
+      background-color: #2755a2;
+      color: white;
+      cursor: pointer;
     }
   }
 }
@@ -151,7 +221,7 @@ h2 {
   .general-container-info-project {
     .title-project-info {
       font-size: 1.6em;
-      padding: 3%  0% 3% 3%;
+      padding: 3% 0% 3% 3%;
     }
     .sub-topic {
       font-size: 1.5em;
@@ -187,24 +257,55 @@ h2 {
     }
   }
 
-  .course-general-container{
-    .course-image{
-      img{
+  .course-general-container {
+    .course-image {
+      img {
         width: 35em;
       }
     }
-    .text-content{
+    .text-content {
       font-size: 1.3em;
-      h3{
+      h3 {
         font-size: 1.3em;
       }
     }
-    .btn-subscription{
-      button{
+    .btn-subscription {
+      button {
         border-radius: 20px;
         background-color: #2755a2;
         color: white;
         cursor: pointer;
+      }
+    }
+  }
+
+  .subscription-form {
+    .header-subscription-container {
+      h1 {
+        font-size: 2.5em;
+      }
+      p {
+        padding: 5%;
+        font-size: 1.5em;
+      }
+    }
+    .info-container {
+      font-size: 1.5em;
+    }
+    .input-container {
+      label {
+        font-size: 1.5em;
+      }
+      input {
+        font-size: 1.5em;
+      }
+      select {
+        font-size: 1.5em;
+      }
+    }
+    .btn-send {
+      button {
+        font-size: 1.5em;
       }
     }
   }
@@ -214,7 +315,7 @@ h2 {
   .general-container-info-project {
     .title-project-info {
       font-size: 1.6em;
-      padding: 3%  0% 3% 3%;
+      padding: 3% 0% 3% 3%;
     }
     .sub-topic {
       font-size: 1.2em;
@@ -251,18 +352,49 @@ h2 {
     }
   }
 
-  .course-general-container{
-    .course-image{
-      img{
+  .course-general-container {
+    .course-image {
+      img {
         width: 35em;
       }
     }
-    .text-content{
+    .text-content {
       padding: 5%;
       font-size: 1.2em;
-      h3{
-        font-family: 'PoppinsBlack';
+      h3 {
+        font-family: "PoppinsBlack";
         font-size: 1.2em;
+      }
+    }
+  }
+
+  .subscription-form {
+    .header-subscription-container {
+      h1 {
+        font-size: 2em;
+      }
+      p {
+        padding: 5%;
+        font-size: 1.2em;
+      }
+    }
+    .info-container {
+      font-size: 1.2em;
+    }
+    .input-container {
+      label {
+        font-size: 1.2em;
+      }
+      input {
+        font-size: 1.2em;
+      }
+      select {
+        font-size: 1.2em;
+      }
+    }
+    .btn-send {
+      button {
+        font-size: 1em;
       }
     }
   }

@@ -80,11 +80,22 @@
 </div>
 
 <div *ngIf="subscriptionActiveForm === true" class="subscription-form">
-  <p>
-    Ingresa correctamente tus datos personales, estos serán los que aparezcan en
-    tu certificado.
-  </p>
-  <div class="first-name-container">
+  <div class="close-dialog">
+    <button (click)="closeDialog()">
+      <img src="../../../assets/svg/close-icon.svg" alt="Volver" />
+    </button>
+  </div>
+  <div class="header-subscription-container">
+    <h1>Inscripción</h1>
+    <p><strong>Curso: </strong>{{data.course.name}}</p>
+  </div>
+  <div class="info-container">
+    <p>
+      Ingresa correctamente tus datos personales.<br> Estos serán los que aparezcan en
+      tu certificado.
+    </p>
+  </div>
+  <div class="input-container">
     <label for="firstName">Nombres:</label>
     <input
       type="text"
@@ -93,11 +104,11 @@
       placeholder="Ej: Luis Fernando"
     />
   </div>
-  <div class="last-name-container">
+  <div class="input-container">
     <label for="lastName">Apellidos:</label>
     <input type="text" name="lastName" placeholder="Ej: Sandoval Parra" required />
   </div>
-  <div class="identification-type-container">
+  <div class="input-container">
     <label for="identificationType">Tipo de Documento:</label>
     <select name="identificationType" required>
       <option disabled selected value="">
@@ -111,19 +122,19 @@
     </select>
 
   </div>
-  <div class="identification-number-container">
+  <div class="input-container">
     <label for="identificationNumber">Nro de Documento:</label>
     <input type="number" name="identificationNumber" placeholder="Ej: 1193124757" required>
   </div>
-  <div class="identification-expedition-place-container">
+  <div class="input-container">
     <label for="identificationExpeditionPlace">Lugar de expedición:</label>
     <input type="text" name="identificationExpeditionPlace" placeholder="Ej: Socorro - Santander">
   </div>
-  <div class="email-container">
+  <div class="input-container">
     <label for="email">Correo:</label>
     <input type="email" name="email" placeholder="Ej: luisandoval@correo.com" required>
   </div>
-  <div class="profession-container">
+  <div class="input-container">
     <label for="">Profesión:</label>
     <input type="text" name="profession" placeholder="Ej: Ingeniero ambiental" required>
   </div>

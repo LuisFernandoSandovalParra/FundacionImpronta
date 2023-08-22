@@ -22,7 +22,7 @@ export class CardHealthTrainingComponent {
     {
       id: 1,
       name: 'Administración de Medicamentos',
-      image: '../../../assets/images/C_Administracion de medicamentos.svg',
+      image: '../../../assets/images/C_Atencion a victimas de violencia sexual.svg',
       course_type: 'profesional',
       substantive_function: 'Formación Profesional',
       hours_num: 40,
