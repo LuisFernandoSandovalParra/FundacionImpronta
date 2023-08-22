@@ -13,6 +13,10 @@ export class DataService {
     return this.http.get<any>(this.apiUrl + '/projects/list');
   }
 
+  getCoursesList(): Observable<any>{
+    return this.http.get<any>(this.apiUrl+ '/courses/list');
+  }
+
   sendMessage(
     name: string,
     emailUser: string,
