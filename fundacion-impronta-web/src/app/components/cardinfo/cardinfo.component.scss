@@ -1,0 +1,758 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: 'IsidoraBlack';
+  src: url('../../../assets/fonts/Isidora Soft Black.otf');
+}
+
+@font-face {
+  font-family: 'IsidoraSemiBold';
+  src: url('../../../assets/fonts/IsidoraSansSemiBold.otf');
+}
+
+body{
+  margin: 0;
+}
+
+strong{
+  font-family: 'IsidoraBlack';
+}
+
+.container {
+  width: 100%;
+  background-image: url('../../../assets/images/Diseño1.png');
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  .logo-phrase {
+    margin: 3%;
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      width: 5em;
+    }
+    hr {
+      color: #f21b83;
+      border: 3px solid;
+    }
+    h2 {
+      font-family: "IsidoraBlack";
+      color: #303030;
+      font-size: 1.2em;
+      text-align: center;
+      margin: 0.5em;
+    }
+  }
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-family: "IsidoraBlack";
+      font-size: 80%;
+      margin: 0.5em;
+      padding: 0.2em 2em;
+      border: 2px solid white;
+      border-radius: 10em;
+      background-color: #f21b83;
+      color: white;
+    }
+  }
+  .info-container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    font-family: "IsidoraSemiBold";
+    font-size: 1.4em;
+    justify-content: center;
+    align-content: center;
+    text-align: justify;
+    div {
+      justify-content: center;
+      align-content: center;
+      flex-basis: 17em;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+    .image {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 60%;
+      }
+    }
+    .description-part-one {
+      font-size: 80%;
+      margin: 10%;
+      margin-bottom: 0;
+      .container-btn {
+        display: flex;
+        justify-content: center;
+        button {
+          border-radius: 50%;
+          background-color: transparent;
+          width: 15%;
+          box-shadow: 5px 5px 5px -3px rgba(0,0,0,0.75);
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .description-part-two {
+      display: none;
+      font-size: 80%;
+      margin: 10%;
+      margin-top: 0;
+      &.active {
+        display: flex;
+      }
+    }
+  }
+}
+.mision-container{
+  background-color: #AFB800;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  font-family: "IsidoraSemiBold";
+  text-align: justify;
+  font-size: 1.4em;
+  .mision-logo{
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    button{
+      padding: 0;
+      border: none;
+      background: none;
+      img{
+        width: 50%;
+      }
+    }
+  }
+  .mision-info{
+    display: none;
+    font-size: 82%;
+    margin: 0 14%;
+    margin-bottom: 2em;
+    &.activeMision{
+      display: flex;
+    }
+  }
+}
+.vision-container{
+  background-color: #F21B83;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-content: center;
+  font-family: "IsidoraSemiBold";
+  color: white;
+  text-align: justify;
+  font-size: 1.4em;
+  .vision-logo{
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    button{
+      padding: 0;
+      border: none;
+      background: none;
+      img{
+        width: 50%;
+      }
+    }
+
+  }
+  .vision-info{
+    display: none;
+    font-size: 82%;
+    margin: 0 14%;
+    margin-bottom: 2em;
+    &.activeVision{
+      display: flex;
+    }
+  }
+}
+
+
+.general-objetive-container{
+  background-color: #ECECEC;
+  width: 100%;
+  .general-objetive-info{
+    width: 100%;
+    .general-objetive-title{
+      padding: 10% 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      font-family: 'IsidoraBlack';
+      font-size: 1.2em;
+      color: #F41B83;
+    }
+    .general-objetive-text{
+      padding: 0 15%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      text-align: justify;
+      font-family: 'IsidoraSemiBold';
+      font-size: 1.3em;
+      strong{
+        font-family: 'IsidoraBlack';
+      }
+    }
+  }
+  .general-objetive-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    img{
+      width: 80%;
+    }
+  }
+}
+
+.accordion{
+  width: 100%;
+  background-color: #ECECEC;
+  .accordion-item{
+    margin: 10%;
+    border-radius: 20px;
+    .accordion-header{
+      text-align: center;
+      background-color: #00ABD3;
+      font-family: 'IsidoraBlack';
+      color: white;
+      padding: 5%;
+      font-size: 1.3em;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    .accordion-content{
+      background-color: #EBAF04;
+      display: none;
+      overflow: hidden;
+      border-radius: 20px;
+      width: 100%;
+      .content-text{
+        font-family: 'IsidoraSemiBold';
+        text-align: justify;
+        font-size: 1.3em;
+        padding: 5% 15%;
+      }
+      .content-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 2% 0;
+        img{
+          border-radius: 100%;
+          box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.75);
+        }
+      }
+    }
+    .open{
+      display: flex;
+    }
+  }
+}
+
+.title-strategic-allies{
+  display: flex;
+  justify-content: center;
+  padding: 5% 0%;
+  width: 100%;
+  text-align: center;
+  font-family: 'IsidoraBlack';
+  font-size: 1.2em;
+  color: #F21B83;
+}
+
+@mixin white-gradient{
+  background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+$animationSpeed: 20s;
+.sponsors-container{
+  background: white;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 100px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 100%;
+
+	&::before,
+	&::after {
+		@include white-gradient;
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 100px;
+		z-index: 2;
+	}
+
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(250px * 14);
+	}
+
+	.slide {
+		display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+		width: 250px;
+
+	}
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 7))}
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .container {
+    background-image: url('../../../assets/images/Diseño1.png');
+    background-size: cover;
+    .title-container {
+      .title {
+        font-size: 1.4em;
+        margin: 0.5em;
+        margin-bottom: 10%;
+        padding: 0.2em 2em;
+      }
+    }
+    .info-container {
+      column-gap: 10px;
+      text-align: justify;
+      div {
+        flex-basis: 80%;
+        padding: 0;
+        .image {
+          width: 100em;
+          img {
+            width: 10%;
+          }
+        }
+      }
+      .description-part-one {
+        font-size: 100%;
+        .container-btn {
+          margin-top: 2em;
+          margin-bottom: 2em;
+          button {
+            border: none;
+            padding: 0;
+            background-color: transparent;
+            width: 9%;
+            cursor: pointer;
+            img {
+              width: 100%;
+            }
+          }
+          button:hover {
+            width: 9%;
+          }
+        }
+      }
+      .description-part-two{
+        font-size: 100%;
+      }
+    }
+  }
+  .mision-container{
+    font-family: "IsidoraSemiBold";
+    font-size: 1.4em;
+    .mision-logo{
+      padding-right: 0;
+      padding-left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        img{
+          width: 50%;
+        }
+      }
+    }
+    .mision-info{
+      margin-left: 10%;
+      margin-right: 10%;
+      font-size: 100%;
+    }
+  }
+  .vision-container{
+    font-family: "IsidoraSemiBold";
+    font-size: 1.4em;
+    .vision-info{
+      margin-left: 10%;
+      margin-right: 10%;
+      font-size: 100%;
+    }
+    .vision-logo{
+      padding-right: 0;
+      padding-left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        img{
+          width: 50%;
+        }
+      }
+    }
+  }
+  .general-objetive-container{
+    .general-objetive-info{
+      .general-objetive-title{
+        padding: 8% 0;
+        font-size: 1.5em;
+      }
+      .general-objetive-text{
+        padding: 0 10%;
+        font-size: 1.5em;
+      }
+    }
+    .general-objetive-logo{
+      img{
+        width: 60%;
+      }
+
+    }
+  }
+
+  .accordion{
+    .accordion-item{
+      margin: 3% 10%;
+      transition: all 0.25s;
+      .accordion-header{
+        padding: 3%;
+        font-size: 1.5em;
+      }
+      .accordion-content{
+        background-color: #EBAF04;
+        .content-text{
+          font-size: 1.5em;
+          padding: 5% 10%;
+        }
+        .content-image{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          padding: 5% 0;
+          img{
+            box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.75);
+          }
+        }
+      }
+      .open{
+        display: flex;
+      }
+    }
+    .accordion-item:hover{
+      transform: translateY(-10px);
+      box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .title-strategic-allies{
+    font-size: 1.5em;
+  }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+  .container {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo-phrase {
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.8em;
+      }
+      img {
+        width: 6em;
+      }
+      hr {
+        color: #f21b83;
+        border: 3px solid;
+      }
+      h2 {
+        font-family: "IsidoraBlack";
+        font-size: 2em;
+      }
+    }
+    .title-container {
+      .title {
+        font-size: 1.4em;
+        margin: 0.5em;
+        margin-bottom: 10%;
+        padding: 0.2em 2em;
+      }
+    }
+    .info-container {
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 25px;
+      font-family: "IsidoraSemiBold";
+      font-size: 1.4em;
+      justify-content: center;
+      align-content: center;
+      text-align: justify;
+      div {
+        flex-basis: 17em;
+        box-sizing: border-box;
+        padding: 10px;
+      }
+      .image {
+        display: flex;
+        justify-content: center;
+        img {
+          width: 100%;
+        }
+      }
+      .description-part-one {
+        margin: 0;
+        font-size: 1em;
+        .container-btn {
+          display: flex;
+          justify-content: center;
+          button {
+            border: none;
+            padding: 0;
+            background-color: transparent;
+            width: 15%;
+            transition: all 0.5s;
+            cursor: pointer;
+            img {
+              width: 100%;
+            }
+          }
+          button:hover {
+            width: 15%;
+            transform: translateY(-5px);
+            box-shadow: 3px 3px 3px -2px rgba(0,0,0,1);
+          }
+        }
+      }
+      .description-part-two {
+        display: none;
+        margin: 0;
+        font-size: 1em;
+        &.active {
+          display: flex;
+        }
+      }
+    }
+  }
+  .mision-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    font-family: "IsidoraSemiBold";
+    font-size: 1.4em;
+    column-gap: 1%;
+    div{
+      display: flex;
+      justify-content: center;
+      flex-basis: 23em;
+      box-sizing: border-box;
+    }
+    .mision-logo{
+      margin: 1em;
+      width: 100%;
+      button{
+        width: 100%;
+        height: auto;
+        pointer-events: none;
+        img{
+          width: 100%;
+        }
+      }
+    }
+    .mision-info{
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 1em;
+      font-size: 1.3em;
+    }
+  }
+  .vision-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    font-family: "IsidoraSemiBold";
+    font-size: 1.4em;
+    column-gap: 1%;
+    div{
+      display: flex;
+      justify-content: center;
+      flex-basis: 23em;
+      box-sizing: border-box;
+    }
+    .vision-logo{
+      margin: 1em;
+      width: 100%;
+      button{
+        width: 100%;
+        height: auto;
+        pointer-events: none;
+        img{
+          width: 100%;
+        }
+      }
+    }
+    .vision-info{
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 1em;
+      font-size: 1.3em;
+      width: 100%;
+    }
+  }
+
+  .general-objetive-container{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    .general-objetive-info{
+      .general-objetive-title{
+        padding: 3% 0% 3% 0%;
+        font-size: 1.9em;
+      }
+      .general-objetive-text{
+        padding: auto;
+        font-size: 1.7em;
+      }
+    }
+    .general-objetive-logo{
+      width: 90%;
+      justify-content: flex-end;
+      img{
+        width: 90%;
+        transform: scaleX(-1);
+      }
+    }
+  }
+
+  .accordion{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    .accordion-item{
+      margin: 2% 0;
+      transition: all 0.25s;
+      width: 100%;
+      .accordion-header{
+        text-align: center;
+        background-color: #00ABD3;
+        font-family: 'IsidoraBlack';
+        color: white;
+        padding: 5%;
+        font-size: 1.6em;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .accordion-content{
+        background-color: #EBAF04;
+        display: none;
+        overflow: hidden;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        transition: all .5;
+        border-radius: 0%;
+        height: 100%;
+        .content-text{
+          font-family: 'IsidoraSemiBold';
+          text-align: justify;
+          font-size: 1.7em;
+          padding: 5% 5%;
+        }
+        .content-image{
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+          padding: 5% 0%;
+          img{
+            width: 20em;
+            border-radius: 100%;
+            box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.75);
+          }
+        }
+      }
+      .open{
+        display: flex;
+        align-items: stretch;
+      }
+    }
+    .accordion-item:hover{
+      transform: translateY(-10px);
+      box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.4);
+    }
+  }
+  .title-strategic-allies{
+    padding: 4% 0%;
+    font-size: 1.9em;
+  }
+}
+

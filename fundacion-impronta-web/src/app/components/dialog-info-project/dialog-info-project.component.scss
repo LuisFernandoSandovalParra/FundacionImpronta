@@ -1,0 +1,419 @@
+* {
+  margin: 0;
+  padding: auto;
+}
+@font-face {
+  font-family: "IsidoraBlack";
+  src: url("../../../assets/fonts/Isidora Soft Black.otf");
+}
+
+@font-face {
+  font-family: "IsidoraSemiBold";
+  src: url("../../../assets/fonts/IsidoraSansSemiBold.otf");
+}
+
+@font-face {
+  font-family: "PoppinsBlack";
+  src: url("../../../assets/fonts/Poppins-Black.ttf");
+}
+
+@font-face {
+  font-family: "PoppinsSemiBold";
+  src: url("../../../assets/fonts/Poppins-SemiBold.ttf");
+}
+strong {
+  font-family: "PoppinsBlack";
+}
+
+h2 {
+  font-family: "IsidoraBlack";
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.general-container-info-project {
+  width: 100%;
+  height: 80vh;
+  font-family: "IsidoraSemiBold";
+  .close-dialog {
+    display: flex;
+    justify-content: right;
+    padding: 1em;
+    border: none;
+    background-color: #feb100;
+    button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  .title-project-info {
+    font-family: "IsidoraBlack";
+    text-align: center;
+    color: #00abd3;
+    padding: 3% 0% 3% 3%;
+    background-color: #feb100;
+  }
+  .project-video {
+    text-align: center;
+    background-color: #feb100;
+  }
+  .sub-topic {
+    padding: 5% 10%;
+    text-align: justify;
+    font-size: 1.2em;
+    background-color: #feb100;
+  }
+  .init-sub-topic {
+    background-color: #feb100;
+  }
+  .end-sub-topic {
+    background-color: #feb100;
+  }
+  .project-progress-bar {
+    padding: 5% 10%;
+    text-align: center;
+    background-color: #feb100;
+    progress {
+      font-size: 1.5em;
+    }
+  }
+  .btn-donation {
+    text-align: center;
+    background-color: #feb100;
+    button {
+      padding: 2.5% 12%;
+      border-radius: 20px;
+      font-size: 1.2em;
+      font-family: "IsidoraBlack";
+      color: white;
+      background-color: #70a200;
+      border: 1px solid #70a200;
+      cursor: pointer;
+      margin: 10%;
+    }
+    button:hover {
+      background-color: #91d302;
+    }
+    button:active {
+      background-color: #537902;
+    }
+  }
+}
+
+.course-general-container {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  font-family: "PoppinsSemiBold";
+  .close-dialog {
+    display: flex;
+    justify-content: right;
+    padding: 1em;
+    border: none;
+    button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  .course-image {
+    img {
+      width: 100%;
+    }
+  }
+  .text-content {
+    padding: 5%;
+    font-size: 1.2em;
+    h3 {
+      font-family: "PoppinsBlack";
+      font-size: 1.2em;
+    }
+  }
+  .btn-subscription {
+    text-align: center;
+    button {
+      font-family: "PoppinsBlack";
+      font-size: 1.4em;
+      padding: 2% 5%;
+      margin-bottom: 10%;
+      border-radius: 20px;
+      border: 1px solid #2755a2;
+      background-color: #2755a2;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #667ca3;
+    }
+    button:active {
+      background-color: #0a42a4;
+    }
+  }
+}
+
+.subscription-form {
+  font-family: "PoppinsSemiBold";
+  height: 80vh;
+  .close-dialog {
+    display: flex;
+    justify-content: right;
+    padding: 1em;
+    border: none;
+    button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  .header-subscription-container {
+    h1 {
+      font-family: "PoppinsBlack";
+      text-align: center;
+      color: #2755a2;
+    }
+    p {
+      padding: 5%;
+    }
+  }
+  .info-container {
+    padding: 0 5%;
+  }
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(173, 173, 173);
+    margin: 5%;
+    padding: 2%;
+    border-radius: 20px;
+    label {
+      color: black;
+      font-family: "PoppinsBlack";
+    }
+    input {
+      border: none;
+      background-color: rgb(173, 173, 173);
+      color: black;
+      font-family: "PoppinsSemiBold";
+    }
+    select {
+      border: none;
+      background-color: rgb(173, 173, 173);
+      color: black;
+      font-family: "PoppinsSemiBold";
+    }
+  }
+  .btn-send {
+    text-align: center;
+    button {
+      font-family: "PoppinsBlack";
+      font-size: 1.4em;
+      padding: 2% 5%;
+      margin-bottom: 10%;
+      border-radius: 20px;
+      border: 1px solid #2755a2;
+      background-color: #2755a2;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  .error-message{
+    text-align: center;
+    color: red;
+    font-family: 'PoppinsBlack';
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .general-container-info-project {
+    .title-project-info {
+      font-size: 1.6em;
+      padding: 3% 0% 3% 3%;
+    }
+    .sub-topic {
+      font-size: 1.5em;
+      padding: 2% 10%;
+    }
+    .project-video {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      background: transparent;
+      margin: 5% 0;
+      iframe {
+        width: 80%;
+        height: 40vh;
+        box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.5);
+      }
+    }
+    .project-progress-bar {
+      padding: 5% 10%;
+      text-align: center;
+      font-size: 1.2em;
+      progress {
+        font-size: 2.1em;
+      }
+    }
+    .btn-donation {
+      button {
+        padding: 2% 5%;
+        border-radius: 35px;
+        margin: 4%;
+        font-size: 1.7em;
+      }
+    }
+  }
+
+  .course-general-container {
+    .course-image {
+      img {
+        width: 35em;
+      }
+    }
+    .text-content {
+      font-size: 1.3em;
+      h3 {
+        font-size: 1.3em;
+      }
+    }
+    .btn-subscription {
+      button {
+        border-radius: 20px;
+        background-color: #2755a2;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .subscription-form {
+    .header-subscription-container {
+      h1 {
+        font-size: 2.5em;
+      }
+      p {
+        padding: 5%;
+        font-size: 1.5em;
+      }
+    }
+    .info-container {
+      font-size: 1.5em;
+    }
+    .input-container {
+      label {
+        font-size: 1.5em;
+      }
+      input {
+        font-size: 1.5em;
+      }
+      select {
+        font-size: 1.5em;
+      }
+    }
+    .btn-send {
+      button {
+        font-size: 1.5em;
+      }
+    }
+    .error-message{
+      font-size: 1.5em;
+    }
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .general-container-info-project {
+    .title-project-info {
+      font-size: 1.6em;
+      padding: 3% 0% 3% 3%;
+    }
+    .sub-topic {
+      font-size: 1.2em;
+      padding: 1.5% 10%;
+    }
+    .project-video {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      background-color: transparent;
+      margin: 5% 0;
+      iframe {
+        width: 60%;
+        height: 60vh;
+        box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.5);
+      }
+    }
+    .project-progress-bar {
+      font-size: 1.3em;
+      padding: 2% 10%;
+      text-align: center;
+      progress {
+        font-size: 1.5em;
+      }
+    }
+    .btn-donation {
+      padding: 0%;
+      margin: 0;
+      button {
+        margin: 5%;
+        padding: 0.5% 3.5%;
+        border-radius: 35px;
+      }
+    }
+  }
+
+  .course-general-container {
+    .course-image {
+      img {
+        width: 35em;
+      }
+    }
+    .text-content {
+      padding: 5%;
+      font-size: 1.2em;
+      h3 {
+        font-family: "PoppinsBlack";
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  .subscription-form {
+    .header-subscription-container {
+      h1 {
+        font-size: 2em;
+      }
+      p {
+        padding: 5%;
+        font-size: 1.2em;
+      }
+    }
+    .info-container {
+      font-size: 1.2em;
+    }
+    .input-container {
+      label {
+        font-size: 1.2em;
+      }
+      input {
+        font-size: 1.2em;
+      }
+      select {
+        font-size: 1.2em;
+      }
+    }
+    .btn-send {
+      button {
+        font-size: 1em;
+      }
+    }
+    .error-message{
+      font-size: 1em;
+    }
+  }
+}

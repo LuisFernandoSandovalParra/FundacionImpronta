@@ -1,0 +1,1382 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "IsidoraBlack";
+  src: url("../../../assets/fonts/Isidora Soft Black.otf");
+}
+
+@font-face {
+  font-family: "IsidoraSemiBold";
+  src: url("../../../assets/fonts/IsidoraSansSemiBold.otf");
+}
+
+body {
+  margin: 0;
+}
+
+strong {
+  font-family: "IsidoraBlack";
+}
+
+.history-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #ececec;
+  .history-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    .history-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      background-color: #feb100;
+      font-family: "IsidoraBlack";
+      font-size: 1.5em;
+      color: white;
+      border-radius: 0.8em;
+      padding: 0 1em;
+      margin: 2em;
+    }
+    .history-text {
+      display: flex;
+      text-align: justify;
+      font-family: "IsidoraSemiBold";
+      font-size: 1.3em;
+      padding: 0 15%;
+      strong {
+        font-family: "IsidoraBlack";
+      }
+    }
+  }
+  .history-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    img {
+      width: 50%;
+    }
+  }
+}
+
+.title-our-essence {
+  text-align: center;
+  padding: 10% 0;
+  font-family: "IsidoraBlack";
+  font-size: 1.5em;
+  background-color: #04a9d0;
+  color: white;
+}
+
+.general-tricycle-container {
+  width: 100%;
+  display: stretch;
+  .tri-container {
+    width: auto;
+  }
+  .ci-container {
+    width: auto;
+  }
+  .clo-container {
+    width: auto;
+  }
+  .btn-show-less {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 5% 0% 5% 0%;
+    button {
+      font-family: "IsidoraBlack";
+      background-color: #ffb000;
+      color: white;
+      border: 1px solid #ffb000;
+      border-radius: 50px;
+      padding: 0 0.5em;
+      font-size: 1.7em;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #00abd3;
+    }
+  }
+}
+.tricycle-container {
+  display: flex;
+  background-color: #81a10d;
+  .tricycle-info {
+    width: 100%;
+    .tricycle-title {
+      width: 100%;
+      font-family: "IsidoraBlack";
+      color: white;
+      font-size: 1.5em;
+      text-align: center;
+      padding: 10% 0;
+    }
+    .tricycle-text {
+      font-family: "IsidoraSemiBold";
+      color: white;
+      font-size: 1.3em;
+      text-align: justify;
+      padding: 0 15%;
+    }
+    .tricycle-more-info-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      padding: 10% 0;
+      button {
+        font-family: "IsidoraBlack";
+        background-color: #ffb000;
+        color: white;
+        border: 1px solid #ffb000;
+        border-radius: 50px;
+        padding: 0 0.5em;
+        font-size: 1.5em;
+      }
+      button:hover {
+        background-color: #00abd3;
+      }
+    }
+  }
+}
+
+.tri-container {
+  display: flex;
+  width: auto;
+  flex-direction: column-reverse;
+  .tri-image {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    img {
+      width: 80%;
+    }
+  }
+  .tri-info {
+    .tri-title {
+      width: 100%;
+      text-align: center;
+      font-family: "IsidoraBlack";
+      font-size: 1.5em;
+      color: #00a9d1;
+      padding: 8% 0;
+    }
+    .tri-description {
+      font-family: "IsidoraSemiBold";
+      font-size: 1.3em;
+      padding: 5% 10%;
+    }
+    .tri-allies {
+      font-family: "IsidoraSemiBold";
+      font-size: 1.3em;
+      padding: 2% 15%;
+      .tri-allies-title {
+        font-family: "IsidoraBlack";
+      }
+    }
+  }
+}
+.separator-container {
+  padding: 5%;
+  .separator-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    img {
+      width: 20%;
+    }
+  }
+  hr {
+    border: 2px solid #81a10d;
+  }
+}
+.ci-container {
+  display: flex;
+  flex-direction: column;
+  .ci-image {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    img {
+      width: 80%;
+    }
+  }
+  .ci-info {
+    .ci-title {
+      width: 100%;
+      text-align: center;
+      font-family: "IsidoraBlack";
+      font-size: 1.5em;
+      color: #f41b83;
+      padding: 8% 0;
+    }
+    .ci-description {
+      font-family: "IsidoraSemiBold";
+      font-size: 1.3em;
+      padding: 5% 10%;
+    }
+    .ci-allies {
+      font-family: "IsidoraSemiBold";
+      font-size: 1.3em;
+      padding: 2% 15%;
+      .ci-allies-title {
+        font-family: "IsidoraBlack";
+      }
+    }
+  }
+}
+.separator-two-container {
+  padding: 5%;
+  .separator-two-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    img {
+      width: 20%;
+    }
+  }
+  hr {
+    border: 2px solid #e91a7d;
+  }
+}
+.clo-container {
+  display: flex;
+  flex-direction: column-reverse;
+  .clo-image {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    img {
+      width: 80%;
+    }
+  }
+  .clo-info {
+    .clo-title {
+      width: 100%;
+      text-align: center;
+      font-family: "IsidoraBlack";
+      font-size: 1.5em;
+      color: #b0b900;
+      padding: 8% 0;
+    }
+    .clo-description {
+      font-family: "IsidoraSemiBold";
+      font-size: 1.3em;
+      padding: 5% 10%;
+    }
+    .clo-allies {
+      font-family: "IsidoraSemiBold";
+      font-size: 1.3em;
+      padding: 2% 15%;
+      .clo-allies-title {
+        font-family: "IsidoraBlack";
+      }
+    }
+  }
+}
+.tricycle-structure-container {
+  .phrase-and-logo {
+    padding: 2%;
+    .phrase {
+      font-family: "IsidoraBlack";
+      color: #303030;
+      text-align: center;
+    }
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      width: 100%;
+      img {
+        width: 70%;
+      }
+    }
+  }
+  .wheels-and-pedals {
+    padding: 0 10%;
+    .wheels {
+      background-color: #b0b900;
+      border: 2px solid #b0b900;
+      border-radius: 20px;
+      margin: 5% 0;
+      .wheels-title {
+        font-family: "IsidoraBlack";
+        font-size: 2em;
+        text-align: center;
+        color: #b0b900;
+        -webkit-text-stroke: 3px white;
+      }
+      .wheels-text {
+        padding: 8%;
+        font-family: "IsidoraSemiBold";
+        font-size: 1.3em;
+        text-align: justify;
+      }
+    }
+    .pedals {
+      background-color: #b0b900;
+      border: 2px solid #b0b900;
+      border-radius: 20px;
+      margin: 10% 0;
+      .pedals-title {
+        font-family: "IsidoraBlack";
+        font-size: 2em;
+        text-align: center;
+        color: #b0b900;
+        -webkit-text-stroke: 3px white;
+      }
+      .pedals-text {
+        padding: 8%;
+        font-family: "IsidoraSemiBold";
+        font-size: 1.3em;
+        text-align: justify;
+      }
+    }
+  }
+}
+.habilities-container {
+  .habilities-phrase {
+    font-family: "IsidoraBlack";
+    color: #303030;
+    text-align: center;
+  }
+  .habilities {
+    text-align: center;
+    padding: 0% 10%;
+    .hability-title {
+      text-align: center;
+      font-family: "IsidoraBlack";
+      color: white;
+      font-size: 1.3em;
+    }
+    .hability {
+      border-radius: 20px;
+      padding: 5% 15%;
+      text-align: left;
+      font-family: "IsidoraSemiBold";
+      color: white;
+      font-size: 1.5em;
+      margin: 10% 0;
+      ul {
+        padding: 5%;
+      }
+    }
+    .emotional {
+      background-color: #00abd3;
+    }
+    .social {
+      background-color: #f01b83;
+    }
+    .cognitive {
+      background-color: #feb100;
+    }
+  }
+}
+
+.color-container {
+  //  background-image: url("../../../assets/images/Color-banner.svg");
+  background-color: #00abd3;
+  //  background-size: cover;
+  //  background-position: right;
+  padding: 10%;
+  .color-info {
+    text-align: center;
+    .color-title {
+      font-family: "IsidoraBlack";
+      color: white;
+      font-size: 2.4em;
+    }
+    .color-text {
+      font-family: "IsidoraSemiBold";
+      color: white;
+      font-size: 1.7em;
+      text-align: justify;
+    }
+  }
+}
+
+.to-sa-bri-container {
+  margin: 10%;
+  .to-sa-bri {
+    display: flex;
+    border: 2px;
+    flex-direction: column;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 5% 0;
+    .color-box {
+      border: 30px solid white;
+      border-radius: 12px;
+      width: 150px;
+      height: 150px;
+      margin: 10%;
+    }
+    .to-sa-bri-info {
+      .to-sa-bri-title {
+        font-family: "IsidoraBlack";
+        font-size: 2em;
+        text-align: center;
+      }
+      .to-sa-bri-description {
+        font-family: "IsidoraSemiBold";
+        font-size: 1.2em;
+        text-align: justify;
+        padding: 10%;
+      }
+    }
+  }
+  .tone {
+    color: #4c0024;
+    background-color: #f01b83;
+  }
+  .tone-box {
+    background-color: #feb100;
+  }
+  .saturation {
+    color: #3c3c00;
+    background-color: #b0b900;
+  }
+  .saturation-box {
+    background-image: linear-gradient(to bottom, white, #f01b83);
+  }
+  .glow {
+    color: #003742;
+    background-color: #5ec4db;
+  }
+  .glow-box {
+    background-image: linear-gradient(to top, black, #b0b900, white);
+  }
+}
+
+.team-container {
+  background-image: url("../../../assets/images/Equipo-mobile.svg");
+  background-size: cover;
+  background-position: right;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column-reverse;
+  .personal-container {
+    display: none;
+    background-color: transparent;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: none;
+    padding: 2%;
+    transform: translateX(-110%);
+    transition: all ease 0.5s;
+    background-color: #afb800;
+    border-radius: 0px;
+    &.activeCard {
+      display: block;
+      transition: all ease 1s;
+      transform: translateX(0);
+    }
+    .hide-personalcard {
+      display: flex;
+      justify-content: right;
+      align-content: center;
+      padding: 0 4%;
+      gap: 0 15%;
+      .personal-name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        font-family: "IsidoraBlack";
+        color: white;
+        font-size: 1.5em;
+      }
+    }
+    button {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      border: none;
+      background: none;
+      cursor: pointer;
+      object-fit: contain;
+      width: 15%;
+      height: 15%;
+      transform: rotate(90deg);
+      img {
+        width: 100%;
+      }
+    }
+    .content-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      .personal-photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        width: 90%;
+        img {
+          width: 100%;
+          object-fit: cover;
+          clip-path: circle(40% at center);
+          transition: transform 0.3s ease;
+        }
+        img:hover {
+          transform: scale(1.5);
+        }
+      }
+      .personal-info {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 5%;
+        .personal-description {
+          text-align: justify;
+          font-family: "IsidoraSemiBold";
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+  .info-team {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    min-width: 30%;
+    padding: 5% 0;
+    .title-team {
+      font-family: "IsidoraBlack";
+      background-color: #afb800;
+      color: white;
+      padding: 0 1.2em;
+      margin: 1.2em;
+      h2 {
+        font-size: 1.7em;
+      }
+    }
+    .text-team {
+      font-family: "IsidoraSemiBold";
+      font-size: 1.3em;
+      color: white;
+      .names {
+        margin-bottom: 20%;
+      }
+      li {
+        margin: 10% 0;
+        cursor: pointer;
+      }
+      li:hover {
+        color: #ecb004;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .history-container {
+    .history-info {
+      .history-text {
+        padding: 0 10%;
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  .title-our-essence {
+    padding: 5% 0;
+    font-size: 2.2em;
+  }
+
+  .tricycle-container {
+    background-image: url("../../../assets/images/TricicloPosterPrincipal.svg");
+    background-size: cover;
+    background-position: right;
+    .tricycle-info {
+      .tricycle-title {
+        text-align: left;
+        font-size: 2em;
+        padding: 0% 0%;
+        h1 {
+          padding: 6% 6%;
+        }
+      }
+      .tricycle-text {
+        width: 50%;
+        font-size: 1.7em;
+        padding: 0 6%;
+        color: black;
+      }
+      .tricycle-more-info-btn {
+        padding: 6% 0;
+        button {
+          font-size: 1.8em;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .tri-container {
+    display: flex;
+    flex-direction: column-reverse;
+    .tri-image {
+      display: flex;
+      width: 100%;
+      img {
+        width: 50%;
+      }
+    }
+    .tri-info {
+      width: 100%;
+      .tri-title {
+        width: auto;
+        font-size: 1.7em;
+        padding: 8% 10%;
+      }
+      .tri-description {
+        font-family: "IsidoraSemiBold";
+        font-size: 1.7em;
+        padding: 0 10%;
+      }
+      .tri-allies {
+        font-size: 1.7em;
+        padding: 5% 15%;
+      }
+    }
+  }
+  .separator-container {
+    padding: 5% 20%;
+    .separator-image {
+      img {
+        width: 20%;
+      }
+    }
+  }
+  .ci-container {
+    display: flex;
+    flex-direction: column;
+    .ci-image {
+      width: 100%;
+      img {
+        width: 50%;
+      }
+    }
+    .ci-info {
+      width: 100%;
+      .ci-title {
+        width: auto;
+        font-size: 1.7em;
+        color: #f41b83;
+        padding: 8% 10%;
+      }
+      .ci-description {
+        font-size: 1.7em;
+        padding: 0 10%;
+      }
+      .ci-allies {
+        font-size: 1.7em;
+        padding: 5% 15%;
+      }
+    }
+  }
+  .separator-two-container {
+    padding: 5% 20%;
+    .separator-two-image {
+      img {
+        width: 20%;
+      }
+    }
+  }
+  .clo-container {
+    display: flex;
+    flex-direction: column-reverse;
+    .clo-image {
+      display: flex;
+      width: 100%;
+      img {
+        width: 50%;
+      }
+    }
+    .clo-info {
+      width: 100%;
+      .clo-title {
+        width: auto;
+        font-size: 1.7em;
+        padding: 8% 10%;
+      }
+      .clo-description {
+        font-family: "IsidoraSemiBold";
+        font-size: 1.7em;
+        padding: 0 10%;
+      }
+      .clo-allies {
+        font-size: 1.7em;
+        padding: 5% 15%;
+      }
+    }
+  }
+  .tricycle-structure-container {
+    .phrase-and-logo {
+      padding: 5%;
+      .phrase {
+        font-size: 2em;
+      }
+      .logo {
+        width: 100%;
+        img {
+          width: 40%;
+        }
+      }
+    }
+    .wheels-and-pedals {
+      display: flex;
+      padding: 0 10%;
+      margin: 0 0 5% 0;
+      .wheels {
+        margin: 0 4%;
+        width: 50%;
+        .wheels-title {
+          font-size: 2.7em;
+        }
+        .wheels-text {
+          font-size: 1.7em;
+        }
+      }
+      .pedals {
+        margin: 0 4%;
+        width: 50%;
+        .pedals-title {
+          font-size: 2.7em;
+        }
+        .pedals-text {
+          font-size: 1.7em;
+        }
+      }
+    }
+  }
+  .habilities-container {
+    .habilities-phrase {
+      font-size: 2em;
+    }
+    .habilities {
+      text-align: center;
+      padding: 0% 10%;
+      .hability-title {
+        font-size: 1.5em;
+      }
+      .hability {
+        padding: 5% 10%;
+        font-size: 1.7em;
+        margin: 7% 10%;
+        ul {
+          padding: 3%;
+        }
+      }
+    }
+  }
+  .color-container {
+    background-position: right;
+    padding: 10%;
+    .color-info {
+      width: 100%;
+      .color-title {
+        font-size: 5em;
+      }
+      .color-text {
+        font-size: 1.7em;
+        text-align: justify;
+      }
+    }
+    .to-sa-bri-container {
+      margin: 5%;
+      .to-sa-bri {
+        flex-direction: row;
+        .color-box {
+          width: 150px;
+          height: 150px;
+          margin: 10% 0% 10% 5%;
+          width: 40%;
+        }
+        .to-sa-bri-info {
+          width: 100%;
+          .to-sa-bri-title {
+            font-family: "IsidoraBlack";
+            font-size: 2em;
+            text-align: center;
+          }
+          .to-sa-bri-description {
+            font-family: "IsidoraSemiBold";
+            font-size: 1.2em;
+            text-align: justify;
+            padding: 5%;
+          }
+        }
+      }
+    }
+  }
+
+  .team-container {
+    .personal-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      border: none;
+      padding: 2%;
+      transform: translateX(-110%);
+      transition: all ease 0.5s;
+      background-color: #afb800;
+      border-radius: 0px;
+      .hide-personalcard {
+        display: flex;
+        justify-content: right;
+        align-content: center;
+        padding: 0 4%;
+        gap: 0 15%;
+        .personal-name {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          font-family: "IsidoraBlack";
+          color: white;
+          font-size: 2em;
+        }
+      }
+      button {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: none;
+        cursor: pointer;
+        object-fit: contain;
+        width: 9%;
+        height: 9%;
+        transform: rotate(90deg);
+        img {
+          width: 100%;
+        }
+      }
+      .content-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        .personal-photo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          padding: 0 5%;
+          margin: 0;
+          width: 90%;
+          img {
+            width: 100%;
+            clip-path: circle(40% at center);
+            transition: transform 0.3s ease;
+          }
+          img:hover {
+            transform: scale(1.2);
+          }
+        }
+        .personal-info {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          margin: 0 5%;
+          .personal-description {
+            text-align: justify;
+            font-family: "IsidoraSemiBold";
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+    .info-team {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      min-width: 30%;
+      padding: 12%;
+      .title-team {
+        font-family: "IsidoraBlack";
+        background-color: #afb800;
+        color: white;
+        padding: 0 1.2em;
+        margin: 1.2em;
+        h2 {
+          font-size: 1.7em;
+        }
+      }
+      .text-team {
+        font-family: "IsidoraSemiBold";
+        font-size: 1.7em;
+        color: white;
+        li {
+          margin: 3% 0;
+          cursor: pointer;
+          transition: all 0.5s;
+        }
+        li:hover {
+          color: #ecb004;
+          transform: translatex(10px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .history-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    .history-info {
+      display: flex;
+      justify-content: right;
+      padding: 5% 0 5% 8%;
+      width: 100%;
+      .history-title {
+        margin: 1.5em;
+      }
+      .history-text {
+        font-size: 1.4em;
+      }
+    }
+    .history-logo {
+      display: flex;
+      justify-content: left;
+      padding: 0 0;
+      width: 100%;
+      img {
+        width: 75%;
+      }
+    }
+  }
+
+  .title-our-essence {
+    padding: 1.5% 0;
+    font-size: 4em;
+  }
+
+  .general-tricycle-container {
+    width: 100%;
+    .btn-show-less {
+      padding: 0% 0% 5% 0%;
+      button {
+        font-size: 2em;
+        cursor: pointer;
+      }
+    }
+  }
+  .tricycle-container {
+    background-image: url("../../../assets/images/TricicloPosterPrincipal.svg");
+    background-size: cover;
+    background-position: right;
+    .tricycle-info {
+      width: 60%;
+      .tricycle-title {
+        width: auto;
+        font-size: 3.5em;
+        padding: 10% 10% 0 10%;
+      }
+      .tricycle-text {
+        padding: 0 26%;
+        font-size: 1.8em;
+      }
+      .tricycle-more-info-btn {
+        padding: 10% 0 10% 0;
+        button {
+          font-size: 2em;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .tri-container {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 5% 8% 0% 8%;
+    .tri-image {
+      width: 100%;
+      img {
+        width: 90%;
+      }
+    }
+    .tri-info {
+      width: 100%;
+      .tri-title {
+        width: auto;
+        font-size: 1.9em;
+        color: #00a9d1;
+        padding: 0%;
+      }
+      .tri-description {
+        font-size: 1.7em;
+        padding: 5% 10%;
+      }
+      .tri-allies {
+        font-size: 1.7em;
+        padding: 5% 15%;
+      }
+    }
+  }
+  .separator-container {
+    padding: 0 25%;
+    .separator-image {
+      img {
+        width: 15%;
+      }
+    }
+  }
+  .ci-container {
+    display: flex;
+    flex-direction: row;
+    padding: 5% 8% 0% 8%;
+    .ci-image {
+      width: 100%;
+      img {
+        width: 90%;
+      }
+    }
+    .ci-info {
+      width: 100%;
+      .ci-title {
+        width: auto;
+        font-size: 1.9em;
+        color: #f41b83;
+        padding: 0%;
+      }
+      .ci-description {
+        font-size: 1.7em;
+        padding: 5% 10%;
+      }
+      .ci-allies {
+        font-size: 1.7em;
+        padding: 5% 15%;
+      }
+    }
+  }
+  .separator-two-container {
+    padding: 0 25%;
+    .separator-two-image {
+      img {
+        width: 15%;
+      }
+    }
+  }
+  .clo-container {
+    display: flex;
+    flex-direction: row;
+    padding: 5% 8% 0% 8%;
+    .clo-image {
+      width: 100%;
+      img {
+        width: 90%;
+      }
+    }
+    .clo-info {
+      width: 100%;
+      .clo-title {
+        width: auto;
+        font-size: 1.9em;
+        color: #00a9d1;
+        padding: 0%;
+      }
+      .clo-description {
+        font-size: 1.7em;
+        padding: 5% 10%;
+      }
+      .clo-allies {
+        font-size: 1.7em;
+        padding: 5% 15%;
+      }
+    }
+  }
+  .tricycle-structure-container {
+    .phrase-and-logo {
+      padding: 5% 5% 0 5%;
+      .phrase {
+        font-size: 2em;
+      }
+      .logo {
+        width: 100%;
+        img {
+          width: 20%;
+        }
+      }
+    }
+    .wheels-and-pedals {
+      display: flex;
+      padding: 0 10%;
+      .wheels {
+        margin: 0 4%;
+        width: 50%;
+        .wheels-title {
+          font-size: 2.9em;
+        }
+        .wheels-text {
+          font-size: 1.7em;
+        }
+      }
+      .pedals {
+        margin: 0 4%;
+        width: 50%;
+        .pedals-title {
+          font-size: 2.9em;
+        }
+        .pedals-text {
+          font-size: 1.7em;
+        }
+      }
+    }
+  }
+  .habilities-container {
+    width: 100%;
+    .habilities-phrase {
+      padding: 5cqi;
+      font-size: 2em;
+    }
+    .habilities {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      text-align: center;
+      padding: 0%;
+      margin: 0% 10%;
+      .hability-title {
+        font-size: 1.5em;
+        padding: 6% 0;
+      }
+      .hability {
+        width: 100%;
+        padding: 0;
+        font-size: 1.8em;
+        margin: 1.5%;
+        ul {
+          padding: 4% 20%;
+        }
+      }
+    }
+  }
+  .color-container {
+    background-image: url("../../../assets/images/Color-banner.svg");
+    background-size: cover;
+    background-position: right;
+    justify-content: left;
+    padding: 3%;
+    margin: 5% 0;
+    display: flex;
+    .color-info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      .color-title {
+        font-size: 5em;
+      }
+      .color-text {
+        padding: 3% 7%;
+      }
+    }
+    .to-sa-bri-container {
+      width: 100%;
+      margin: 0%;
+      .to-sa-bri {
+        flex-direction: row;
+        .color-box {
+          width: 100px;
+          height: 100px;
+          margin: 5% 0% 5% 5%;
+          width: 25%;
+        }
+        .to-sa-bri-info {
+          width: 100%;
+          .to-sa-bri-title {
+            font-family: "IsidoraBlack";
+            font-size: 2.3em;
+            text-align: left;
+            padding: 0 5%;
+          }
+          .to-sa-bri-description {
+            font-family: "IsidoraSemiBold";
+            font-size: 1em;
+            text-align: justify;
+            padding: 2% 5%;
+          }
+        }
+      }
+    }
+  }
+
+  .team-container {
+    display: flex;
+    width: 100%;
+    background-image: url("../../../assets/images/Final-team.svg");
+    background-size: cover;
+    background-position: center;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    flex-direction: row-reverse;
+    .personal-container {
+      display: flex;
+      background-color: transparent;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      border: none;
+      padding: 2%;
+      transform: translateX(-110%);
+      transition: all ease 0.5s;
+      box-shadow: 2px 2px 2px 1px #c1b7009f;
+      background-color: #afb800;
+      border-radius: 8px;
+      &.activeCard {
+        background-color: #afb800;
+        border-radius: 8px;
+        transform: translateX(0);
+      }
+      .hide-personalcard {
+        display: flex;
+        justify-content: right;
+        align-content: center;
+        padding: 0 4%;
+        gap: 0 15%;
+        .personal-name {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          font-family: "IsidoraBlack";
+          color: white;
+          font-size: 2em;
+        }
+      }
+      button {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: none;
+        cursor: pointer;
+        object-fit: contain;
+        width: 10%;
+        height: 10%;
+        transform: rotate(0deg);
+        img {
+          width: 100%;
+        }
+      }
+      .content-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        .personal-photo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          padding: 0;
+          margin: 0;
+          width: 90%;
+          img {
+            width: 100%;
+          }
+        }
+        .personal-info {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          margin: 0 5%;
+          .personal-description {
+            text-align: justify;
+            font-family: "IsidoraSemiBold";
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+    .info-team {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      min-width: 30%;
+      padding: 12%;
+      .title-team {
+        font-family: "IsidoraBlack";
+        background-color: #afb800;
+        color: white;
+        padding: 0 1.2em;
+        margin: 1.2em;
+        h2 {
+          font-size: 1.7em;
+        }
+      }
+      .text-team {
+        font-family: "IsidoraSemiBold";
+        font-size: 1.7em;
+        color: white;
+        li {
+          margin: 0% 0;
+          cursor: pointer;
+          transition: all 0.5s;
+        }
+        li:hover {
+          color: #ecb004;
+          transform: translatex(10px);
+        }
+      }
+    }
+  }
+}

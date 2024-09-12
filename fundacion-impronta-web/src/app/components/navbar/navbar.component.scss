@@ -1,0 +1,238 @@
+@font-face {
+  font-family: 'IsidoraBlack';
+  src: url('../../../assets/fonts/Isidora Soft Black.otf');
+}
+
+@font-face {
+  font-family: 'IsidoraSemiBold';
+  src: url('../../../assets/fonts/IsidoraSansSemiBold.otf');
+}
+
+body{
+  margin: 0;
+}
+
+strong{
+  font-family: 'IsidoraBlack';
+}
+
+.show-mobile{
+  display: block;
+  box-shadow: 0px 2px 5px rgb(black, .2);
+    div {
+    z-index: 2;
+    padding: 1em;
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    button {
+      border: 0;
+      background: transparent;
+    }
+    .logo-mobile{
+      width: 7em;
+    }
+    .menu-mobile-btn{
+      width: 2em;
+      cursor: pointer;
+    }
+  }
+  .side-menu{
+    position: fixed;
+    inset: 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(-100%);
+    transition: all ease-out .5s;
+    font-family: 'IsidoraBlack';
+    font-size: 1.7em;
+    color: #00ABD3;
+    z-index: 9999;
+    &.active{
+      transform: translateX(0);
+    }
+    .back-mobile-btn{
+      width: 3em;
+      cursor: pointer;
+    }
+    ul{
+      display: flex;
+      padding-left: 0;
+      list-style: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 5%;
+      text-align: center;
+      font-size: 0.9em;
+      li a{
+        text-decoration: none;
+        color: inherit;
+
+      }
+      li{
+        margin: 6%;
+      }
+      li:hover{
+        color: #F21B83;
+      }
+    }
+    .donation-btn{
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      border: 3px solid;
+      padding: 0.2em 0.5em;
+      background-color: #00ABD3;
+      font-family: 'IsidoraBlack';
+      color: white;
+      font-size: 1.2em;
+      gap: 3px;
+      cursor: pointer;
+      img{
+        width: 1.2em;
+        transform: scaleX(-1);
+      }
+    }
+    .donation-btn:hover{
+      border: 3px solid #F21B83;
+      background-color: #F21B83;
+      font-family: 'IsidoraBlack';
+      color: white;
+    }
+    .donation-btn:active{
+      background-color: #AFB800;
+    }
+  }
+}
+
+.hide-mobile {
+  display: none;
+  box-shadow: 0px 2px 5px rgb(black, .2);
+  font-family: 'IsidoraBlack';
+  div {
+    padding: 1em 0em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .logo {
+    margin-right: 1 em;
+    margin-left: 1 em;
+    padding: 0;
+  }
+  nav {
+    display: grid;
+    align-items: center;
+    font-size: 1.7em;
+    color: #00ABD3;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      list-style: none;
+      a {
+        margin: 0.2em;
+        color: inherit;
+        text-decoration: none;
+      }
+      li{
+        margin-right: 0.5em;
+      }
+    }
+    li:hover{
+      color: #F21B83;
+    }
+  }
+  .info {
+    display: flex;
+    align-items: center;
+    .account {
+      margin-right: .5em;
+    }
+  }
+  .donation{
+    padding: 0 0;
+  }
+  .donation-btn{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    padding: 0.2em 0.5em;
+    border: 3px solid;
+    background-color: #00ABD3;
+    font-family: 'IsidoraBlack';
+    color: white;
+    font-size: 1.7em;
+    gap: 3px;
+    cursor: pointer;
+    img{
+      width: 1.2em;
+      transform: scaleX(-1);
+    }
+  }
+  .donation-btn:hover{
+    border: 3px solid #F21B83;
+    background-color: #F21B83;
+    font-family: 'IsidoraBlack';
+    color: white;
+  }
+  .donation-btn:active{
+    background-color: #AFB800;
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .show-mobile {
+    .logo{
+      width: 1%;
+    }
+  }
+  .hide-mobile {
+    display: none;
+  }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+  .show-mobile {
+    display: none;
+  }
+  .hide-mobile {
+    display: block;
+    nav {
+      font-size: 1.9em;
+      color: #00ABD3;
+      justify-content: space-between;
+      ul {
+        display: flex;
+        list-style: none;
+        font-size: 0.8em;
+        a {
+          margin: 0.2em;
+          color: inherit;
+          text-decoration: none;
+        }
+        li{
+          margin-right: 0.5em;
+        }
+      }
+      li:hover{
+        color: #F21B83;
+        animation: bounce ease-in-out 0.6s infinite;
+      }
+    }
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translate(0); }
+  50% { transform: translateY(-4px); }
+}

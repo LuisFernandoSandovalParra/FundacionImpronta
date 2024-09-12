@@ -1,0 +1,70 @@
+<div class="sub-navbar">
+  <ul>
+    <li (click)="openUserAccessDialog('login')">Inicia Sesión</li>
+    <li (click)="openUserAccessDialog('signin')">Regístrate</li>
+  </ul>
+</div>
+<div class="banner-container">
+  <div class="impronta-logo">
+    <img
+      data-aos="fade-down"
+      data-aos-duration="1000"
+      src="../../../assets/images/Banner Cursos Logo.svg"
+      alt="Formación en salud"
+    />
+  </div>
+  <div class="btns-courses-container">
+    <div
+      (click)="changeCoursesTypeSelected('profesional')"
+      class="courses-professional-formation"
+    >
+      <img
+        data-aos="flip-left"
+        data-aos-duration="1500"
+        src="../../../assets/images/Banner Cursos-04.svg"
+        alt="Profesional"
+      />
+      <h1 data-aos="flip-up" data-aos-duration="1000">Formación Profesional</h1>
+    </div>
+    <div
+      (click)="changeCoursesTypeSelected('social')"
+      class="courses-social-proyection"
+    >
+      <img
+        data-aos="flip-right"
+        data-aos-duration="1500"
+        src="../../../assets/images/Banner Cursos-03.svg"
+        alt="Proyección social"
+      />
+      <h1 data-aos="flip-up" data-aos-duration="1000">
+        Cursos Proyección Social
+      </h1>
+    </div>
+  </div>
+</div>
+<div
+  [ngStyle]="{ 'background-color': backgroundColorCoursesType }"
+  class="courses-container"
+>
+  <div class="courses-type-title">
+    <h1 data-aos="flip-down" data-aos-duration="1000">
+      {{ titleCoursesType }}
+    </h1>
+  </div>
+  <div class="courses">
+    <div
+      *ngFor="let course of getListCourses(coursesTypeSelected)"
+      class="card-course"
+      [ngStyle]="{ 'background-color': backgroundColorCoursesType }"
+    >
+      <div (click)="showMoreCourseInfo(course.id)" class="course" data-aos="fade-up" data-aos-duration="1500">
+        <img [src]="course.image" alt="Curso" />
+        <div class="capa">
+          <h2>{{course.name}}</h2>
+          <p>Precio: ${{course.value}}</p>
+          <p>Horas: {{course.hours_num}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

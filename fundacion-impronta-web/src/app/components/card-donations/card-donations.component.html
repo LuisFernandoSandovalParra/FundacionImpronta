@@ -1,0 +1,125 @@
+<div class="general-container">
+  <div class="title-container">
+    <div class="donation-image">
+      <img src="../../../assets/images/donation-image2.svg" alt="Donaciones"/>
+    </div>
+    <h1>Donaciones</h1>
+  </div>
+  <div class="container-payment">
+    <form (ngSubmit)="getIntegrityFirm()" #payForm="ngForm">
+      <!-- OBLIGATORIOS -->
+      <input type="hidden" name="public-key" [value]="publicKey" />
+      <input type="hidden" name="currency" [value]="currency" />
+      <input type="hidden" name="reference" [value]="reference" />
+      <input type="hidden" name="signature:integrity" [value]="integrity" />
+      <input type="hidden" name="redirect-url" [value]="redirectLink" />
+      <div class="input-contain">
+        <label for="customer-data:full-name">Nombres y apellidos</label>
+        <input
+          type="text"
+          name="customer-data:full-name"
+          [(ngModel)]="fullName"
+          [value]="fullName"
+          placeholder="Ej: Juan Felipe Perez Perez"
+          required
+        />
+      </div>
+      <div class="input-contain">
+        <label for="customer-data:email">Correo</label>
+        <input
+          type="email"
+          name="customer-data:email"
+          [(ngModel)]="email"
+          [value]="email"
+          placeholder="Ej: juanperez@correo.com"
+          required
+        />
+      </div>
+      <div class="input-contain">
+        <label for="customer-data:legal-id-type">Tipo de Documento</label>
+        <select
+          name="customer-data:legal-id-type"
+          [(ngModel)]="documentType"
+          [value]="documentType"
+          required
+        >
+          <option disabled selected value="">
+            Seleccione el tipo de documento
+          </option>
+          <option value="CC">Cédula de Ciudadanía</option>
+          <option value="CE">Cédula de Extranjería</option>
+          <option value="NIT">Número de Identificación Tributaria</option>
+          <option value="PP">Pasaporte</option>
+          <option value="TI">Tarjeta de Identidad</option>
+          <option value="DNI">Documento Nacional de Identidad</option>
+          <option value="RG">Carteira de Identidade / Registro Geral</option>
+        </select>
+      </div>
+      <div class="input-contain">
+        <label for="customer-data:legal-id">Nro de Documento</label>
+        <input
+          type="number"
+          name="customer-data:legal-id"
+          [(ngModel)]="documentNum"
+          [value]="documentNum"
+          placeholder="Ej: 1042031023"
+          required
+        />
+      </div>
+      <div class="input-contain">
+        <label for="customer-data:phone-number">Teléfono</label>
+        <input
+          type="number"
+          name="customer-data:phone-number"
+          [(ngModel)]="phoneNumber"
+          [value]="phoneNumber"
+          placeholder="Ej: 313 111 0000"
+          required
+        />
+      </div>
+      <div class="input-contain">
+        <label for="">Tipo de donación</label>
+        <select name="donation-type" [(ngModel)]="donationType" required>
+          <option disabled selected value="">
+            Seleccione el tipo de donación
+          </option>
+          <option value="general">General</option>
+          <option value="proyecto">Proyecto</option>
+        </select>
+      </div>
+      <div *ngIf="donationType === 'proyecto'" class="input-contain">
+        <label for="project-select">Proyectos</label>
+        <select name="project-select" [(ngModel)]="projectSelected" required>
+          <option disabled selected value="">Seleccione el proyecto</option>
+          <option *ngFor="let project of projects" [value]="project.title">
+            {{ project.title }}
+          </option>
+        </select>
+      </div>
+      <div class="input-contain">
+        <label for="amount-in-cents">Donación</label>
+        <input
+          type="text"
+          name="amount-in-cents"
+          [(ngModel)]="amountInCents"
+          [value]="amountInCents"
+          placeholder="Ej: $50000"
+          required
+        />
+      </div>
+      <div class="legal-info">
+        <p>
+          Valoramos tu privacidad. Los datos proporcionados en este formulario
+          de donación se tratarán de manera confidencial y solo se utilizarán
+          con el propósito de procesar y gestionar tu contribución. No
+          compartiremos tus datos con terceros sin tu consentimiento. Puedes
+          obtener más información sobre cómo manejamos y protegemos tus datos en
+          nuestra [Política de Privacidad]. Gracias por apoyarnos.
+        </p>
+      </div>
+      <div class="btn-contain">
+        <button type="submit">Pagar con Wompi</button>
+      </div>
+    </form>
+  </div>
+</div>

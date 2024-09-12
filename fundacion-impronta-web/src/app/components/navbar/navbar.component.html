@@ -1,0 +1,52 @@
+<div class="show-mobile">
+  <div>
+    <button (click)="toogleMenu()">
+      <img src="../../../assets/svg/menu-mobile-icon.svg" class="menu-mobile-btn" alt="menu"/>
+    </button>
+    <a href="#">
+      <img src="../../../assets/svg/fundacion-logo.jpg" class="logo-mobile" alt="fundaciónImpronta"/>
+    </a>
+  </div>
+  <div class="side-menu" [class.active]="activeMenu">
+    <button (click)="toogleMenu()">
+      <img src="../../../assets/svg/back-row-icon.svg" class="back-mobile-btn" alt="volver">
+    </button>
+    <ul>
+      <li><a (click)="toogleMenu()" [routerLink]="['inicio']" routerLinkActive="active" href="">Inicio</a></li>
+      <li><a (click)="toogleMenu()" [routerLink]="['nosotros']" routerLinkActive="active" href="">Nosotros</a></li>
+      <li><a (click)="toogleMenu()" [routerLink]="['proyectos']" routerLinkActive="active" href="">Proyectos</a></li>
+      <li><a (click)="toogleMenu()" [routerLink]="['voluntarios']" routerLinkActive="active" href="">Voluntarios</a></li>
+      <li><a (click)="toogleMenu()" [routerLink]="['contactanos']" routerLinkActive="active" href="">Contactanos</a></li>
+    </ul>
+    <div>
+      <button (click)="toogleMenu()" [routerLink]="['donaciones']"  routerLinkActive="active" class="donation-btn">
+        <img src="../../../assets/svg/donation-icon.svg" alt="Donaciones">
+        Donaciones
+      </button>
+    </div>
+  </div>
+</div>
+<div class="hide-mobile">
+  <div>
+    <div class="logo">
+      <a class="logo" href="">
+        <img src="../../../assets/svg/fundacion-logo.jpg" alt="logo" width="150px">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a [routerLink]="['inicio']" href="">Inicio</a></li>
+        <li><a [routerLink]="['nosotros']" href="">Nosotros</a></li>
+        <li><a [routerLink]="['proyectos']" href="">Proyectos</a></li>
+        <li><a [routerLink]="['voluntarios']" href="">Voluntarios</a></li>
+        <li><a [routerLink]="['contactanos']" href="">Contactanos</a></li>
+      </ul>
+    </nav>
+    <div class="donation">
+      <button [routerLink]="['donaciones']" routerLinkActive="active" class="donation-btn">
+        <img src="../../../assets/svg/donation-icon.svg" alt="Donaciones">
+        Donaciones
+      </button>
+    </div>
+  </div>
+</div>

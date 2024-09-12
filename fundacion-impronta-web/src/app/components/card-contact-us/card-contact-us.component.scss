@@ -1,0 +1,247 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'IsidoraBlack';
+  src: url('../../../assets/fonts/Isidora Soft Black.otf');
+}
+
+@font-face {
+  font-family: 'IsidoraSemiBold';
+  src: url('../../../assets/fonts/IsidoraSansSemiBold.otf');
+}
+
+body{
+  margin: 0;
+}
+
+strong{
+  font-family: 'IsidoraBlack';
+}
+
+.contact-container{
+  background-color: #FFB000;
+  .contact-title{
+    font-family: 'IsidoraBlack';
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 10% 0;
+  }
+  .contact-info-container{
+    .map-location{
+      text-align: center;
+      width: 100%;
+      iframe{
+        border-radius: 20px;
+        box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.5);
+      }
+      .direction{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        font-family: 'IsidoraSemiBold';
+        color: white;
+        padding: 5% 10%;
+        img{
+          width: 7%;
+        }
+      }
+    }
+    .contact-form{
+      border-radius: 20px;
+      border: 3px solid #FFB000;
+      padding: 5%;
+      margin: 10% 10%;
+      text-align: center;
+      background-color: #ECECEC;
+      .title-form{
+        border: 1px solid #00ABD3;
+        background-color: #00ABD3;
+        color: white;
+        font-family: 'IsidoraBlack';
+        border-radius: 10px;
+        text-align: center;
+        font-size: 0.8em;
+        margin: 2% 0;
+      }
+      input{
+        width: 80%;
+        padding: 5% 8%;
+        margin: 2% 0;
+        border-radius: 15px;
+        border: 1px solid white;
+        font-family: 'IsidoraSemiBold';
+        background-color: white;
+      }
+      textarea{
+        width: 80%;
+        padding: 5% 8%;
+        margin: 2% 0;
+        border-radius: 15px;
+        font-family: 'IsidoraSemiBold';
+        background-color: white;
+        border: 1px solid white;
+      }
+      ::placeholder{
+        font-family: 'IsidoraSemiBold';
+      }
+      button{
+        background-color: #00ABD3;
+        font-family: 'IsidoraBlack';
+        font-size: 1.2em;
+        color: white;
+        padding: 3% 5%;
+        border-radius: 30px;
+        border: 1px solid #00ABD3;
+
+      }
+      button:hover{
+        background-color: #62c6dc;
+        cursor: pointer;
+      }
+      button:active{
+        background-color: #008cab;
+      }
+    }
+  }
+  .aditional-info{
+    text-align: center;
+    font-family: 'IsidoraSemiBold';
+    .phone{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      color: white;
+      padding: 0% 10% 10% 10%;
+      img{
+        width: 7%;
+        padding: 0 2%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em){
+  .contact-container{
+    .contact-title{
+      font-size: 2em;
+      padding: 7% 0;
+    }
+    .contact-info-container{
+      .map-location{
+        iframe{
+          width: 70%;
+          height: 40vh;
+        }
+        .direction{
+          padding: 5% 15%;
+          font-size: 1.7em;
+          img{
+            padding: 0%;
+          }
+        }
+      }
+      .contact-form{
+        margin: 10% 20%;
+        .title-form{
+          font-size: 1.3em;
+        }
+        input{
+          font-size: 1.3em;
+        }
+        textarea{
+          font-size: 1.3em;
+        }
+        button{
+          font-size: 1.7em;
+        }
+      }
+    }
+    .aditional-info{
+      .phone{
+        font-size: 1.7em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        color: white;
+        padding: 0% 10% 10% 10%;
+        img{
+          width: 7%;
+          padding: 0 2%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .contact-container{
+    .contact-title{
+      font-size: 2em;
+      padding: 3% 0;
+    }
+    .contact-info-container{
+      display: flex;
+      .map-location{
+        margin: 0 2% 0 10%;
+        width: 70%;
+        iframe{
+          width: 100%;
+          height: 60vh;
+        }
+        .direction{
+          justify-content: left;
+          padding: 5% 5% 0% 5%;
+          font-size: 1.4em;
+        }
+      }
+      .contact-form{
+        width: 30%;
+        padding: 2%;
+        margin: 0 10% 0 2%;
+        .title-form{
+          font-size: 1em;
+        }
+        input{
+          font-size: 1em;
+          padding: 3% 8%;
+        }
+        textarea{
+          font-size: 1em;
+          resize: none;
+          padding: 3% 8%;
+        }
+        button{
+          font-size: 1.1em;
+          cursor: pointer;
+        }
+      }
+    }
+    .aditional-info{
+      .phone{
+        font-size: 1.4em;
+        display: flex;
+        text-align: left;
+        justify-content: left;
+        align-items: left;
+        color: white;
+        padding: 0% 10% 4% 12.2%;
+        img{
+          width: 3%;
+          padding: 0 1%;
+        }
+      }
+    }
+  }
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
+}

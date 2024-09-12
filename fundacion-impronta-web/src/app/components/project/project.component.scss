@@ -1,0 +1,457 @@
+* {
+  margin: 0;
+  padding: auto;
+}
+@font-face {
+  font-family: "IsidoraBlack";
+  src: url("../../../assets/fonts/Isidora Soft Black.otf");
+}
+
+@font-face {
+  font-family: "IsidoraSemiBold";
+  src: url("../../../assets/fonts/IsidoraSansSemiBold.otf");
+}
+
+body {
+  margin: 0;
+}
+
+strong {
+  font-family: "IsidoraBlack";
+}
+
+button {
+  cursor: pointer;
+}
+
+.general-container {
+  background-color: #04a9d0;
+  &.activeInfo {
+    display: none;
+  }
+  .projects-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 0 10% 0;
+    .project-card {
+      margin: 0;
+      display: flex;
+      .project {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: white;
+        margin: 3%;
+        max-width: 20em;
+        box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        transition: all 0.25s;
+        .project-image {
+          width: 100%;
+          border-radius: 15px;
+          img {
+            border-radius: 8px 8px 0 0;
+            width: 100%;
+            height: 25vh;
+          }
+        }
+        .project-title {
+          font-family: "IsidoraBlack";
+          font-size: 1.4em;
+          text-align: center;
+          padding: 2%;
+        }
+        .project-description {
+          flex-grow: 1;
+          font-family: "IsidoraSemiBold";
+          padding: 4%;
+          text-align: justify;
+          color: #72716e;
+        }
+        .project-progress-bar {
+          text-align: center;
+          .progress-title {
+            font-family: "IsidoraSemiBold";
+          }
+          progress {
+            font-size: 1.5em;
+          }
+          .progress-text {
+            font-family: "IsidoraSemiBold";
+            font-size: 0.8em;
+            color: #72716e;
+          }
+        }
+        .btns {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10%;
+          margin: 5%;
+          padding: 0% 0% 5% 0%;
+          text-align: center;
+          button {
+            padding: 5% 0;
+            border-radius: 20px;
+            font-size: 1.2em;
+            font-family: "IsidoraBlack";
+            cursor: pointer;
+          }
+          .btn-show-more {
+            color: white;
+            background-color: #feb100;
+            border: 1px solid #feb100;
+          }
+          .btn-show-more:hover {
+            background-color: #fed800;
+          }
+          .btn-show-more:active {
+            background-color: #aea829;
+          }
+          .btn-donate {
+            color: white;
+            background-color: #70a200;
+            border: 1px solid #70a200;
+          }
+          .btn-donate:hover {
+            background-color: #91d302;
+          }
+          .btn-donate:active {
+            background-color: #537902;
+          }
+        }
+      }
+      .project:hover {
+        transform: translateY(-15px);
+        box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+
+.specific-project-container {
+  display: none;
+  font-family: "IsidoraSemiBold";
+  text-align: justify;
+  h2 {
+    font-family: "IsidoraBlack";
+    text-align: left;
+  }
+  background-image: linear-gradient(to bottom, #04a9d0, white);
+  &.activeInfo {
+    display: block;
+  }
+  .btn-back {
+    width: 100%;
+    button {
+      display: flex;
+      justify-content: right;
+      padding: 0;
+      margin: 0;
+      border: none;
+      background: none;
+      object-fit: contain;
+      img {
+        width: 15%;
+      }
+    }
+  }
+  .title-project-info {
+    font-family: "IsidoraBlack";
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+  }
+  .project-video {
+    width: 100%;
+    background-color: black;
+    margin: 10% 0;
+    iframe {
+      width: 100%;
+      height: 40vh;
+    }
+  }
+  .description-project-info {
+    padding: 5% 10%;
+  }
+  .topic-project-info {
+    padding: 5% 10%;
+  }
+  .problematic-project-info {
+    padding: 5% 10%;
+  }
+  .proposal-project-info {
+    padding: 5% 10%;
+  }
+  .population-project-info {
+    padding: 5% 10%;
+  }
+  .place-application-project-info {
+    padding: 5% 10%;
+  }
+  .representative-project-info {
+    padding: 5% 10%;
+  }
+  .expected-budget-project-info {
+    padding: 5% 10%;
+  }
+  .project-progress-bar {
+    padding: 5% 10%;
+    text-align: center;
+    progress {
+      font-size: 1.5em;
+    }
+  }
+  .btn-donation {
+    text-align: center;
+    margin: 10%;
+    button {
+      padding: 2.5% 12%;
+      border-radius: 20px;
+      font-size: 1.2em;
+      font-family: "IsidoraBlack";
+      cursor: pointer;
+    }
+    button {
+      color: white;
+      background-color: #70a200;
+      border: 1px solid #70a200;
+    }
+    button:hover {
+      background-color: #91d302;
+    }
+    button:active {
+      background-color: #537902;
+    }
+  }
+}
+
+.container-projects-separator {
+  display: flex;
+  width: 100%;
+  padding: 10% 0%;
+  .btn-section-projects {
+    text-align: center;
+    width: 100%;
+    font-family: "IsidoraBlack";
+    color: white;
+    font-size: 1.2em;
+    padding: 5% 0;
+    background-color: #00abd3;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.25s;
+    transform: translateY(-7px);
+    box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.1);
+    &.activeBtnProjectType {
+      background-color: transparent;
+      transform: translateY(0);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .general-container {
+    .projects-container {
+      font-size: 1.5em;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-rows: 1fr;
+      .project-card {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        .project {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          .project-description {
+            flex-grow: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .specific-project-container {
+    font-size: 1.7em;
+    .btn-back {
+      width: 100%;
+      button {
+        display: flex;
+        justify-content: right;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: none;
+        object-fit: contain;
+        width: 100%;
+        img {
+          width: 8%;
+        }
+      }
+    }
+    .title-project-info {
+      font-size: 1.5em;
+    }
+    .project-video {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      background-color: transparent;
+      margin: 10% 0;
+      iframe {
+        width: 80%;
+        height: 40vh;
+        box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.5);
+      }
+    }
+    .project-progress-bar {
+      padding: 5% 10%;
+      text-align: center;
+      progress {
+        font-size: 1.5em;
+      }
+    }
+    .btn-donation {
+      button {
+        padding: 2% 8%;
+        border-radius: 35px;
+      }
+    }
+  }
+  .container-projects-separator {
+    .btn-section-projects {
+      font-size: 2.3em;
+      padding: 3.5% 0;
+      transition: all 0.25s;
+      transform: translateY(-7px);
+      box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.1);
+      &.activeBtnProjectType {
+        background-color: transparent;
+        transform: translateY(0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .general-container {
+    padding: 0 8%;
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 1fr;
+      .project-card {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        .project {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          .project-description {
+            flex-grow: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .specific-project-container {
+    font-size: 1.7em;
+    .btn-back {
+      width: 100%;
+      button {
+        display: flex;
+        justify-content: right;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: none;
+        object-fit: contain;
+        width: 100%;
+        img {
+          padding: 1%;
+          width: 5%;
+        }
+      }
+    }
+    .title-project-info {
+      font-size: 1.5em;
+    }
+    .description-project-info {
+      padding: 2% 10%;
+    }
+    .topic-project-info {
+      padding: 2% 10%;
+    }
+    .problematic-project-info {
+      padding: 2% 10%;
+    }
+    .proposal-project-info {
+      padding: 2% 10%;
+    }
+    .population-project-info {
+      padding: 2% 10%;
+    }
+    .place-application-project-info {
+      padding: 2% 10%;
+    }
+    .representative-project-info {
+      padding: 2% 10%;
+    }
+    .expected-budget-project-info {
+      padding: 2% 10%;
+    }
+    .project-video {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      background-color: transparent;
+      margin: 5% 0;
+      iframe {
+        width: 60%;
+        height: 60vh;
+        box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.5);
+      }
+    }
+    .project-progress-bar {
+      padding: 2% 10%;
+      text-align: center;
+      progress {
+        font-size: 1.5em;
+      }
+    }
+    .btn-donation {
+      margin: 2%;
+      padding: 2% 5%;
+      button {
+        padding: 0.5% 3.5%;
+        border-radius: 35px;
+      }
+    }
+  }
+  .container-projects-separator {
+    padding: 5% 0;
+    .btn-section-projects {
+      font-size: 2.8em;
+      padding: 1.3% 0;
+      background-color: #00abd3;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.25s;
+      transform: translateY(-7px);
+      box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.1);
+      &.activeBtnProjectType {
+        background-color: transparent;
+        transform: translateY(0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+      }
+    }
+  }
+}

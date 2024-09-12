@@ -1,0 +1,251 @@
+@font-face {
+  font-family: "PoppinsBlack";
+  src: url("../../../assets/fonts/Poppins-Black.ttf");
+}
+
+@font-face {
+  font-family: "PoppinsSemiBold";
+  src: url("../../../assets/fonts/Poppins-SemiBold.ttf");
+}
+
+.dialog-size{
+  max-width: 20em;
+}
+
+.sub-navbar {
+  background-color: #2755a2;
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    li {
+      flex: 1;
+      padding: 4% 0%;
+      text-align: center;
+      color:white;
+      font-family: 'PoppinsSemiBold';
+    }
+  }
+}
+
+.banner-container {
+  background-image: url("../../../assets/images/Banner Cursos Fondo.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  .impronta-logo {
+    width: 100%;
+    text-align: center;
+    img {
+      width: 50%;
+    }
+  }
+  .btns-courses-container {
+    display: flex;
+    justify-content: center;
+    padding: 5% 0;
+    .courses-social-proyection {
+      text-align: center;
+      h1 {
+        background-color: #47b8a4;
+      }
+    }
+    .courses-professional-formation {
+      text-align: center;
+      h1 {
+        background-color: #2755a2;
+      }
+    }
+    img {
+      width: 80%;
+    }
+    h1 {
+      text-align: center;
+      font-family: "PoppinsBlack";
+      font-size: 0.8em;
+      margin: 0 2%;
+      padding: 2% 0;
+      border-radius: 7px;
+      color: white;
+    }
+  }
+}
+
+.courses-container {
+  .courses-type-title {
+    text-align: center;
+    font-family: "PoppinsBlack";
+    font-size: 0.8em;
+    color: white;
+    padding: 5% 0;
+  }
+  .courses {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    .card-course {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      background-color: white;
+      margin: 3%;
+      max-width: 20em;
+      border-radius: 8px;
+      box-shadow: 0px 2px 2px 2px rgba(157, 153, 153, 0.1);
+      transition: all 0.25s;
+      cursor: pointer;
+      img {
+        width: 100%;
+      }
+      .capa {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #47b8a3d8;
+        border-radius: 8px;
+        transition: all 500ms ease-out;
+        opacity: 0;
+        visibility: hidden;
+        color: white;
+        h2 {
+          font-family: "PoppinsBlack";
+          text-align: center;
+        }
+        p {
+          font-family: "PoppinsSemiBold";
+          padding: 2%;
+          text-align: center;
+        }
+      }
+    }
+    .card-course:hover {
+      transform: translateY(-15px);
+      box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.508);
+      .capa {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .sub-navbar {
+    ul {
+      li {
+        margin: 0 10%;
+        font-size: 1.5em;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .banner-container {
+    .impronta-logo {
+      img {
+        width: 40%;
+      }
+    }
+    .btns-courses-container {
+      gap: 10%;
+      img {
+        width: 100%;
+      }
+      h1 {
+        text-align: center;
+        font-size: 1.3em;
+        margin: 0 2%;
+        padding: 2% 0;
+        border-radius: 7px;
+        color: white;
+      }
+    }
+  }
+
+  .courses-container {
+    .courses-type-title {
+      font-size: 1.2em;
+    }
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .sub-navbar {
+    ul {
+      margin: 0% 24%;
+      li {
+        padding: 1.5% 0%;
+        margin: 0 12%;
+        font-size: 1.5em;
+        cursor: pointer;
+      }
+      li:hover{
+        background-color: #47b8a4;
+        animation: bounce ease-in-out 0.6s infinite;
+      }
+      li:active{
+        background-color: #317f71;
+      }
+    }
+  }
+  .banner-container {
+    .impronta-logo {
+      padding: 3% 0%;
+      img {
+        width: 20%;
+      }
+    }
+    .btns-courses-container {
+      padding: 0 0 3% 0;
+      width: 100%;
+      gap: 10%;
+      .courses-social-proyection {
+        transition: all ease-in-out 0.2s;
+        cursor: pointer;
+      }
+      .courses-social-proyection:hover {
+        transform: translateY(-15px);
+      }
+      .courses-professional-formation {
+        transition: all ease-in-out 0.2s;
+        cursor: pointer;
+      }
+      .courses-professional-formation:hover {
+        transform: translateY(-15px);
+      }
+      img {
+        width: 100%;
+        transition: all 0.25s;
+      }
+      h1 {
+        text-align: center;
+        font-size: 1.4em;
+        margin: 0 10%;
+        padding: 2% 0;
+        border-radius: 7px;
+        color: white;
+      }
+    }
+  }
+
+  .courses-container {
+    .courses-type-title {
+      text-align: center;
+      font-family: "PoppinsBlack";
+      font-size: 1.5em;
+      color: white;
+      padding: 2% 0;
+    }
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translate(0); }
+  50% { transform: translateY(-4px); }
+}

@@ -1,0 +1,72 @@
+<div class="general-container">
+  <div
+    class="container-projects-separator"
+    data-aos="zoom-in"
+    data-aos-duration="1500"
+  >
+    <div
+      (click)="changeProjectTypeSelected('social')"
+      [class.activeBtnProjectType]="btnProjectTypeSelectedActive"
+      class="btn-section-projects"
+    >
+      <p>Proyección social</p>
+    </div>
+    <div
+      (click)="changeProjectTypeSelected('extension')"
+      [class.activeBtnProjectType]="!btnProjectTypeSelectedActive"
+      class="btn-section-projects"
+    >
+      <p>Por extensión</p>
+    </div>
+  </div>
+  <div class="projects-container">
+    <div
+      *ngFor="let project of getListProject(projectTypeSelected)"
+      class="project-card"
+    >
+      <div class="project" data-aos="fade-up" data-aos-duration="1500">
+        <div class="project-image">
+          <img [src]="project.image" [alt]="project.title" />
+        </div>
+        <div class="project-title">
+          <h3>{{ project.title }}</h3>
+        </div>
+        <div class="project-description">
+          <p>{{ project.abstract }}</p>
+        </div>
+        <div
+          *ngIf="project.project_type === 'extension'"
+          class="project-progress-bar"
+        >
+          <div class="progress-title">
+            <h4>Presupuesto</h4>
+          </div>
+          <progress
+            [value]="calculateProgressProject(project.id)"
+            max="100"
+          ></progress>
+          <div class="progress-text">
+            {{ covertToMoney(project.current_budget, "COP") }} /
+            {{ covertToMoney(project.expected_budget, "COP") }}
+          </div>
+        </div>
+        <div class="btns">
+          <button
+            (click)="showMoreProjectInfo(project.id)"
+            class="btn-show-more"
+          >
+            Ver mas
+          </button>
+          <button
+            (click)="sendData(project.title)"
+            [routerLink]="['/donaciones']"
+            routerLinkActive="active"
+            class="btn-donate"
+          >
+            Donar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
