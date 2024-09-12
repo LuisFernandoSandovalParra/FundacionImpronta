@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Course, Module } from '../../models/card-health-training.model';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogInfoProjectComponent } from '../dialog-info-project/dialog-info-project.component';
+import { DialogCountAccessComponent } from '../dialog-count-access/dialog-count-access.component';
 import { DataService } from '../../data.service';
 
 @Component({
@@ -19,163 +20,7 @@ export class CardHealthTrainingComponent implements OnInit{
   btnCoursesTypeSelectedActive = false;
   activeCoursesCards = false;
 
-  courses: Course[] = [
-
-    /*
-    {
-      id: 1,
-      name: 'Atención a Victimas de Violencia Sexual',
-      image:
-        '../../../assets/images/C_Atencion a victimas de violencia sexual.svg',
-      course_type: 'profesional',
-      substantive_function: 'Formación Profesional',
-      hours_num: 40,
-      value: 20000,
-    },
-    {
-      id: 2,
-      name: 'Atención a Victimas de Violencia con Agentes Químicos',
-      image:
-        '../../../assets/images/C_Atencion a victimas de Violencia con Agentes Quimicos.svg',
-      course_type: 'profesional',
-      substantive_function: 'Formación Profesional',
-      hours_num: 40,
-      value: 20000,
-    },
-    {
-      id: 3,
-      name: 'Atención Integral al Consumidor de Sustancias Psicoactivas',
-      image:
-        '../../../assets/images/C_Atención Integral al Consumidor de Sustancias Psicoactivas.svg',
-      course_type: 'profesional',
-      substantive_function: 'Formación Profesional',
-      hours_num: 40,
-      value: 20000,
-    },
-    {
-      id: 4,
-      name: 'Cuidados Paleativos y Manejo del Dolor',
-      image:
-        '../../../assets/images/C_Cuidados Paleativos y Manejo del Dolor.svg',
-      course_type: 'profesional',
-      substantive_function: 'Formación Profesional',
-      hours_num: 40,
-      value: 20000,
-    },
-    {
-      id: 5,
-      name: 'Duelo Gestacional y Perinatala',
-      image: '../../../assets/images/C_Duelo Gestacional y Perinatala.svg',
-      course_type: 'profesional',
-      substantive_function: 'Formación Profesional',
-      hours_num: 40,
-      value: 20000,
-    },
-    {
-      id: 6,
-      name: 'Entrenamiento en Habilidades Sociales',
-      image: '../../../assets/images/',
-      course_type: 'social',
-      substantive_function: 'Proyección Social',
-      hours_num: 40,
-      value: 20000,
-    },
-    {
-      id: 7,
-      name: 'Gestionando Mi Duelo',
-      image: '../../../assets/images/',
-      course_type: 'social',
-      substantive_function: 'Proyección Social',
-      hours_num: 40,
-      value: 20000,
-    },
-    {
-      id: 8,
-      name: 'Gestión del Duelo',
-      image: '../../../assets/images/C_Gestion del Duelo.svg',
-      course_type: 'profesional',
-      substantive_function: 'Formación Profesional',
-      hours_num: 40,
-      value: 20000,
-    },
-    {
-      id: 9,
-      name: 'Inclusión Social para las Personas con Necesidades Educativas Diferenciadas',
-      image:
-        '../../../assets/images/C_Inclusión Social para las Personas con Necesidades Educativas Diferenciadas.svg',
-      course_type: 'profesional',
-      substantive_function: 'Formación Profesional',
-      hours_num: 40,
-      value: 20000,
-    },
-    {
-      id: 10,
-      name: 'Atención Diferencial para la Población LGBT',
-      image: '../../../assets/images/',
-      course_type: 'profesional',
-      substantive_function: 'Formación Profesional',
-      hours_num: 40,
-      value: 20000,
-    },
-    {
-      id: 11,
-      name: 'Instituciones Amigas de la Mujer y la Infancia',
-      image:
-        '../../../assets/images/C_Instituciones Amigas de la Mujer y la Infancia.svg',
-      course_type: 'profesional',
-      substantive_function: 'Formación Profesional',
-      hours_num: 40,
-      value: 20000,
-    },
-    {
-      id: 12,
-      name: 'Humanización en el Servicio de Salud',
-      image:
-        '../../../assets/images/C_Humanización en el Servicio de Salud.svg',
-      course_type: 'profesional',
-      substantive_function: 'Formación Profesional',
-      hours_num: 40,
-      value: 20000,
-    },
-    {
-      id: 13,
-      name: 'Plan de Cuidados en Salud Mental',
-      image: '../../../assets/images/',
-      course_type: 'profesional',
-      substantive_function: 'Formación Profesional',
-      hours_num: 40,
-      value: 20000,
-    },
-    {
-      id: 14,
-      name: 'Primeros Auxilios Emocionales',
-      image: '../../../assets/images/C_Primeros Auxilios Emocionales.svg',
-      course_type: 'profesional',
-      substantive_function: 'Formación Profesional',
-      hours_num: 40,
-      value: 20000,
-    },
-    {
-      id: 15,
-      name: 'Seguridad y Salud en el Trabajo',
-      image: '../../../assets/images/C_Seguridad y Salud en el Trabajo.svg',
-      course_type: 'profesional',
-      substantive_function: 'Formación Profesional',
-      hours_num: 40,
-      value: 20000,
-    },
-    {
-      id: 16,
-      name: 'Manejo de Residuos Solidos y Peligrosos Hospitalarios',
-      image:
-        '../../../assets/images/C_Manejo de Residuos Solidos y Peligrosos Hospitalarios.svg',
-      course_type: 'profesional',
-      substantive_function: 'Formación Profesional',
-      hours_num: 40,
-      value: 20000,
-    },
-    */
-  ];
+  courses: Course[] = [];
 
   modules: Module[] = [
     {
@@ -288,6 +133,16 @@ export class CardHealthTrainingComponent implements OnInit{
       }
     }
     return modulesName;
+  }
+
+  openUserAccessDialog(type: string){
+    const dialogRef = this.dialog.open(DialogCountAccessComponent, {
+      panelClass: 'dialog-size',
+      data: {
+        type: type
+      }
+    });
+    dialogRef.afterClosed().subscribe((result) => {});
   }
 
   openDialog() {

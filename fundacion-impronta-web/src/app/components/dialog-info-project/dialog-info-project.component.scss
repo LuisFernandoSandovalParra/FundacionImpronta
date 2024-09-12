@@ -21,12 +21,18 @@
   font-family: "PoppinsSemiBold";
   src: url("../../../assets/fonts/Poppins-SemiBold.ttf");
 }
-strong{
-  font-family: 'PoppinsBlack';
+strong {
+  font-family: "PoppinsBlack";
 }
 
 h2 {
   font-family: "IsidoraBlack";
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .general-container-info-project {
@@ -192,13 +198,13 @@ h2 {
       border: none;
       background-color: rgb(173, 173, 173);
       color: black;
-      font-family: 'PoppinsSemiBold';
+      font-family: "PoppinsSemiBold";
     }
     select {
       border: none;
       background-color: rgb(173, 173, 173);
       color: black;
-      font-family: 'PoppinsSemiBold';
+      font-family: "PoppinsSemiBold";
     }
   }
   .btn-send {
@@ -214,6 +220,12 @@ h2 {
       color: white;
       cursor: pointer;
     }
+  }
+  .error-message{
+    text-align: center;
+    color: red;
+    font-family: 'PoppinsBlack';
+    font-size: 0.7em;
   }
 }
 
@@ -308,6 +320,9 @@ h2 {
         font-size: 1.5em;
       }
     }
+    .error-message{
+      font-size: 1.5em;
+    }
   }
 }
 
@@ -396,6 +411,9 @@ h2 {
       button {
         font-size: 1em;
       }
+    }
+    .error-message{
+      font-size: 1em;
     }
   }
 }

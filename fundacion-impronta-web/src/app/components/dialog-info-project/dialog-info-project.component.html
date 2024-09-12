@@ -55,7 +55,10 @@
   </div>
 </div>
 
-<div *ngIf="data.type === 'course' && subscriptionActiveForm === false" class="course-general-container">
+<div
+  *ngIf="data.type === 'course' && subscriptionActiveForm === false"
+  class="course-general-container"
+>
   <div class="close-dialog">
     <button (click)="closeDialog()">
       <img src="../../../assets/svg/close-icon.svg" alt="Volver" />
@@ -85,60 +88,275 @@
       <img src="../../../assets/svg/close-icon.svg" alt="Volver" />
     </button>
   </div>
-  <div class="header-subscription-container">
-    <h1>Inscripción</h1>
-    <p><strong>Curso: </strong>{{data.course.name}}</p>
-  </div>
-  <div class="info-container">
-    <p>
-      Ingresa correctamente tus datos personales.<br> Estos serán los que aparezcan en
-      tu certificado.
-    </p>
-  </div>
-  <div class="input-container">
-    <label for="firstName">Nombres:</label>
-    <input
-      type="text"
-      name="firstName"
-      required
-      placeholder="Ej: Luis Fernando"
-    />
-  </div>
-  <div class="input-container">
-    <label for="lastName">Apellidos:</label>
-    <input type="text" name="lastName" placeholder="Ej: Sandoval Parra" required />
-  </div>
-  <div class="input-container">
-    <label for="identificationType">Tipo de Documento:</label>
-    <select name="identificationType" required>
-      <option disabled selected value="">
-        Seleccione el tipo de documento
-      </option>
-      <option value="CC">Cédula de Ciudadanía</option>
-      <option value="CE">Cédula de Extranjería</option>
-      <option value="PP">Pasaporte</option>
-      <option value="TI">Tarjeta de Identidad</option>
-      <option value="DNI">Documento Nacional de Identidad</option>
-    </select>
 
-  </div>
-  <div class="input-container">
-    <label for="identificationNumber">Nro de Documento:</label>
-    <input type="number" name="identificationNumber" placeholder="Ej: 1193124757" required>
-  </div>
-  <div class="input-container">
-    <label for="identificationExpeditionPlace">Lugar de expedición:</label>
-    <input type="text" name="identificationExpeditionPlace" placeholder="Ej: Socorro - Santander">
-  </div>
-  <div class="input-container">
-    <label for="email">Correo:</label>
-    <input type="email" name="email" placeholder="Ej: luisandoval@correo.com" required>
-  </div>
-  <div class="input-container">
-    <label for="">Profesión:</label>
-    <input type="text" name="profession" placeholder="Ej: Ingeniero ambiental" required>
-  </div>
-  <div class="btn-send">
-    <button>Inscribirse</button>
-  </div>
+  <form [formGroup]="payForm" (ngSubmit)="onSubmit()">
+    <div class="header-subscription-container">
+      <h1>Inscripción</h1>
+      <p><strong>Curso: </strong>{{ data.course.name }}</p>
+    </div>
+    <div class="info-container">
+      <p>
+        Ingresa correctamente tus datos personales.<br />
+        Estos serán los que aparezcan en tu certificado.
+      </p>
+    </div>
+    <input type="hidden" name="public-key" formControlName="publicKey" />
+    <input type="hidden" name="currency" formControlName="currency" />
+    <input type="hidden" name="reference" formControlName="reference" />
+    <input
+      type="hidden"
+      name="signature:integrity"
+      formControlName="integrity"
+    />
+    <input type="hidden" name="redirect-url" formControlName="redirectLink" />
+    <input
+      type="hidden"
+      name="amount-in-cents"
+      formControlName="amountInCents"
+    />
+    <div class="input-container">
+      <label for="customer-data:full-name">Nombres:</label>
+      <input
+        type="text"
+        name="customer-data:full-name"
+        formControlName="firstName"
+        placeholder="Ej: Luis Fernando"
+        autocomplete="off"
+        required
+      />
+    </div>
+    <div
+      class="alert"
+      *ngIf="firstName?.invalid && (firstName?.dirty || firstName?.touched)"
+    >
+      <div class="error-message" *ngIf="firstName?.errors?.['required']">
+        <p>Este campo es obligatorio.</p>
+      </div>
+      <div class="error-message" *ngIf="firstName?.errors?.['pattern']">
+        <p>Ingrese correctamente su(s) nombre(s).</p>
+      </div>
+    </div>
+    <div class="input-container">
+      <label for="customer-data:full-name">Apellidos:</label>
+      <input
+        type="text"
+        name="customer-data:full-name"
+        formControlName="lastName"
+        placeholder="Ej: Sandoval Parra"
+        autocomplete="off"
+        required
+      />
+    </div>
+    <div
+      class="alert"
+      *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)"
+    >
+      <div class="error-message" *ngIf="lastName?.errors?.['required']">
+        <p>Este campo es obligatorio.</p>
+      </div>
+      <div class="error-message" *ngIf="lastName?.errors?.['pattern']">
+        <p>Ingrese correctamente su(s) apellido(s)</p>
+      </div>
+    </div>
+    <div class="input-container">
+      <label for="customer-data:legal-id-type">Tipo de Documento:</label>
+      <select
+        name="customer-data:legal-id-type"
+        formControlName="documentType"
+        required
+      >
+        <option disabled selected value="">
+          Seleccione el tipo de documento
+        </option>
+        <option value="CC">Cédula de Ciudadanía</option>
+        <option value="CE">Cédula de Extranjería</option>
+        <option value="PP">Pasaporte</option>
+        <option value="TI">Tarjeta de Identidad</option>
+        <option value="DNI">Documento Nacional de Identidad</option>
+      </select>
+    </div>
+    <div class="input-container">
+      <label for="customer-data:legal-id">Nro de Documento:</label>
+      <input
+        type="text"
+        name="customer-data:legal-id"
+        formControlName="documentNum"
+        placeholder="Ej: 1193124757"
+        autocomplete="off"
+        required
+      />
+    </div>
+    <div
+      class="alert"
+      *ngIf="
+        documentNum?.invalid && (documentNum?.dirty || documentNum?.touched)
+      "
+    >
+      <div class="error-message" *ngIf="documentNum?.errors?.['minlength']">
+        <p>El nro. de documento debe tener 9 digitos o mas.</p>
+      </div>
+      <div class="error-message" *ngIf="documentNum?.errors?.['required']">
+        <p>Ingrese correctamente el numero de documento.</p>
+      </div>
+      <div class="error-message" *ngIf="documentNum?.errors?.['pattern']">
+        <p>El nro. de documento solo puede llevar digitos.</p>
+      </div>
+    </div>
+    <div class="input-container">
+      <label for="identificationExpeditionPlace">Lugar de expedición:</label>
+      <input
+        type="text"
+        name="identificationExpeditionPlace"
+        formControlName="identificationExpeditionPlace"
+        placeholder="Ej: Socorro (Santander)"
+        autocomplete="off"
+        required
+      />
+    </div>
+    <div
+      class="alert"
+      *ngIf="
+        identificationExpeditionPlace?.invalid &&
+        (identificationExpeditionPlace?.dirty ||
+          identificationExpeditionPlace?.touched)
+      "
+    >
+      <div
+        class="error-message"
+        *ngIf="identificationExpeditionPlace?.errors?.['required']"
+      >
+        <p>Este campo es obligatorio.</p>
+      </div>
+      <div
+        class="error-message"
+        *ngIf="identificationExpeditionPlace?.errors?.['pattern']"
+      >
+        <p>
+          Ingrese correctamente lugar de expedición <br />
+          del documento de identidad.
+        </p>
+      </div>
+    </div>
+    <div class="input-container">
+      <label for="birthdate">Fecha de nacimiento:</label>
+      <input
+        type="date"
+        name="birthdate"
+        formControlName="birthdate"
+        placeholder="Ej: 2000-01-30"
+        autocomplete="off"
+        required
+      />
+    </div>
+    <div
+      class="alert"
+      *ngIf="birthdate?.invalid && (birthdate?.dirty || birthdate?.touched)"
+    >
+      <div class="error-message" *ngIf="birthdate?.errors?.['required']">
+        <p>Este campo es obligatorio.</p>
+      </div>
+      <div class="error-message" *ngIf="birthdate?.errors?.['minimunAge']">
+        <p>Debe ser mayor a 18 años.</p>
+      </div>
+    </div>
+    <div class="input-container">
+      <label for="customer-data:email">Correo:</label>
+      <input
+        type="email"
+        name="customer-data:email"
+        formControlName="email"
+        placeholder="Ej: luisandoval@correo.com"
+        autocomplete="off"
+        required
+      />
+    </div>
+    <div
+      class="alert"
+      *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+    >
+      <div class="error-message" *ngIf="email?.errors?.['required']">
+        <p>Este campo es obligatorio.</p>
+      </div>
+      <div class="error-message" *ngIf="email?.errors?.['pattern']">
+        <p>Ingrese correctamente su email.</p>
+      </div>
+    </div>
+    <div class="input-container">
+      <label for="customer-data:phone-number">Teléfono:</label>
+      <input
+        type="text"
+        name="customer-data:phone-number"
+        formControlName="phoneNumber"
+        placeholder="Ej: 3208335446"
+        autocomplete="off"
+        required
+      />
+    </div>
+    <div
+      class="alert"
+      *ngIf="
+        phoneNumber?.invalid && (phoneNumber?.dirty || phoneNumber?.touched)
+      "
+    >
+      <div class="error-message" *ngIf="phoneNumber?.errors?.['minlength']">
+        <p>El nro. de teléfono debe tener 10 digitos.</p>
+      </div>
+      <div class="error-message" *ngIf="phoneNumber?.errors?.['required']">
+        <p>Ingrese correctamente el nro. de teléfono.</p>
+      </div>
+      <div class="error-message" *ngIf="phoneNumber?.errors?.['pattern']">
+        <p>El nro. de teléfono solo puede llevar digitos.</p>
+      </div>
+      <div class="error-message" *ngIf="phoneNumber?.errors?.['maxlength']">
+        <p>El nro. de teléfono debe tener 10 digitos.</p>
+      </div>
+    </div>
+    <div class="input-container">
+      <label for="academic_Level">Nivel academico:</label>
+      <select name="academic_Level" formControlName="academicLevel" required>
+        <option disabled selected value="">
+          Seleccione su nivel academico
+        </option>
+        <option value="bachiller">Bachiller</option>
+        <option value="tecnico">Tecnico</option>
+        <option value="profesional">Profesional</option>
+      </select>
+    </div>
+    <div
+      class="alert"
+      *ngIf="
+        academicLevel?.invalid &&
+        (academicLevel?.dirty || academicLevel?.touched)
+      "
+    >
+      <div class="error-message" *ngIf="academicLevel?.errors?.['required']">
+        <p>Este campo es obligatorio.</p>
+      </div>
+    </div>
+    <div class="input-container">
+      <label for="">Ocupación:</label>
+      <input
+        type="text"
+        name="profession"
+        formControlName="profession"
+        placeholder="Ej: Jefe de enfermeria"
+        autocomplete="off"
+        required
+      />
+    </div>
+    <div
+      class="alert"
+      *ngIf="profession?.invalid && (profession?.dirty || profession?.touched)"
+    >
+      <div class="error-message" *ngIf="profession?.errors?.['required']">
+        <p>Este campo es obligatorio.</p>
+      </div>
+      <div class="error-message" *ngIf="profession?.errors?.['pattern']">
+        <p>Ingrese correctamente su profesión.</p>
+      </div>
+    </div>
+    <div class="btn-send">
+      <button type="submit">Inscribirse</button>
+    </div>
+  </form>
 </div>

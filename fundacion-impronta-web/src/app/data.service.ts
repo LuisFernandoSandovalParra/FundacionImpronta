@@ -9,12 +9,20 @@ export class DataService {
   private apiUrl = `http://localhost:3000/api`;
   constructor(private http: HttpClient) {}
 
+  getIntegrity(amount: string): Observable<any> {
+    return this.http.get<any>(this.apiUrl + `/donations/pay/${amount}`);
+  }
+
   getProjectList(): Observable<any>{
     return this.http.get<any>(this.apiUrl + '/projects/list');
   }
 
   getCoursesList(): Observable<any>{
     return this.http.get<any>(this.apiUrl+ '/courses/list');
+  }
+
+  updateCourse(course_id: number, data: any){
+    this.http.put<any>(this.apiUrl + `/courses/update/${course_id}`, data);
   }
 
   sendMessage(
@@ -55,7 +63,4 @@ export class DataService {
     });
   }
 
-  getIntegrity(amount: string): Observable<any> {
-    return this.http.get<any>(this.apiUrl + `/donations/pay/${amount}`);
-  }
 }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { CardVolunteersComponent } from './components/card-volunteers/card-volunteers.component';
 import { CardDonationsComponent } from './components/card-donations/card-donations.component';
 import { CardHealthTrainingComponent } from './components/card-health-training/card-health-training.component';
+import { DialogCountAccessComponent } from './components/dialog-count-access/dialog-count-access.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { CardHealthTrainingComponent } from './components/card-health-training/c
     DialogInfoProjectComponent,
     CardVolunteersComponent,
     CardDonationsComponent,
-    CardHealthTrainingComponent
+    CardHealthTrainingComponent,
+    DialogCountAccessComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +52,7 @@ import { CardHealthTrainingComponent } from './components/card-health-training/c
     BrowserAnimationsModule,
     MatSnackBarModule,
     MatDialogModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

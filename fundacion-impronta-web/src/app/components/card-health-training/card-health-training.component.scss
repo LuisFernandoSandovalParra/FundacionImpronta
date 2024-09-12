@@ -8,6 +8,28 @@
   src: url("../../../assets/fonts/Poppins-SemiBold.ttf");
 }
 
+.dialog-size{
+  max-width: 20em;
+}
+
+.sub-navbar {
+  background-color: #2755a2;
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    li {
+      flex: 1;
+      padding: 4% 0%;
+      text-align: center;
+      color:white;
+      font-family: 'PoppinsSemiBold';
+    }
+  }
+}
+
 .banner-container {
   background-image: url("../../../assets/images/Banner Cursos Fondo.svg");
   background-repeat: no-repeat;
@@ -80,7 +102,7 @@
       img {
         width: 100%;
       }
-      .capa{
+      .capa {
         top: 0;
         position: absolute;
         width: 100%;
@@ -90,22 +112,22 @@
         transition: all 500ms ease-out;
         opacity: 0;
         visibility: hidden;
-        color:white;
-        h2{
-          font-family: 'PoppinsBlack';
+        color: white;
+        h2 {
+          font-family: "PoppinsBlack";
           text-align: center;
         }
-        p{
-          font-family: 'PoppinsSemiBold';
+        p {
+          font-family: "PoppinsSemiBold";
           padding: 2%;
           text-align: center;
         }
       }
     }
-    .card-course:hover{
+    .card-course:hover {
       transform: translateY(-15px);
       box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.508);
-      .capa{
+      .capa {
         opacity: 1;
         visibility: visible;
       }
@@ -114,6 +136,16 @@
 }
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .sub-navbar {
+    ul {
+      li {
+        margin: 0 10%;
+        font-size: 1.5em;
+        cursor: pointer;
+      }
+    }
+  }
+
   .banner-container {
     .impronta-logo {
       img {
@@ -144,6 +176,24 @@
 }
 
 @media screen and (min-width: 64em) {
+  .sub-navbar {
+    ul {
+      margin: 0% 24%;
+      li {
+        padding: 1.5% 0%;
+        margin: 0 12%;
+        font-size: 1.5em;
+        cursor: pointer;
+      }
+      li:hover{
+        background-color: #47b8a4;
+        animation: bounce ease-in-out 0.6s infinite;
+      }
+      li:active{
+        background-color: #317f71;
+      }
+    }
+  }
   .banner-container {
     .impronta-logo {
       padding: 3% 0%;
@@ -193,4 +243,9 @@
       padding: 2% 0;
     }
   }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translate(0); }
+  50% { transform: translateY(-4px); }
 }

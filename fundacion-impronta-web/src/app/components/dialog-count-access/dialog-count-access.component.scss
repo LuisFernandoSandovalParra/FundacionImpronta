@@ -1,0 +1,213 @@
+@font-face {
+  font-family: "PoppinsBlack";
+  src: url("../../../assets/fonts/Poppins-Black.ttf");
+}
+
+@font-face {
+  font-family: "PoppinsSemiBold";
+  src: url("../../../assets/fonts/Poppins-SemiBold.ttf");
+}
+
+.general-container {
+  width: 100%;
+  max-height: 80vh;
+  height: fit-content;
+  background-color: gainsboro;
+  .close-dialog {
+    display: flex;
+    justify-content: right;
+    padding: 1em;
+    border: none;
+    button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  .login-image {
+    text-align: center;
+    img {
+      width: 50%;
+    }
+  }
+  .container-login {
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-family: "PoppinsBlack";
+      padding: 0;
+      font-size: 0.8em;
+      text-align: center;
+      color: #2755a2;
+    }
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      .input-user {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        label {
+          font-family: "PoppinsSemiBold";
+          color: #2755a2;
+        }
+        .input-user-space {
+          width: 100%;
+          display: flex;
+          align-content: center;
+          background-color: white;
+          border-radius: 10px;
+          padding: 1%;
+          img {
+            width: 15%;
+          }
+          input {
+            font-family: "PoppinsSemiBold";
+            font-size: 1em;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+    .redirect-link {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      font-family: "PoppinsSemiBold";
+      font-size: 0.8em;
+    }
+    .btn-login {
+      text-align: center;
+      margin: 7%;
+      button {
+        padding: 2% 5%;
+        font-family: "PoppinsSemiBold";
+        font-size: 1.2em;
+        background-color: #47b8a4;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .general-container {
+    .login-image {
+      img {
+        width: 50%;
+      }
+    }
+    .container-login {
+      .title {
+        font-size: 1em;
+      }
+      .inputs {
+        gap: 10px;
+        .input-user {
+          width: 60%;
+          label {
+            font-size: 1.5em;
+          }
+          .input-user-space {
+            border-radius: 20px;
+            img {
+              width: 15%;
+            }
+            input {
+              font-size: 1.5em;
+            }
+          }
+        }
+      }
+      .redirect-link {
+        font-size: 1.4em;
+      }
+      .btn-login {
+        button {
+          font-size: 1.9em;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .general-container {
+    width: 100%;
+    max-height: 80vh;
+    height: fit-content;
+    background-color: gainsboro;
+    .close-dialog {
+      display: flex;
+      justify-content: right;
+      padding: 1em;
+      border: none;
+      button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+    }
+    .login-image {
+      text-align: center;
+      img {
+        width: 20%;
+      }
+    }
+    .container-login {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .title {
+        font-family: "PoppinsBlack";
+        padding: 0;
+        font-size: 0.8em;
+        text-align: center;
+        color: #2755a2;
+      }
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        .input-user {
+          width: 70%;
+          display: flex;
+          flex-direction: column;
+          label {
+            font-family: "PoppinsSemiBold";
+            color: #2755a2;
+          }
+          .input-user-space {
+            width: 100%;
+            display: flex;
+            align-content: center;
+            background-color: white;
+            border-radius: 10px;
+            padding: 1%;
+            img {
+              width: 15%;
+            }
+            input {
+              font-family: "PoppinsSemiBold";
+              font-size: 1em;
+              width: 100%;
+              border: none;
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
